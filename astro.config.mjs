@@ -9,6 +9,6 @@ export default defineConfig({
 
   
   site: "https://learningguides.github.io",
-  base: "/geometriaanalitica",
+  base: "/balancedemateria",
 
 });
