@@ -34,7 +34,7 @@ const lecciones = Object.keys(archivos).map((ruta) => {
       <ul class="list">
         {lecciones.map((leccion) => (
           <li>
-            <a href={`${import.meta.env.BASE_URL}lessons/${leccion.nombre}`} class="item">
+            <a href={`${import.meta.env.BASE_URL}/lessons/${leccion.nombre}`} class="item">
               <span>{leccion.titulo}</span>
               <span class="arrow">→</span>
             </a>
