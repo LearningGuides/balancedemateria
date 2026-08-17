@@ -34,7 +34,7 @@ const lecciones = Object.keys(archivos).map((ruta) => {
       <ul class="list">
         {lecciones.map((leccion) => (
           <li>
-            <a href={`balancedemateria/lessons/${leccion.nombre}`} class="item">
+            <a href={`/lessons/${leccion.nombre}`} class="item">
               <span>{leccion.titulo}</span>
               <span class="arrow">→</span>
             </a>
