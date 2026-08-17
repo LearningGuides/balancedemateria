@@ -1,0 +1,120 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = "Documento" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>{title}</title>
+
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+        <a href="/balancedemateria" class="btn-home">Lecciones</a>
+
+    <main class="documento">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    color: #003366;
+  }
+
+  h2 {
+    margin-top: 40px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+  }
+
+  h3 {
+    color: #444;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  th {
+    background: #f5f5f5;
+  }
+
+  .formula {
+    background: #f8f8f8;
+    border-left: 4px solid #007acc;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .concepto {
+    background: #eef6ff;
+    border-left: 5px solid #007acc;
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .ejemplo {
+    background: #fff8e6;
+    border-left: 5px solid #f0a500;
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  pre {
+    margin: 0;
+    white-space: pre-wrap;
+  }
+
+  hr {
+    margin: 40px 0;
+  }
+
+  @media (max-width: 700px) {
+    body {
+      padding: 15px;
+    }
+
+    table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+</style>

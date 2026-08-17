@@ -1,11 +1,128 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const archivos = import.meta.glob("../lessons/*.html", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+
+const lecciones = Object.keys(archivos).map((ruta) => {
+  const archivo = ruta.split("/").pop() ?? "";
+  const nombre = archivo.replace(".html", "");
+
+  const titulo = nombre
+    .replaceAll("-", " ")
+    .replaceAll("_", " ")
+    .replace(/\b\w/g, (letra) => letra.toUpperCase());
+
+  return {
+    nombre,
+    titulo,
+  };
+});
 ---
 
 <Layout>
-	<Welcome />
+  <main class="container">
+    <section class="card">
+      <header class="header">
+        <h1>Lecciones</h1>
+        <p>Selecciona una lección para comenzar.</p>
+      </header>
+
+      <ul class="list">
+        {lecciones.map((leccion) => (
+          <li>
+            <a href={`/lessons/${leccion.nombre}`} class="item">
+              <span>{leccion.titulo}</span>
+              <span class="arrow">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  :root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --accent: #2563eb;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background: var(--bg);
+  }
+
+  .card {
+    width: min(700px, 100%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .header p {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+
+  .item:hover {
+    border-color: var(--accent);
+    background: #f8fbff;
+    transform: translateY(-2px);
+  }
+
+  .arrow {
+    color: var(--muted);
+    transition: transform 0.2s ease;
+  }
+
+  .item:hover .arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+  }
+</style>
