@@ -1,0 +1,1390 @@
+
+<h1>Lección 1: Fundamentos de los Cálculos de Ingeniería</h1>
+<section id="section-1">
+<div class="concepto">
+<h1>1. Introducción a las Unidades</h1>
+<h2>Definición de unidad</h2>
+<p>Una <strong>unidad</strong> es una cantidad estandarizada de una magnitud física que se utiliza como referencia para medir otras cantidades de la misma naturaleza.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>Metro (m): unidad de longitud.</li>
+<li>Kilogramo (kg): unidad de masa.</li>
+<li>Segundo (s): unidad de tiempo.</li>
+</ul>
+<p>Cuando se dice que una mesa mide <strong>2 metros</strong>, significa que su longitud equivale a dos veces la unidad patrón llamada metro.</p>
+<hr/>
+<h2>Diferencia entre valor numérico y unidad</h2>
+<p>Toda medición está formada por dos partes:</p>
+<p><strong>Valor numérico:</strong> indica cuántas veces está contenida la unidad en la magnitud medida.</p>
+<p><strong>Unidad:</strong> especifica la naturaleza física de la cantidad.</p>
+<p>Ejemplo:</p>
+<p>\[
+10 , m
+\]</p>
+<ul>
+<li>Valor numérico = 10</li>
+<li>Unidad = m</li>
+</ul>
+<p>El número por sí solo carece de significado físico.</p>
+<hr/>
+<h2>Importancia de utilizar unidades en ingeniería</h2>
+<p>Las unidades permiten expresar magnitudes físicas de forma clara y universal.</p>
+<p>Sin unidades:</p>
+<ul>
+<li>No se puede interpretar correctamente un resultado.</li>
+<li>Se generan errores de diseño.</li>
+<li>Se dificulta la comunicación entre profesionales.</li>
+</ul>
+<p>En ingeniería, una diferencia de unidades puede provocar fallas catastróficas.</p>
+<hr/>
+<h2>Beneficios de trabajar con unidades</h2>
+<h3>Interpretación física correcta</h3>
+<p>Permiten comprender el significado de una cantidad.</p>
+<p>Ejemplo:</p>
+<ul>
+<li>50 kg → masa.</li>
+<li>50 N → fuerza.</li>
+</ul>
+<p>Aunque el número es igual, representan conceptos distintos.</p>
+<hr/>
+<h3>Reducción de errores</h3>
+<p>Las unidades ayudan a detectar errores matemáticos o conceptuales.</p>
+<p>Ejemplo:</p>
+<p>\[
+Velocidad = Distancia + Tiempo
+\]</p>
+<p>No es correcto porque:</p>
+<p>\[
+m + s
+\]</p>
+<p>no pueden sumarse.</p>
+<hr/>
+<h3>Método lógico de resolución de problemas</h3>
+<p>Las unidades actúan como una guía para encontrar ecuaciones y verificar resultados.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una persona corre una distancia de
+     <strong>
+      5 km
+     </strong>
+     en
+     <strong>
+      25 min
+     </strong>
+     . Sin las unidades, los números 5 y 25 no tienen significado físico. Con las unidades sabemos que representan distancia y tiempo respectivamente.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-2">
+<div class="concepto">
+<h1>2. Dimensiones y Magnitudes Físicas</h1>
+<h2>Definición de dimensión</h2>
+<p>Una dimensión representa la naturaleza física de una magnitud.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>Longitud → [L]</li>
+<li>Masa → [M]</li>
+<li>Tiempo → [T]</li>
+</ul>
+<hr/>
+<h2>Dimensiones fundamentales</h2>
+<p>Son independientes y no pueden expresarse mediante otras.</p>
+<p>Las siete dimensiones fundamentales del SI son:</p>
+<table>
+<thead>
+<tr>
+<th>Magnitud</th>
+<th>Símbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Longitud</td>
+<td>[L]</td>
+</tr>
+<tr>
+<td>Masa</td>
+<td>[M]</td>
+</tr>
+<tr>
+<td>Tiempo</td>
+<td>[T]</td>
+</tr>
+<tr>
+<td>Temperatura</td>
+<td>[Θ]</td>
+</tr>
+<tr>
+<td>Corriente eléctrica</td>
+<td>[I]</td>
+</tr>
+<tr>
+<td>Cantidad de sustancia</td>
+<td>[N]</td>
+</tr>
+<tr>
+<td>Intensidad luminosa</td>
+<td>[J]</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2>Dimensiones derivadas</h2>
+<p>Se obtienen combinando dimensiones fundamentales.</p>
+<p>Ejemplos:</p>
+<p>Velocidad:</p>
+<p>\[
+[L][T]^{-1}
+\]</p>
+<p>Aceleración:</p>
+<p>\[
+[L][T]^{-2}
+\]</p>
+<p>Fuerza:</p>
+<p>\[
+[M][L][T]^{-2}
+\]</p>
+<hr/>
+<h2>Relación entre dimensiones y unidades</h2>
+<p>La dimensión indica qué tipo de magnitud es.</p>
+<p>La unidad indica cómo se mide.</p>
+<p>Ejemplo:</p>
+<p>Velocidad:</p>
+<p>Dimensión:</p>
+<p>\[
+[L][T]^{-1}
+\]</p>
+<p>Unidades:</p>
+<ul>
+<li>m/s</li>
+<li>km/h</li>
+<li>ft/s</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     La aceleración de un automóvil es de
+     <strong>
+      3 m/s²
+     </strong>
+     . La dimensión de la aceleración se obtiene combinando longitud y tiempo:
+    </p>
+<div class="formula">
+<p>\[
+[L][T^{-2}]
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-3">
+<div class="concepto">
+<h1>3. Reglas Básicas para Trabajar con Unidades</h1>
+<h2>Suma y resta de magnitudes con las mismas unidades</h2>
+<p>Solo pueden sumarse magnitudes de igual naturaleza.</p>
+<p>Correcto:</p>
+<p>\[
+5m + 3m = 8m
+\]</p>
+<p>Incorrecto:</p>
+<p>\[
+5m + 2s
+\]</p>
+<hr/>
+<h2>Multiplicación y división de unidades</h2>
+<p>Ejemplo:</p>
+<p>Área:</p>
+<p>\[
+m \times m = m^2
+\]</p>
+<p>Velocidad:</p>
+<p>\[
+\frac{m}{s}
+\]</p>
+<hr/>
+<h2>Factores de conversión</h2>
+<p>Son relaciones equivalentes entre unidades.</p>
+<p>Ejemplo:</p>
+<p>\[
+1 m = 100 cm
+\]</p>
+<p>Factor:</p>
+<p>\[
+\frac{100cm}{1m}
+\]</p>
+<p>o</p>
+<p>\[
+\frac{1m}{100cm}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Convertir
+     <strong>
+      72 km/h
+     </strong>
+     a
+     <strong>
+      m/s
+     </strong>
+     :
+    </p>
+<div class="formula">
+<p>\[
+72 \frac{km}{h}\times\frac{1000m}{1km}\times\frac{1h}{3600s}
+=20\frac{m}{s}
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-4">
+<div class="concepto">
+<h1>4. Sistemas de Unidades</h1>
+<h2>Sistema Internacional (SI)</h2>
+<p>Es el sistema oficial mundial.</p>
+<p>Unidades básicas:</p>
+<ul>
+<li>m</li>
+<li>kg</li>
+<li>s</li>
+<li>K</li>
+<li>A</li>
+<li>mol</li>
+<li>cd</li>
+</ul>
+<hr/>
+<h2>Sistema CGS</h2>
+<p>Basado en:</p>
+<ul>
+<li>centímetro (cm)</li>
+<li>gramo (g)</li>
+<li>segundo (s)</li>
+</ul>
+<p>Muy utilizado en física.</p>
+<hr/>
+<h2>Sistema Inglés o Americano</h2>
+<p>Utiliza:</p>
+<ul>
+<li>pie (ft)</li>
+<li>libra (lb)</li>
+<li>segundo (s)</li>
+</ul>
+<p>Común en Estados Unidos.</p>
+<hr/>
+<h2>Comparación entre sistemas</h2>
+<table>
+<thead>
+<tr>
+<th>Magnitud</th>
+<th>SI</th>
+<th>CGS</th>
+<th>Inglés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Longitud</td>
+<td>1 m</td>
+<td>100 cm</td>
+<td>3.28084 ft</td>
+</tr>
+<tr>
+<td>Masa</td>
+<td>1 kg</td>
+<td>1000 g</td>
+<td>2.20462 lbm</td>
+</tr>
+<tr>
+<td>Fuerza</td>
+<td>1 N</td>
+<td>100000 dina</td>
+<td>0.224809 lbf</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+</div>
+
+<section id="section-5">
+<div class="concepto">
+<h1>5. Clasificación de las Unidades</h1>
+<h2>Unidades fundamentales</h2>
+<p>Son independientes.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>metro</li>
+<li>kilogramo</li>
+<li>segundo</li>
+</ul>
+<hr/>
+<h2>Unidades derivadas</h2>
+<p>Provienen de combinaciones de fundamentales.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>m²</li>
+<li>m³</li>
+<li>N</li>
+<li>J</li>
+</ul>
+<hr/>
+<h2>Relación entre ambas</h2>
+<p>Las derivadas se construyen a partir de las fundamentales.</p>
+<p>Ejemplo:</p>
+<p>\[
+N = kg \cdot m/s^2
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     La densidad se obtiene a partir de:
+    </p>
+<div class="formula">
+<p>\[
+\text{Densidad}=\frac{\text{Masa}}{\text{Volumen}}
+\]</p>
+</div>
+<p>
+     Unidad SI:
+    </p>
+<div class="formula">
+<p>\[
+kg/m^3
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-6">
+<div class="concepto">
+<h1>6. Dimensiones Fundamentales</h1>
+<h2>Longitud</h2>
+<p>Mide distancia.</p>
+<p>Unidad SI:</p>
+<p>\[
+m
+\]</p>
+<hr/>
+<h2>Masa</h2>
+<p>Cantidad de materia.</p>
+<p>Unidad:</p>
+<p>\[
+kg
+\]</p>
+<hr/>
+<h2>Tiempo</h2>
+<p>Duración de eventos.</p>
+<p>Unidad:</p>
+<p>\[
+s
+\]</p>
+<hr/>
+<h2>Temperatura</h2>
+<p>Nivel térmico.</p>
+<p>Unidad:</p>
+<p>\[
+K
+\]</p>
+<hr/>
+<h2>Cantidad de sustancia</h2>
+<p>Cantidad de partículas.</p>
+<p>Unidad:</p>
+<p>\[
+mol
+\]</p>
+<hr/>
+<h2>Corriente eléctrica</h2>
+<p>Flujo de carga.</p>
+<p>Unidad:</p>
+<p>\[
+A
+\]</p>
+<hr/>
+<h2>Intensidad luminosa</h2>
+<p>Potencia luminosa.</p>
+<p>Unidad:</p>
+<p>\[
+cd
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     La cantidad de sustancia contenida en una muestra puede expresarse como:
+    </p>
+<div class="formula">
+<p>\[
+2.5\ mol
+\]</p>
+</div>
+<p>
+     donde el mol es una dimensión fundamental relacionada con la cantidad de materia.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-7">
+<div class="concepto">
+<h1>7. Unidades Derivadas</h1>
+<h2>Volumen</h2>
+<p>\[
+V=L^3
+\]</p>
+<p>Unidad:</p>
+<p>\[
+m^3
+\]</p>
+<hr/>
+<h2>Fuerza</h2>
+<p>\[
+F=ma
+\]</p>
+<p>Unidad:</p>
+<p>\[
+N=kg·m/s^2
+\]</p>
+<hr/>
+<h2>Presión</h2>
+<p>\[
+P=\frac{F}{A}
+\]</p>
+<p>Unidad:</p>
+<p>\[
+Pa=\frac{N}{m^2}
+\]</p>
+<hr/>
+<h2>Energía</h2>
+<p>\[
+E=F·d
+\]</p>
+<p>Unidad:</p>
+<p>\[
+J=N·m
+\]</p>
+<hr/>
+<h2>Potencia</h2>
+<p>\[
+P=\frac{E}{t}
+\]</p>
+<p>Unidad:</p>
+<p>\[
+W=\frac{J}{s}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Calcular la presión ejercida por una fuerza de
+     <strong>
+      500 N
+     </strong>
+     sobre una superficie de
+     <strong>
+      2 m²
+     </strong>
+     :
+    </p>
+<div class="formula">
+<p>\[
+P=\frac{F}{A}
+=\frac{500}{2}
+=250\ Pa
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-8">
+<div class="concepto">
+<h1>8. Fuerza y Segunda Ley de Newton</h1>
+<h2>Definición de fuerza</h2>
+<p>Interacción capaz de modificar el movimiento de un cuerpo.</p>
+<hr/>
+<h2>Relación entre fuerza, masa y aceleración</h2>
+<p>Segunda Ley de Newton:</p>
+<p>\[
+F=ma
+\]</p>
+<p>donde:</p>
+<ul>
+<li>F = fuerza</li>
+<li>m = masa</li>
+<li>a = aceleración</li>
+</ul>
+<hr/>
+<h2>Unidades de fuerza en distintos sistemas</h2>
+<table>
+<thead>
+<tr>
+<th>Sistema</th>
+<th>Unidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SI</td>
+<td>Newton (N)</td>
+</tr>
+<tr>
+<td>CGS</td>
+<td>Dina</td>
+</tr>
+<tr>
+<td>Inglés</td>
+<td>Libra-fuerza (lbf)</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una caja de
+     <strong>
+      15 kg
+     </strong>
+     acelera a
+     <strong>
+      2 m/s²
+     </strong>
+     :
+    </p>
+<div class="formula">
+<p>\[
+F=ma
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+F=15\times2=30N
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-9">
+<div class="concepto">
+<h1>9. Factores de Conversión Especiales en el Sistema Inglés</h1>
+<h2>Libra-masa (lbm)</h2>
+<p>Unidad de masa.</p>
+<hr/>
+<h2>Libra-fuerza (lbf)</h2>
+<p>Unidad de fuerza.</p>
+<hr/>
+<h2>Factor de conversión (g_c)</h2>
+<p>Permite mantener consistencia dimensional.</p>
+<p>\[
+g_c = 32.174 \frac{lbm·ft}{lbf·s^2}
+\]</p>
+<p>Ecuación:</p>
+<p>\[
+F=\frac{ma}{g_c}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Convertir una fuerza equivalente a:
+    </p>
+<div class="formula">
+<p>\[
+64.348\ \frac{lbm\cdot ft}{s^2}
+\]</p>
+</div>
+<p>
+     a libra-fuerza:
+    </p>
+<div class="formula">
+<p>\[
+\frac{64.348}{32.174}=2\ lbf
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-10">
+<div class="concepto">
+<h1>10. Cantidades Adimensionales</h1>
+<h2>Números puros</h2>
+<p>No poseen dimensiones.</p>
+<p>Ejemplo:</p>
+<p>\[
+5
+\]</p>
+<hr/>
+<h2>Razones</h2>
+<p>Relación entre magnitudes iguales.</p>
+<p>Ejemplo:</p>
+<p>\[
+\frac{20m}{10m}=2
+\]</p>
+<hr/>
+<h2>Magnitudes adimensionales</h2>
+<p>Ejemplos:</p>
+<ul>
+<li>Coeficiente de fricción</li>
+<li>Número de Reynolds</li>
+<li>Eficiencia</li>
+</ul>
+<hr/>
+<h2>Diferencia entre adimensional y sin unidades</h2>
+<p>Adimensional:</p>
+<ul>
+<li>Surge de una combinación física.</li>
+<li>Tiene significado físico.</li>
+</ul>
+<p>Sin unidades:</p>
+<ul>
+<li>Puede ser simplemente un número.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     La eficiencia de una máquina:
+    </p>
+<div class="formula">
+<p>\[
+\eta=\frac{E_{salida}}{E_{entrada}}
+=\frac{800}{1000}=0.8
+\]</p>
+</div>
+<p>
+     La eficiencia es adimensional.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-11">
+<div class="concepto">
+<h1>11. Homogeneidad Dimensional</h1>
+<h2>Verificación de ecuaciones</h2>
+<p>Toda ecuación física debe ser dimensionalmente consistente.</p>
+<hr/>
+<h2>Igualdad de dimensiones entre ambos lados</h2>
+<p>Ejemplo:</p>
+<p>\[
+d=vt
+\]</p>
+<p>Dimensiones:</p>
+<p>\[
+[L]=[L/T][T]
+\]</p>
+<p>\[
+[L]=[L]
+\]</p>
+<p>Correcto.</p>
+<hr/>
+<h2>Validación física de fórmulas</h2>
+<p>Permite detectar errores antes de realizar cálculos.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Verificar:
+    </p>
+<div class="formula">
+<p>\[
+v=v_0+at
+\]</p>
+</div>
+<p>
+     Dimensiones:
+    </p>
+<div class="formula">
+<p>\[
+[L/T]=[L/T]+[L/T^2][T]
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+[L/T]=[L/T]+[L/T]
+\]</p>
+</div>
+<p>
+     La ecuación es dimensionalmente correcta.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-12">
+<div class="concepto">
+<h1>12. Obtención de Dimensiones de Constantes</h1>
+<h2>Uso de homogeneidad dimensional</h2>
+<p>Ejemplo:</p>
+<p>\[
+F=kx
+\]</p>
+<p>Dimensiones:</p>
+<p>\[
+[M][L][T^{-2}] = [k][L]
+\]</p>
+<hr/>
+<h2>Determinación de dimensiones desconocidas</h2>
+<p>\[
+[k]=[M][T^{-2}]
+\]</p>
+<p>La constante elástica tiene dimensiones:</p>
+<p>\[
+kg/s^2
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Si:
+    </p>
+<div class="formula">
+<p>\[
+F=kx
+\]</p>
+</div>
+<p>
+     donde (F) es fuerza y (x) longitud,
+    </p>
+<div class="formula">
+<p>\[
+[k]=\frac{F}{x}
+=\frac{MLT^{-2}}{L}
+=MT^{-2}
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-13">
+<div class="concepto">
+<h1>13. Cifras Significativas</h1>
+<h2>Definición</h2>
+<p>Son los dígitos que representan la precisión de una medición.</p>
+<p>Ejemplo:</p>
+<p>\[
+12.34
+\]</p>
+<p>Tiene 4 cifras significativas.</p>
+<hr/>
+<h2>Reglas de conteo</h2>
+<h3>Todos los dígitos distintos de cero cuentan</h3>
+<p>1234 → 4 cifras</p>
+<hr/>
+<h3>Ceros entre dígitos sí cuentan</h3>
+<p>1002 → 4 cifras</p>
+<hr/>
+<h3>Ceros a la izquierda no cuentan</h3>
+<p>0.0035 → 2 cifras</p>
+<hr/>
+<h3>Ceros finales después del decimal sí cuentan</h3>
+<p>2.500 → 4 cifras</p>
+<hr/>
+<h2>Notación científica</h2>
+<p>Ejemplo:</p>
+<p>\[
+4500=4.5\times10^3
+\]</p>
+<p>2 cifras significativas.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<table>
+<tr>
+<th>
+       Número
+      </th>
+<th>
+       Cifras significativas
+      </th>
+</tr>
+<tr>
+<td>
+       3500
+      </td>
+<td>
+       2
+      </td>
+</tr>
+<tr>
+<td>
+       3500.0
+      </td>
+<td>
+       5
+      </td>
+</tr>
+<tr>
+<td>
+       0.00456
+      </td>
+<td>
+       3
+      </td>
+</tr>
+</table>
+</div>
+<hr/>
+</section>
+<section id="section-14">
+<div class="concepto">
+<h1>14. Significado Físico de las Cifras Significativas</h1>
+<h2>Precisión de instrumentos</h2>
+<p>Un instrumento más preciso genera más cifras significativas.</p>
+<hr/>
+<h2>Limitaciones de medición</h2>
+<p>Toda medición tiene incertidumbre.</p>
+<hr/>
+<h2>Interpretación de resultados</h2>
+<p>No deben reportarse más cifras que las justificadas por los datos.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Un termómetro con resolución de
+     <strong>
+      0.1 °C
+     </strong>
+     registra:
+    </p>
+<div class="formula">
+<p>\[
+25.4^\circ C
+\]</p>
+</div>
+<p>
+     No sería correcto reportar:
+    </p>
+<div class="formula">
+<p>\[
+25.437^\circ C
+\]</p>
+</div>
+<p>
+     porque supera la precisión del instrumento.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-15">
+<div class="concepto">
+<h1>15. Operaciones con Cifras Significativas</h1>
+<h2>Multiplicación y división</h2>
+<p>El resultado conserva la menor cantidad de cifras significativas.</p>
+<p>Ejemplo:</p>
+<p>\[
+2.5\times3.42=8.55
+\]</p>
+<p>Resultado:</p>
+<p>\[
+8.6
+\]</p>
+<p>(2 cifras significativas)</p>
+<hr/>
+<h2>Suma y resta</h2>
+<p>El resultado conserva la menor precisión decimal.</p>
+<p>Ejemplo:</p>
+<p>\[
+12.11+1.2=13.31
+\]</p>
+<p>Resultado:</p>
+<p>\[
+13.3
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo (multiplicación)
+    </h3>
+<div class="formula">
+<p>\[
+12.4\times3.2=39.68
+\]</p>
+</div>
+<p>
+     Resultado correcto:
+    </p>
+<div class="formula">
+<p>\[
+40
+\]</p>
+</div>
+<p>
+     (2 cifras significativas)
+    </p>
+</div>
+<div class="ejemplo">
+<h3>
+     Ejemplo (suma)
+    </h3>
+<div class="formula">
+<p>\[
+15.23+2.1=17.33
+\]</p>
+</div>
+<p>
+     Resultado correcto:
+    </p>
+<div class="formula">
+<p>\[
+17.3
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-16">
+<div class="concepto">
+<h1>16. Validación de Resultados</h1>
+<h2>Repetición de cálculos</h2>
+<p>Verificar nuevamente operaciones.</p>
+<hr/>
+<h2>Sustitución inversa</h2>
+<p>Introducir el resultado en la ecuación original.</p>
+<hr/>
+<h2>Estimación por orden de magnitud</h2>
+<p>Comparar con valores aproximados.</p>
+<p>Ejemplo:</p>
+<p>\[
+998 \approx 10^3
+\]</p>
+<hr/>
+<h2>Prueba de razonabilidad</h2>
+<p>Preguntarse:</p>
+<ul>
+<li>¿Tiene sentido físico?</li>
+<li>¿Las unidades son correctas?</li>
+<li>¿El valor es coherente?</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Si se calcula la masa de un automóvil y se obtiene:
+    </p>
+<div class="formula">
+<p>\[
+0.005\ kg
+\]</p>
+</div>
+<p>
+     aunque matemáticamente el cálculo parezca correcto, el resultado no es razonable físicamente, por lo que debe revisarse el procedimiento.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-17">
+<div class="concepto">
+<h1>17. Conclusiones</h1>
+<h2>Importancia de las unidades</h2>
+<p>Las unidades proporcionan significado físico a cualquier medición y permiten comunicar resultados de manera universal.</p>
+<hr/>
+<h2>Uso correcto de dimensiones</h2>
+<p>Las dimensiones ayudan a comprender la naturaleza de las magnitudes físicas y facilitan la construcción y análisis de ecuaciones.</p>
+<hr/>
+<h2>Aplicación de la homogeneidad dimensional</h2>
+<p>Toda ecuación física válida debe cumplir con la igualdad dimensional entre ambos lados, permitiendo detectar errores y obtener dimensiones desconocidas.</p>
+<hr/>
+<h2>Manejo adecuado de cifras significativas</h2>
+<p>Las cifras significativas reflejan la precisión de las mediciones y garantizan que los resultados reportados sean coherentes con la exactitud de los datos experimentales.</p>
+<hr/>
+<h2>Métodos de verificación de resultados</h2>
+<p>La repetición de cálculos, la sustitución inversa, la estimación por orden de magnitud y la prueba de razonabilidad son herramientas fundamentales para validar resultados y minimizar errores en ingeniería y ciencias.</p>
+<hr/>
+<h3>Conclusión general</h3>
+<p>El estudio de las unidades, dimensiones, sistemas de medición, homogeneidad dimensional y cifras significativas constituye una base esencial para cualquier disciplina de ingeniería y ciencias aplicadas. Su correcto uso permite interpretar adecuadamente los fenómenos físicos, realizar cálculos confiables, evitar errores de diseño y garantizar que los resultados obtenidos tengan validez técnica y científica.</p>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo integrador
+    </h3>
+<p>
+     Calcular la energía cinética de una bicicleta de
+     <strong>
+      20 kg
+     </strong>
+     que viaja a
+     <strong>
+      5 m/s
+     </strong>
+     :
+    </p>
+<div class="formula">
+<p>\[
+E_k=\frac{1}{2}mv^2
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+E_k=\frac{1}{2}(20)(5)^2
+=250J
+\]</p>
+</div>
+<p>
+     Verificando:
+    </p>
+<ul>
+<li>
+      Unidades correctas.
+     </li>
+<li>
+      Dimensiones homogéneas.
+     </li>
+<li>
+      Resultado físicamente razonable.
+     </li>
+</ul>
+</div>
+</section>
+
+<div class="contenedor">
+    <h1>Tabla de Conversiones en Ingeniería</h1>
+
+    <h2>1. Longitud</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 km</td><td>1000 m</td></tr>
+        <tr><td>1 m</td><td>100 cm = 1000 mm</td></tr>
+        <tr><td>1 pulgada (in)</td><td>25.4 mm</td></tr>
+        <tr><td>1 pie (ft)</td><td>0.3048 m</td></tr>
+        <tr><td>1 yarda (yd)</td><td>0.9144 m</td></tr>
+        <tr><td>1 milla (mi)</td><td>1.609 km</td></tr>
+      </tbody>
+    </table>
+
+    <h2>2. Área</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 m²</td><td>10.764 ft²</td></tr>
+        <tr><td>1 ft²</td><td>0.0929 m²</td></tr>
+        <tr><td>1 ha</td><td>10,000 m²</td></tr>
+        <tr><td>1 acre</td><td>4046.86 m²</td></tr>
+      </tbody>
+    </table>
+
+    <h2>3. Volumen</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 m³</td><td>1000 L</td></tr>
+        <tr><td>1 L</td><td>1000 mL</td></tr>
+        <tr><td>1 ft³</td><td>0.02832 m³</td></tr>
+        <tr><td>1 galón estadounidense</td><td>3.785 L</td></tr>
+        <tr><td>1 galón imperial</td><td>4.546 L</td></tr>
+      </tbody>
+    </table>
+
+    <h2>4. Masa</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 kg</td><td>1000 g</td></tr>
+        <tr><td>1 tonelada (t)</td><td>1000 kg</td></tr>
+        <tr><td>1 lb</td><td>0.4536 kg</td></tr>
+        <tr><td>1 oz</td><td>28.35 g</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Fuerza</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 N</td><td>0.2248 lbf</td></tr>
+        <tr><td>1 lbf</td><td>4.448 N</td></tr>
+        <tr><td>1 kgf</td><td>9.80665 N</td></tr>
+      </tbody>
+    </table>
+
+    <h2>6. Presión</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 Pa</td><td>1 N/m²</td></tr>
+        <tr><td>1 kPa</td><td>1000 Pa</td></tr>
+        <tr><td>1 MPa</td><td>10⁶ Pa</td></tr>
+        <tr><td>1 bar</td><td>100 kPa</td></tr>
+        <tr><td>1 atm</td><td>101.325 kPa</td></tr>
+        <tr><td>1 psi</td><td>6.895 kPa</td></tr>
+        <tr><td>1 MPa</td><td>145.04 psi</td></tr>
+      </tbody>
+    </table>
+
+    <h2>7. Energía</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 J</td><td>1 N·m</td></tr>
+        <tr><td>1 kJ</td><td>1000 J</td></tr>
+        <tr><td>1 cal</td><td>4.184 J</td></tr>
+        <tr><td>1 kcal</td><td>4184 J</td></tr>
+        <tr><td>1 BTU</td><td>1055 J</td></tr>
+        <tr><td>1 kWh</td><td>3.6 MJ</td></tr>
+      </tbody>
+    </table>
+
+    <h2>8. Potencia</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 W</td><td>1 J/s</td></tr>
+        <tr><td>1 kW</td><td>1000 W</td></tr>
+        <tr><td>1 HP</td><td>745.7 W</td></tr>
+        <tr><td>1 CV</td><td>735.5 W</td></tr>
+      </tbody>
+    </table>
+
+    <h2>9. Temperatura</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Conversión</th>
+          <th>Fórmula</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>°F a °C</td><td>(°F − 32) × 5/9</td></tr>
+        <tr><td>°C a °F</td><td>(°C × 9/5) + 32</td></tr>
+        <tr><td>K a °C</td><td>K − 273.15</td></tr>
+        <tr><td>°C a K</td><td>°C + 273.15</td></tr>
+      </tbody>
+    </table>
+
+    <h2>10. Velocidad</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 m/s</td><td>3.6 km/h</td></tr>
+        <tr><td>1 km/h</td><td>0.2778 m/s</td></tr>
+        <tr><td>1 mph</td><td>1.609 km/h</td></tr>
+        <tr><td>1 nudo</td><td>1.852 km/h</td></tr>
+      </tbody>
+    </table>
+
+    <h2>11. Caudal</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 m³/s</td><td>1000 L/s</td></tr>
+        <tr><td>1 L/s</td><td>0.001 m³/s</td></tr>
+        <tr><td>1 gpm estadounidense</td><td>3.785 L/min</td></tr>
+      </tbody>
+    </table>
+
+    <h2>12. Densidad</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 g/cm³</td><td>1000 kg/m³</td></tr>
+        <tr><td>1 kg/m³</td><td>0.001 g/cm³</td></tr>
+      </tbody>
+    </table>
+
+    <h2>13. Prefijos del Sistema Internacional</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Prefijo</th>
+          <th>Símbolo</th>
+          <th>Factor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tera</td><td>T</td><td>10¹²</td></tr>
+        <tr><td>Giga</td><td>G</td><td>10⁹</td></tr>
+        <tr><td>Mega</td><td>M</td><td>10⁶</td></tr>
+        <tr><td>Kilo</td><td>k</td><td>10³</td></tr>
+        <tr><td>Hecto</td><td>h</td><td>10²</td></tr>
+        <tr><td>Deca</td><td>da</td><td>10¹</td></tr>
+        <tr><td>Unidad</td><td>—</td><td>10⁰</td></tr>
+        <tr><td>Deci</td><td>d</td><td>10⁻¹</td></tr>
+        <tr><td>Centi</td><td>c</td><td>10⁻²</td></tr>
+        <tr><td>Mili</td><td>m</td><td>10⁻³</td></tr>
+        <tr><td>Micro</td><td>µ</td><td>10⁻⁶</td></tr>
+        <tr><td>Nano</td><td>n</td><td>10⁻⁹</td></tr>
+        <tr><td>Pico</td><td>p</td><td>10⁻¹²</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <style>
+    .contenedor body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f4f6f8;
+      color: #222;
+    }
+
+    .contenedor h1 {
+      text-align: center;
+    }
+
+     .contenedor h2 {
+      margin-top: 30px;
+      color: #1f4e78;
+    }
+
+    .contenedor table {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 25px;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .contenedor th,
+    td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .contenedor th {
+      background-color: #1f4e78;
+      color: white;
+    }
+
+    .contenedor tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .contenedor {
+      max-width: 900px;
+      margin: auto;
+    }
+  </style>

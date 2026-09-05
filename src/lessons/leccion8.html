@@ -1,0 +1,1452 @@
+<h1>Lección 8: Sistemas de Múltiples Unidades y Balances de Materia</h1>
+<section id="section-1">
+<div class="concepto">
+<h1>1. Introducción a los Sistemas de Múltiples Unidades</h1>
+<h2>Diferencia entre procesos de una unidad y múltiples unidades</h2>
+<p>Un proceso de <strong>una sola unidad</strong> contiene únicamente un equipo u operación principal. Por ejemplo:</p>
+<ul>
+<li>Un mezclador.</li>
+<li>Un divisor.</li>
+<li>Un evaporador.</li>
+<li>Un filtro.</li>
+</ul>
+<p>En estos casos, el balance de materia se plantea directamente alrededor de ese equipo.</p>
+<p>Un proceso de <strong>múltiples unidades</strong> contiene dos o más equipos conectados mediante corrientes de materia. Por ejemplo:</p>
+<p>\[
+\text{Mezclador} \rightarrow \text{Reactor} \rightarrow \text{Separador}
+\]</p>
+<p>Cada unidad puede modificar el caudal, la composición o el estado físico de las corrientes.</p>
+<hr/>
+<h2>Procesos industriales complejos</h2>
+<p>En una planta industrial real, rara vez se utiliza una sola operación unitaria. Generalmente se combinan varias etapas, como:</p>
+<ul>
+<li>Mezclado.</li>
+<li>Calentamiento.</li>
+<li>Reacción.</li>
+<li>Separación.</li>
+<li>Filtración.</li>
+<li>Destilación.</li>
+<li>Secado.</li>
+<li>Recirculación.</li>
+</ul>
+<p>La interacción entre estas unidades produce corrientes internas que deben analizarse cuidadosamente.</p>
+<hr/>
+<h2>Importancia del análisis por sistemas</h2>
+<p>Dividir el proceso en sistemas permite:</p>
+<ul>
+<li>Identificar entradas y salidas.</li>
+<li>Reducir el número de incógnitas.</li>
+<li>Elegir balances sencillos.</li>
+<li>Localizar errores.</li>
+<li>Determinar corrientes internas.</li>
+<li>Resolver el proceso de manera ordenada.</li>
+</ul>
+<p>Un mismo proceso puede analizarse como un sistema global o dividirse en varios subsistemas.</p>
+<hr/>
+<h2>Aplicación de balances de materia</h2>
+<p>Para un proceso sin reacción química y en estado estacionario:</p>
+<p>\[
+\sum \text{Entradas}=\sum \text{Salidas}
+\]</p>
+<p>Para cada componente (i):</p>
+<p>\[
+\sum \text{Entradas de }i
+=\sum \text{Salidas de }i
+\]</p>
+<p>Cuando existen varias unidades, estas ecuaciones pueden aplicarse:</p>
+<ul>
+<li>Al proceso completo.</li>
+<li>A una unidad individual.</li>
+<li>A un grupo de unidades.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una planta procesa leche mediante:
+    </p>
+<ul>
+<li>
+      Mezclado.
+     </li>
+<li>
+      Pasteurización.
+     </li>
+<li>
+      Enfriamiento.
+     </li>
+</ul>
+<p>
+     Cada etapa constituye una unidad distinta, pero todas forman parte del mismo proceso.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-2">
+<div class="concepto">
+<h1>2. Diagramas de Flujo de Procesos</h1>
+<h2>Definición</h2>
+<p>Un <strong>diagrama de flujo de procesos</strong>, conocido como PFD por sus siglas en inglés, es una representación gráfica de los equipos principales y de las corrientes que los conectan.</p>
+<hr/>
+<h2>Representación gráfica del proceso</h2>
+<p>En el diagrama, cada equipo se representa mediante un símbolo o figura.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>Tanque.</li>
+<li>Mezclador.</li>
+<li>Reactor.</li>
+<li>Intercambiador de calor.</li>
+<li>Columna de destilación.</li>
+<li>Filtro.</li>
+<li>Bomba.</li>
+</ul>
+<p>Las flechas indican la dirección de las corrientes.</p>
+<hr/>
+<h2>Equipos conectados mediante corrientes</h2>
+<p>Un proceso puede representarse de la siguiente forma:</p>
+<p>\[
+F
+\rightarrow
+\boxed{\text{Mezclador}}
+\rightarrow
+\boxed{\text{Evaporador}}
+\rightarrow
+P
+\]</p>
+<p>Además pueden aparecer corrientes laterales, recirculaciones o purgas.</p>
+<hr/>
+<h2>Información para balances de materia</h2>
+<p>Un PFD puede incluir:</p>
+<ul>
+<li>Número o nombre de cada corriente.</li>
+<li>Caudal.</li>
+<li>Temperatura.</li>
+<li>Presión.</li>
+<li>Composición.</li>
+<li>Estado físico.</li>
+<li>Datos de equipos.</li>
+<li>Servicios auxiliares principales.</li>
+</ul>
+<p>Esta información facilita el planteamiento de balances.</p>
+<hr/>
+<h2>Aplicación en diseño y operación</h2>
+<p>Los diagramas de flujo se emplean para:</p>
+<ul>
+<li>Diseñar plantas.</li>
+<li>Analizar procesos existentes.</li>
+<li>Capacitar operadores.</li>
+<li>Detectar fallas.</li>
+<li>Planear modificaciones.</li>
+<li>Realizar balances de materia y energía.</li>
+<li>Identificar puntos de control.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una planta de producción de aceite incluye:
+    </p>
+<ul>
+<li>
+      Tanque de mezcla.
+     </li>
+<li>
+      Intercambiador de calor.
+     </li>
+<li>
+      Separador.
+     </li>
+</ul>
+<p>
+     El diagrama muestra cómo circulan las corrientes entre estos equipos.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-3">
+<div class="concepto">
+<h1>3. Diagramas de Bloques</h1>
+<h2>Definición</h2>
+<p>Un <strong>diagrama de bloques</strong> es una representación simplificada del proceso.</p>
+<p>Cada bloque representa una operación, una unidad o un conjunto de equipos.</p>
+<hr/>
+<h2>Representación simplificada</h2>
+<p>No muestra todos los detalles mecánicos.</p>
+<p>Ejemplo:</p>
+<p>\[
+\text{Materia prima}
+\rightarrow
+\boxed{\text{Preparación}}
+\rightarrow
+\boxed{\text{Separación}}
+\rightarrow
+\text{Producto}
+\]</p>
+<hr/>
+<h2>Cada bloque representa una operación unitaria</h2>
+<p>Un bloque puede representar:</p>
+<ul>
+<li>Mezclado.</li>
+<li>Reacción.</li>
+<li>Separación.</li>
+<li>Secado.</li>
+<li>Filtración.</li>
+<li>Destilación.</li>
+<li>Almacenamiento.</li>
+</ul>
+<p>Incluso puede representar varias unidades si el análisis no necesita mayor detalle.</p>
+<hr/>
+<h2>Facilita el análisis de procesos complejos</h2>
+<p>El diagrama de bloques permite:</p>
+<ul>
+<li>Visualizar la estructura general.</li>
+<li>Identificar las principales entradas y salidas.</li>
+<li>Reconocer recirculaciones y purgas.</li>
+<li>Dividir el proceso en subsistemas.</li>
+<li>Elegir dónde aplicar los balances.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En lugar de dibujar todos los equipos de una planta de tratamiento de agua, se representan únicamente tres bloques:
+    </p>
+<ul>
+<li>
+      Mezcla.
+     </li>
+<li>
+      Filtración.
+     </li>
+<li>
+      Desinfección.
+     </li>
+</ul>
+</div>
+<hr/>
+</section>
+<section id="section-4">
+<div class="concepto">
+<h1>4. Comparación entre Diagrama de Flujo y Diagrama de Bloques</h1>
+<h2>Nivel de detalle</h2>
+<p>El diagrama de bloques es más general y simplificado.</p>
+<p>El diagrama de flujo de procesos contiene mayor información técnica.</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Diagrama de bloques</th>
+<th>Diagrama de flujo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nivel de detalle</td>
+<td>Bajo</td>
+<td>Medio o alto</td>
+</tr>
+<tr>
+<td>Equipos específicos</td>
+<td>No siempre</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Composiciones</td>
+<td>Opcionales</td>
+<td>Frecuentes</td>
+</tr>
+<tr>
+<td>Temperaturas y presiones</td>
+<td>Generalmente no</td>
+<td>Frecuentes</td>
+</tr>
+<tr>
+<td>Uso inicial</td>
+<td>Comprensión general</td>
+<td>Diseño y análisis</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2>Ventajas del diagrama de bloques</h2>
+<ul>
+<li>Es fácil de elaborar.</li>
+<li>Permite comprender rápidamente el proceso.</li>
+<li>Ayuda a identificar sistemas y subsistemas.</li>
+<li>Es útil al inicio de un problema.</li>
+</ul>
+<hr/>
+<h2>Ventajas del diagrama de flujo</h2>
+<ul>
+<li>Contiene información cuantitativa.</li>
+<li>Permite realizar balances detallados.</li>
+<li>Facilita la operación industrial.</li>
+<li>Ayuda a identificar corrientes específicas.</li>
+<li>Es útil para diseño y control.</li>
+</ul>
+<hr/>
+<h2>Aplicaciones prácticas</h2>
+<p>El diagrama de bloques se utiliza para:</p>
+<ul>
+<li>Explicaciones generales.</li>
+<li>Planeación inicial.</li>
+<li>Análisis conceptual.</li>
+</ul>
+<p>El diagrama de flujo se utiliza para:</p>
+<ul>
+<li>Cálculos de ingeniería.</li>
+<li>Diseño de plantas.</li>
+<li>Simulación.</li>
+<li>Operación y mantenimiento.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Para explicar un proceso a un nuevo operador se utiliza un diagrama de bloques; para diseñar la planta se emplea un diagrama de flujo detallado.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-5">
+<div class="concepto">
+<h1>5. Definición de Sistema en un Proceso</h1>
+<p>Un <strong>sistema</strong> es cualquier parte del proceso que se selecciona para su análisis y se separa del resto mediante una frontera real o imaginaria.</p>
+<p>Puede incluir:</p>
+<ul>
+<li>Una unidad.</li>
+<li>Varias unidades.</li>
+<li>Todo el proceso.</li>
+<li>Una sección específica.</li>
+</ul>
+<hr/>
+<h2>Entradas</h2>
+<p>Son las corrientes que cruzan la frontera hacia el interior del sistema.</p>
+<p>Pueden contener:</p>
+<ul>
+<li>Materias primas.</li>
+<li>Solventes.</li>
+<li>Gases.</li>
+<li>Reactivos.</li>
+<li>Corrientes recicladas.</li>
+</ul>
+<hr/>
+<h2>Salidas</h2>
+<p>Son las corrientes que abandonan el sistema.</p>
+<p>Pueden ser:</p>
+<ul>
+<li>Productos.</li>
+<li>Subproductos.</li>
+<li>Desechos.</li>
+<li>Purga.</li>
+<li>Vapor.</li>
+<li>Corrientes de recirculación, dependiendo de la frontera elegida.</li>
+</ul>
+<hr/>
+<h2>Frontera del sistema</h2>
+<p>La frontera define qué corrientes se consideran internas y cuáles externas.</p>
+<p>Las corrientes internas no aparecen en el balance global si no cruzan la frontera seleccionada.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En una línea de producción de jugo, únicamente el tanque mezclador se considera como sistema para realizar el balance de materia.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-6">
+<div class="concepto">
+<h1>6. Sistema Global</h1>
+<h2>Definición</h2>
+<p>El <strong>sistema global</strong> incluye todas las unidades del proceso dentro de una sola frontera.</p>
+<p>Ejemplo:</p>
+<p>\[
+\boxed{
+\text{Mezclador}
+\rightarrow
+\text{Evaporador}
+\rightarrow
+\text{Filtro}
+}
+\]</p>
+<hr/>
+<h2>Solo considera corrientes externas</h2>
+<p>En el balance global se incluyen únicamente las corrientes que entran o salen del proceso completo.</p>
+<p>Las corrientes internas entre equipos no aparecen porque no cruzan la frontera global.</p>
+<hr/>
+<h2>Simplificación del análisis inicial</h2>
+<p>El sistema global permite eliminar temporalmente muchas incógnitas internas.</p>
+<p>Por ejemplo, si una corriente pasa del mezclador al evaporador, esa corriente no aparece en el balance global.</p>
+<hr/>
+<h2>Balance global</h2>
+<p>Sin reacción ni acumulación:</p>
+<p>\[
+\sum F_{\text{externas}}
+=\sum P_{\text{externas}}
+\]</p>
+<p>Para un componente (A):</p>
+<p>\[
+\sum F_{\text{externas}}w_{A,F}
+=\sum P_{\text{externas}}w_{A,P}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una planta con mezclador, evaporador y secador se analiza inicialmente como una sola unidad para calcular el flujo total del producto final.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-7">
+<div class="concepto">
+<h1>7. Subsistemas</h1>
+<h2>Definición</h2>
+<p>Un <strong>subsistema</strong> es una parte del proceso total seleccionada para realizar un análisis más específico.</p>
+<p>Puede ser:</p>
+<ul>
+<li>Una unidad individual.</li>
+<li>Dos unidades juntas.</li>
+<li>Una sección del proceso.</li>
+</ul>
+<hr/>
+<h2>Análisis por unidades individuales</h2>
+<p>Cada equipo puede tratarse como un sistema independiente.</p>
+<p>Ejemplo:</p>
+<p>\[
+\boxed{\text{Mezclador}}
+\]</p>
+<p>Balance:</p>
+<p>\[
+F_1+F_2=M
+\]</p>
+<p>Luego:</p>
+<p>\[
+\boxed{\text{Evaporador}}
+\]</p>
+<p>Balance:</p>
+<p>\[
+M=P+V
+\]</p>
+<hr/>
+<h2>Flexibilidad en la resolución</h2>
+<p>El analista puede elegir diferentes fronteras dependiendo de los datos disponibles.</p>
+<p>Una frontera adecuada puede permitir resolver una incógnita sin conocer todas las corrientes internas.</p>
+<hr/>
+<h2>Simplificación del problema</h2>
+<p>Los subsistemas ayudan a:</p>
+<ul>
+<li>Separar ecuaciones.</li>
+<li>Reducir confusión.</li>
+<li>Identificar variables.</li>
+<li>Resolver el proceso de forma secuencial.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Después de resolver el balance global de una planta, se analiza únicamente el evaporador para determinar la cantidad de agua eliminada.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-8">
+<div class="concepto">
+<h1>8. Combinación de Subsistemas</h1>
+<p>En ocasiones conviene agrupar dos o más unidades dentro de una sola frontera.</p>
+<p>Ejemplo:</p>
+<p>\[
+\boxed{
+\text{Mezclador}
++
+\text{Evaporador}
+}
+\]</p>
+<hr/>
+<h2>Reducción de incógnitas</h2>
+<p>Al combinar unidades, las corrientes internas desaparecen del balance del subsistema combinado.</p>
+<p>Esto puede reducir significativamente el número de incógnitas.</p>
+<hr/>
+<h2>Estrategia para procesos complejos</h2>
+<p>Una estrategia común es:</p>
+<ol>
+<li>Resolver el sistema global.</li>
+<li>Formar un subsistema con varias unidades.</li>
+<li>Resolver unidades individuales.</li>
+<li>Determinar corrientes internas.</li>
+</ol>
+<p>No existe una única frontera correcta. Se selecciona la que produzca el balance más conveniente.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Se consideran conjuntamente un mezclador y un intercambiador de calor como un solo sistema para calcular el flujo hacia el reactor.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-9">
+<div class="concepto">
+<h1>9. Selección del Sistema de Análisis</h1>
+<h2>Elección del sistema más conveniente</h2>
+<p>Debe elegirse una frontera que:</p>
+<ul>
+<li>Incluya pocas incógnitas.</li>
+<li>Tenga suficientes datos conocidos.</li>
+<li>Permita escribir balances independientes.</li>
+<li>Elimine corrientes internas innecesarias.</li>
+</ul>
+<hr/>
+<h2>Número de incógnitas</h2>
+<p>Antes de plantear el balance se cuentan las variables desconocidas que cruzan la frontera.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>Caudales desconocidos.</li>
+<li>Composiciones desconocidas.</li>
+<li>Cantidades de componentes.</li>
+<li>Fracciones másicas o molares.</li>
+</ul>
+<hr/>
+<h2>Facilidad para resolver balances</h2>
+<p>El sistema más grande no siempre es el mejor.</p>
+<p>En algunos casos conviene usar el sistema global; en otros, una unidad individual proporciona una ecuación más directa.</p>
+<p>La selección debe apoyarse en el análisis de grados de libertad.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En una planta con cinco equipos, se selecciona inicialmente el sistema global porque solo presenta una corriente desconocida.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-10">
+<div class="concepto">
+<h1>10. Grados de Libertad</h1>
+<p>Los <strong>grados de libertad</strong> indican si existe suficiente información para resolver el sistema.</p>
+<p>\[
+GDL=N_I-N_E
+\]</p>
+<p>donde:</p>
+<ul>
+<li>(N_I): número de incógnitas.</li>
+<li>(N_E): número de ecuaciones independientes.</li>
+</ul>
+<hr/>
+<h2>Número de incógnitas</h2>
+<p>Se deben contar únicamente las variables realmente desconocidas.</p>
+<p>Una corriente puede introducir varias incógnitas:</p>
+<ul>
+<li>Caudal total.</li>
+<li>Fracción de uno o más componentes.</li>
+<li>Temperatura, si fuera necesaria.</li>
+<li>Presión, si fuera necesaria.</li>
+</ul>
+<hr/>
+<h2>Número de ecuaciones independientes</h2>
+<p>Pueden utilizarse:</p>
+<ul>
+<li>Balance total.</li>
+<li>Balances por componentes.</li>
+<li>Suma de fracciones igual a 1.</li>
+<li>Relaciones entre corrientes.</li>
+<li>Especificaciones de recuperación.</li>
+<li>Datos de rendimiento.</li>
+<li>Relaciones de equilibrio.</li>
+</ul>
+<hr/>
+<h2>Criterio de selección</h2>
+<h3>(GDL=0)</h3>
+<p>El sistema está correctamente especificado y puede resolverse.</p>
+<h3>(GDL&gt;0)</h3>
+<p>Faltan datos o relaciones.</p>
+<h3>(GDL&lt;0)</h3>
+<p>Hay datos o ecuaciones adicionales, posiblemente redundantes o contradictorios.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Un sistema tiene:
+    </p>
+<ul>
+<li>
+      3 incógnitas.
+     </li>
+<li>
+      3 ecuaciones independientes.
+     </li>
+</ul>
+<p>
+     Los grados de libertad son cero y el sistema puede resolverse.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-11">
+<div class="concepto">
+<h1>11. Estrategias para Resolver Procesos con Múltiples Unidades</h1>
+<h2>Método por grados de libertad</h2>
+<p>Consiste en analizar varias fronteras y seleccionar aquella con cero grados de libertad.</p>
+<p>Procedimiento:</p>
+<ol>
+<li>Elegir una frontera.</li>
+<li>Contar incógnitas.</li>
+<li>Contar ecuaciones.</li>
+<li>Calcular los grados de libertad.</li>
+<li>Resolver si (GDL=0).</li>
+</ol>
+<hr/>
+<h2>Método del sistema global</h2>
+<p>Se comienza con una frontera alrededor de todo el proceso.</p>
+<p>Ventajas:</p>
+<ul>
+<li>Elimina corrientes internas.</li>
+<li>Reduce incógnitas.</li>
+<li>Permite encontrar productos o alimentaciones externas.</li>
+<li>Proporciona una visión general.</li>
+</ul>
+<hr/>
+<h2>Método por unidades individuales</h2>
+<p>Cada equipo se resuelve por separado.</p>
+<p>Es útil cuando:</p>
+<ul>
+<li>Se conocen las corrientes de entrada de una unidad.</li>
+<li>Se necesitan corrientes internas.</li>
+<li>Cada equipo tiene relaciones específicas.</li>
+</ul>
+<hr/>
+<h2>Método combinado</h2>
+<p>En procesos complejos se combinan las tres estrategias:</p>
+<ol>
+<li>Balance global.</li>
+<li>Balance de grupos de equipos.</li>
+<li>Balance de unidades individuales.</li>
+</ol>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Se inicia resolviendo el balance global de una planta y posteriormente se calculan los caudales internos de cada equipo.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-12">
+<div class="concepto">
+<h1>12. Balance Global de Materia</h1>
+<p>Para un proceso completo, sin reacción y en estado estacionario:</p>
+<p>\[
+\sum \dot m_{\text{entrada}}
+====\sum \dot m_{\text{salida}}
+\]</p>
+<hr/>
+<h2>Ejemplo general</h2>
+<p>Si entran dos corrientes y salen tres:</p>
+<p>\[
+F_1+F_2=P_1+P_2+P_3
+\]</p>
+<hr/>
+<h2>Balance global por componente</h2>
+<p>Para el componente (A):</p>
+<p>\[
+F_1w_{A,1}+F_2w_{A,2}
+=P_1w_{A,P1}+P_2w_{A,P2}+P_3w_{A,P3}
+\]</p>
+<hr/>
+<h2>Ventaja principal</h2>
+<p>Las corrientes internas no aparecen en la ecuación global.</p>
+<p>Esto permite encontrar cantidades externas antes de estudiar el interior del proceso.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Entradas:
+    </p>
+<ul>
+<li>
+      500 kg/h.
+     </li>
+<li>
+      200 kg/h.
+     </li>
+</ul>
+<p>
+     Salidas:
+    </p>
+<ul>
+<li>
+      300 kg/h.
+     </li>
+<li>
+      400 kg/h.
+     </li>
+</ul>
+<p>
+     El balance global se cumple.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-13">
+<div class="concepto">
+<h1>13. Balances en Subsistemas</h1>
+<p>Cada subsistema debe cumplir la conservación de la masa.</p>
+<p>Para un subsistema sin reacción:</p>
+<p>\[
+\sum \text{Entradas}
+=\sum \text{Salidas}
+\]</p>
+<hr/>
+<h2>Aplicación de balances independientes</h2>
+<p>Puede plantearse:</p>
+<ul>
+<li>Un balance total.</li>
+<li>Un balance por cada componente independiente.</li>
+<li>Relaciones específicas del equipo.</li>
+</ul>
+<hr/>
+<h2>Determinación de corrientes internas</h2>
+<p>Las corrientes internas se calculan normalmente después de resolver los flujos externos.</p>
+<p>Ejemplo:</p>
+<p>Si el sistema global permite determinar el producto final, posteriormente puede analizarse un mezclador para obtener una corriente intermedia.</p>
+<hr/>
+<h2>Conservación de masa</h2>
+<p>Una corriente interna que sale de un subsistema debe ser igual a la que entra al subsistema siguiente.</p>
+<p>No debe asignarse un valor diferente a la misma corriente en dos unidades conectadas.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Después de obtener el flujo total de salida de una planta, se calcula el flujo que atraviesa únicamente un mezclador.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-14">
+<div class="concepto">
+<h1>14. Balances por Componentes</h1>
+<p>Para cada especie (i):</p>
+<p>\[
+\sum \dot m_{i,\text{entrada}}
+=\sum \dot m_{i,\text{salida}}
+\]</p>
+<p>si no hay reacción ni acumulación.</p>
+<hr/>
+<h2>Seguimiento individual de especies</h2>
+<p>Los balances por componente permiten seguir sustancias como:</p>
+<ul>
+<li>Agua.</li>
+<li>Soluto.</li>
+<li>Sólidos.</li>
+<li>Solvente.</li>
+<li>Producto.</li>
+<li>Contaminante.</li>
+</ul>
+<hr/>
+<h2>Uso de composiciones</h2>
+<p>Si se conoce la fracción másica:</p>
+<p>\[
+\dot m_i=w_i\dot m
+\]</p>
+<p>Si se conoce la fracción molar:</p>
+<p>\[
+\dot n_i=x_i\dot n
+\]</p>
+<hr/>
+<h2>Número de balances</h2>
+<p>Para una mezcla de (C) componentes, pueden escribirse hasta (C) balances por componente.</p>
+<p>Sin embargo, no todos son independientes si también se utiliza el balance total.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una corriente contiene:
+    </p>
+<ul>
+<li>
+      40% etanol.
+     </li>
+<li>
+      60% agua.
+     </li>
+</ul>
+<p>
+     El balance del etanol se realiza de forma independiente al del agua.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-15">
+<div class="concepto">
+<h1>15. Balances Independientes</h1>
+<p>Una ecuación es independiente si aporta información nueva y no puede obtenerse combinando otras ecuaciones.</p>
+<hr/>
+<h2>Evitar ecuaciones redundantes</h2>
+<p>Para una mezcla binaria sin reacción:</p>
+<ul>
+<li>Balance total.</li>
+<li>Balance del componente A.</li>
+<li>Balance del componente B.</li>
+</ul>
+<p>Solo dos de estas tres ecuaciones son independientes.</p>
+<p>Esto ocurre porque:</p>
+<p>\[
+w_A+w_B=1
+\]</p>
+<p>y el balance total puede obtenerse sumando los balances de A y B.</p>
+<hr/>
+<h2>Número adecuado de ecuaciones</h2>
+<p>Para (C) componentes no reactivos, existen normalmente (C) balances independientes si no se incluye el balance total como ecuación adicional.</p>
+<p>También puede usarse:</p>
+<ul>
+<li>Un balance total.</li>
+<li>(C-1) balances por componente.</li>
+</ul>
+<hr/>
+<h2>Resolución eficiente</h2>
+<p>No conviene escribir ecuaciones innecesarias. Esto puede generar:</p>
+<ul>
+<li>Sistemas redundantes.</li>
+<li>Cálculos repetidos.</li>
+<li>Confusión en los grados de libertad.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En un sistema con dos componentes se escriben únicamente:
+    </p>
+<ul>
+<li>
+      Balance de A.
+     </li>
+<li>
+      Balance de B.
+     </li>
+</ul>
+<p>
+     No es necesario escribir un tercer balance total si no aporta nueva información.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-16">
+<div class="concepto">
+<h1>16. Consideraciones Especiales para Splitters</h1>
+<p>Un splitter divide una corriente en varias salidas sin modificar su composición.</p>
+<hr/>
+<h2>Composición constante</h2>
+<p>Si una entrada (F) se divide en (S_1) y (S_2):</p>
+<p>\[
+w_{i,F}=w_{i,S1}=w_{i,S2}
+\]</p>
+<p>para todos los componentes.</p>
+<hr/>
+<h2>División del flujo</h2>
+<p>El balance total es:</p>
+<p>\[
+F=S_1+S_2
+\]</p>
+<p>Si existe una fracción de división (\alpha):</p>
+<p>\[
+S_1=\alpha F
+\]</p>
+<p>\[
+S_2=(1-\alpha)F
+\]</p>
+<hr/>
+<h2>Solo un balance de flujo independiente</h2>
+<p>Aunque pueden escribirse balances para cada componente, no proporcionan información adicional sobre la división si la composición ya se sabe constante.</p>
+<p>Ejemplo:</p>
+<p>\[
+Fw_A=S_1w_A+S_2w_A
+\]</p>
+<p>Al cancelar (w_A):</p>
+<p>\[
+F=S_1+S_2
+\]</p>
+<p>Por eso, en un splitter ideal los balances por componente se reducen al mismo balance total.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una corriente de 600 kg/h se divide en dos corrientes de 240 kg/h y 360 kg/h.
+    </p>
+<p>
+     Ambas conservan la misma composición.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-17">
+<div class="concepto">
+<h1>17. Identificación de Corrientes Conocidas y Desconocidas</h1>
+<p>Antes de resolver se recomienda construir una tabla.</p>
+<table>
+<thead>
+<tr>
+<th>Corriente</th>
+<th style="text-align: right;">Caudal</th>
+<th>Composición</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(F_1)</td>
+<td style="text-align: right;">Conocido</td>
+<td>Conocida</td>
+<td>Entrada</td>
+</tr>
+<tr>
+<td>(F_2)</td>
+<td style="text-align: right;">Desconocido</td>
+<td>Conocida</td>
+<td>Entrada</td>
+</tr>
+<tr>
+<td>(P)</td>
+<td style="text-align: right;">Desconocido</td>
+<td>Desconocida</td>
+<td>Salida</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2>Variables conocidas</h2>
+<p>Pueden ser:</p>
+<ul>
+<li>Caudales.</li>
+<li>Composiciones.</li>
+<li>Recuperaciones.</li>
+<li>Porcentajes.</li>
+<li>Relaciones entre corrientes.</li>
+<li>Concentraciones.</li>
+</ul>
+<hr/>
+<h2>Variables por determinar</h2>
+<p>Pueden incluir:</p>
+<ul>
+<li>Caudales internos.</li>
+<li>Composición de productos.</li>
+<li>Cantidad recirculada.</li>
+<li>Cantidad purgada.</li>
+<li>División de corrientes.</li>
+<li>Recuperación de componentes.</li>
+</ul>
+<hr/>
+<h2>Organización del problema</h2>
+<p>Una nomenclatura clara evita confusiones.</p>
+<p>Ejemplo:</p>
+<ul>
+<li>(F): alimentación.</li>
+<li>(R): recirculación.</li>
+<li>(P): producto.</li>
+<li>(W): desecho.</li>
+<li>(M): corriente mezclada.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En un proceso se conocen:
+    </p>
+<ul>
+<li>
+      Dos alimentaciones.
+     </li>
+<li>
+      Dos productos.
+     </li>
+</ul>
+<p>
+     Solo falta determinar el caudal de una corriente intermedia.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-18">
+<div class="concepto">
+<h1>18. Resolución de un Balance Global</h1>
+<p>El balance global suele ser el primer paso porque elimina todas las corrientes internas.</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>Un proceso recibe:</p>
+<p>\[
+F=1000;kg/h
+\]</p>
+<p>y produce una corriente de producto (P) y una de desecho (W).</p>
+<p>Si:</p>
+<p>\[
+W=250;kg/h
+\]</p>
+<p>entonces:</p>
+<p>\[
+F=P+W
+\]</p>
+<p>\[
+1000=P+250
+\]</p>
+<p>\[
+P=750;kg/h
+\]</p>
+<hr/>
+<h2>Uso del balance total</h2>
+<p>El balance total permite determinar caudales desconocidos cuando las demás corrientes externas son conocidas.</p>
+<hr/>
+<h2>Primer paso del análisis</h2>
+<p>Después de encontrar un flujo externo, este valor puede utilizarse en balances de subsistemas para calcular corrientes internas.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Entradas:
+    </p>
+<ul>
+<li>
+      180 kg/h.
+     </li>
+<li>
+      70 kg/h.
+     </li>
+</ul>
+<p>
+     Salidas:
+    </p>
+<ul>
+<li>
+      120 kg/h.
+     </li>
+<li>
+      50 kg/h.
+     </li>
+<li>
+      Producto desconocido.
+     </li>
+</ul>
+<p>
+     Producto:
+    </p>
+<div class="formula">
+<p>\[
+250-170=80\ kg/h
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-19">
+<div class="concepto">
+<h1>19. Determinación de la Composición de una Corriente</h1>
+<p>La composición desconocida se obtiene normalmente mediante un balance por componente.</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>Dos corrientes se mezclan:</p>
+<p>\[
+F_1=100;kg/h
+\]</p>
+<p>con:</p>
+<p>\[
+w_{A,1}=0.20
+\]</p>
+<p>y:</p>
+<p>\[
+F_2=200;kg/h
+\]</p>
+<p>con:</p>
+<p>\[
+w_{A,2}=0.50
+\]</p>
+<p>El flujo de salida es:</p>
+<p>\[
+M=100+200=300;kg/h
+\]</p>
+<p>Balance de A:</p>
+<p>\[
+100(0.20)+200(0.50)=300w_{A,M}
+\]</p>
+<p>\[
+20+100=300w_{A,M}
+\]</p>
+<p>\[
+w_{A,M}=0.40
+\]</p>
+<p>La corriente mezclada contiene 40% en masa de A.</p>
+<hr/>
+<h2>Fracciones másicas</h2>
+<p>Debe cumplirse:</p>
+<p>\[
+\sum_i w_i=1
+\]</p>
+<p>y:</p>
+<p>\[
+0\leq w_i\leq1
+\]</p>
+<hr/>
+<h2>Conservación de materia</h2>
+<p>La masa del componente en la corriente resultante debe ser igual a la suma de las masas de ese componente en las entradas.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una corriente contiene únicamente:
+    </p>
+<ul>
+<li>
+      Aceite.
+     </li>
+<li>
+      Agua.
+     </li>
+</ul>
+<p>
+     Después de resolver el balance del aceite se obtiene una composición de 35% en masa de aceite.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-20">
+<div class="concepto">
+<h1>20. Resolución Secuencial de un Proceso</h1>
+<p>La resolución secuencial consiste en avanzar de un sistema resoluble al siguiente.</p>
+<hr/>
+<h2>Paso 1: resolver el sistema global</h2>
+<p>Se determinan las corrientes externas desconocidas.</p>
+<hr/>
+<h2>Paso 2: elegir un subsistema resoluble</h2>
+<p>Se busca una unidad o grupo de unidades con cero grados de libertad.</p>
+<hr/>
+<h2>Paso 3: obtener una corriente interna</h2>
+<p>El resultado del subsistema se utiliza como dato para otra unidad.</p>
+<hr/>
+<h2>Paso 4: continuar hasta completar el proceso</h2>
+<p>El procedimiento se repite hasta calcular todas las corrientes y composiciones.</p>
+<hr/>
+<h2>Ejemplo de secuencia</h2>
+<p>\[
+\text{Mezclador}
+\rightarrow
+\text{Evaporador}
+\rightarrow
+\text{Filtro}
+\]</p>
+<p>Una posible estrategia sería:</p>
+<ol>
+<li>Balance global para calcular el producto final.</li>
+<li>Balance del filtro para encontrar la alimentación del filtro.</li>
+<li>Balance del evaporador para calcular el vapor.</li>
+<li>Balance del mezclador para obtener una alimentación desconocida.</li>
+</ol>
+<p>El orden depende de los datos disponibles, no necesariamente de la dirección física del proceso.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una planta tiene:
+    </p>
+<p>
+     1. Mezclador.
+    </p>
+<p>
+     2. Evaporador.
+    </p>
+<p>
+     3. Separador.
+    </p>
+<p>
+     Primero se determina el flujo total de salida y luego se calculan los caudales entre cada equipo.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-21">
+<div class="concepto">
+<h1>21. Validación de Resultados</h1>
+<h2>Comprobación del balance total</h2>
+<p>Debe verificarse para:</p>
+<ul>
+<li>El proceso completo.</li>
+<li>Cada unidad.</li>
+<li>Cada subsistema importante.</li>
+</ul>
+<p>\[
+\sum \text{Entradas} - \sum \text{Salidas}
+=0
+\]</p>
+<p>en estado estacionario y sin reacción.</p>
+<hr/>
+<h2>Revisión de balances por componente</h2>
+<p>Para cada especie:</p>
+<p>\[
+\sum \text{Entradas}_i - \sum \text{Salidas}_i
+=0
+\]</p>
+<hr/>
+<h2>Verificación de unidades</h2>
+<p>Todas las corrientes deben utilizar una base consistente:</p>
+<ul>
+<li>kg/h.</li>
+<li>mol/s.</li>
+<li>kmol/h.</li>
+</ul>
+<p>No debe mezclarse masa y moles sin usar peso molecular.</p>
+<hr/>
+<h2>Consistencia física</h2>
+<p>Debe comprobarse que:</p>
+<ul>
+<li>No existan caudales negativos.</li>
+<li>Las fracciones estén entre 0 y 1.</li>
+<li>Las fracciones sumen 1.</li>
+<li>La misma corriente tenga iguales datos en equipos conectados.</li>
+<li>La masa de un componente no supere la masa total.</li>
+<li>Las recuperaciones estén entre 0 y 100%.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Si la suma de las salidas es mayor que las entradas sin reacción química, existe un error en los cálculos.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-22">
+<div class="concepto">
+<h1>22. Aplicaciones Industriales</h1>
+<h2>Plantas químicas</h2>
+<p>Los sistemas de múltiples unidades se utilizan en:</p>
+<ul>
+<li>Producción de ácidos.</li>
+<li>Refinación.</li>
+<li>Fabricación de polímeros.</li>
+<li>Separación de solventes.</li>
+<li>Tratamiento de corrientes residuales.</li>
+</ul>
+<hr/>
+<h2>Procesos farmacéuticos</h2>
+<p>Incluyen:</p>
+<ul>
+<li>Mezclado de materias primas.</li>
+<li>Reacción.</li>
+<li>Cristalización.</li>
+<li>Filtración.</li>
+<li>Secado.</li>
+<li>Purificación.</li>
+</ul>
+<p>Los balances permiten controlar rendimiento, pureza y pérdidas.</p>
+<hr/>
+<h2>Industria alimentaria</h2>
+<p>Ejemplos:</p>
+<ul>
+<li>Producción de azúcar.</li>
+<li>Elaboración de leche en polvo.</li>
+<li>Concentración de jugos.</li>
+<li>Refinación de aceites.</li>
+<li>Fermentación y separación.</li>
+</ul>
+<hr/>
+<h2>Biotecnología</h2>
+<p>Aplicaciones:</p>
+<ul>
+<li>Preparación de medios.</li>
+<li>Fermentación.</li>
+<li>Separación de biomasa.</li>
+<li>Extracción de productos.</li>
+<li>Filtración.</li>
+<li>Purificación.</li>
+<li>Recirculación de células.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una planta de producción de leche en polvo integra varias operaciones (mezcla, evaporación y secado). Los balances globales permiten determinar el rendimiento del proceso antes de analizar cada equipo individualmente.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-23">
+<div class="concepto">
+<h1>23. Resumen Integrador</h1>
+<h2>Diagramas de flujo</h2>
+<p>Representan equipos y corrientes con información detallada del proceso.</p>
+<hr/>
+<h2>Diagramas de bloques</h2>
+<p>Muestran de manera simplificada las principales operaciones y conexiones.</p>
+<hr/>
+<h2>Sistema global</h2>
+<p>Incluye todas las unidades y solo considera corrientes externas.</p>
+<p>\[
+\sum \text{Entradas externas}
+=\sum \text{Salidas externas}
+\]</p>
+<hr/>
+<h2>Subsistemas</h2>
+<p>Permiten analizar unidades individuales o grupos de equipos.</p>
+<hr/>
+<h2>Grados de libertad</h2>
+<p>Determinan si una frontera puede resolverse:</p>
+<p>\[
+GDL =\text{Incógnitas}-\text{Ecuaciones independientes}
+\]</p>
+<hr/>
+<h2>Balances globales</h2>
+<p>Son útiles para calcular corrientes externas sin considerar las corrientes internas.</p>
+<hr/>
+<h2>Balances por componentes</h2>
+<p>Permiten seguir individualmente cada sustancia:</p>
+<p>\[
+\sum \text{Entrada}_i
+=\sum \text{Salida}_i
+\]</p>
+<hr/>
+<h2>Resolución secuencial</h2>
+<p>Consiste en:</p>
+<ol>
+<li>Resolver el sistema global.</li>
+<li>Seleccionar subsistemas con cero grados de libertad.</li>
+<li>Determinar corrientes internas.</li>
+<li>Continuar hasta completar el proceso.</li>
+<li>Verificar todos los resultados.</li>
+</ol>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo integrador
+    </h3>
+<p>
+     Una planta recibe dos corrientes de alimentación:
+    </p>
+<ul>
+<li>
+      250 kg/h de una solución salina.
+     </li>
+<li>
+      150 kg/h de agua.
+     </li>
+</ul>
+<p>
+     El proceso incluye un mezclador, un evaporador y un separador. Primero se realiza el balance global para determinar el flujo total de producto; posteriormente se analizan cada una de las unidades para calcular las corrientes internas y las composiciones. Esta estrategia permite resolver procesos con múltiples equipos de manera ordenada y eficiente, siguiendo la metodología presentada en la lección.
+    </p>
+</div>
+</section>
+<section id="section-24">
+<div class="concepto">
+<h1>Conclusión general</h1>
+<p>Los procesos de múltiples unidades requieren una selección cuidadosa de las fronteras de análisis. El sistema global permite simplificar inicialmente el problema al eliminar corrientes internas, mientras que los subsistemas permiten determinar los detalles de cada operación. Los diagramas de bloques y de flujo facilitan la organización de la información, y el análisis de grados de libertad permite identificar qué sistema puede resolverse. La combinación de balances totales, balances por componentes y una resolución secuencial constituye una estrategia eficaz para analizar procesos químicos, farmacéuticos, alimentarios y biotecnológicos complejos.</p>
+</div>
+</section>

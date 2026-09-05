@@ -1,0 +1,54 @@
+---
+import DocumentoLayout from "../../layouts/DocumentoLayout.astro";
+
+const archivos = import.meta.glob(
+  "../../lessons/*.html",
+  {
+    query: "?raw",
+    import: "default",
+    eager: true,
+  }
+);
+
+export function getStaticPaths() {
+  const archivos = import.meta.glob(
+    "../../lessons/*.html",
+    {
+      query: "?raw",
+      import: "default",
+      eager: true,
+    }
+  );
+
+  return Object.entries(archivos).map(([ruta, contenido]) => {
+    const nombreArchivo = ruta.split("/").pop() ?? "";
+    const nombre = nombreArchivo.replace(".html", "");
+
+    return {
+      params: {
+        nombre,
+      },
+      props: {
+        nombre,
+        contenido,
+      },
+    };
+  });
+}
+
+interface Props {
+  nombre: string;
+  contenido: string;
+}
+
+const { nombre, contenido } = Astro.props;
+
+const titulo = nombre
+  .replaceAll("-", " ")
+  .replaceAll("_", " ")
+  .replace(/\b\w/g, (letra) => letra.toUpperCase());
+---
+
+<DocumentoLayout title={titulo}>
+  <Fragment set:html={contenido} />
+</DocumentoLayout>

@@ -1,0 +1,4861 @@
+<h1>Lección 4: Balances de Materia en Unidades Simples (Sin Reacción Química)</h1>
+<section id="section-1">
+<div class="concepto">
+
+<h1>1. Introducción a los Balances en Unidades Simples</h1>
+<h2>Sistemas de una sola unidad</h2>
+<p>Una <strong>unidad simple</strong> es un equipo individual que realiza una operación física sobre una corriente de materia.</p>
+
+
+
+
+<p>Ejemplos:</p>
+<ul>
+<li>Divisor (Splitter)</li>
+<li>Mezclador (Mixer)</li>
+<li>Secador (Dryer)</li>
+<li>Evaporador (Evaporator)</li>
+</ul>
+<p>En estos equipos normalmente no ocurren reacciones químicas.</p>
+<hr/>
+<h2>Procesos sin reacción química</h2>
+<p>Cuando no existen reacciones químicas:</p>
+<p>\[
+Generación = 0
+\]</p>
+<p>\[
+Consumo = 0
+\]</p>
+<p>La ecuación general del balance queda:</p>
+<p>\[
+Entrada - Salida = Acumulación
+\]</p>
+<p>Y para estado estacionario:</p>
+<p>\[
+Entrada = Salida
+\]</p>
+<hr/>
+<h2>Aplicación de balances totales y por componentes</h2>
+<p>Se utilizan dos tipos de balances:</p>
+<h3>Balance total</h3>
+<p>Considera toda la masa.</p>
+<p>\[
+\sum m_{entrada} = \sum m_{salida}
+\]</p>
+<hr/>
+<h3>Balance por componente</h3>
+<p>Considera una sustancia específica.</p>
+<p>\[
+m_{i,entrada}=m_{i,salida}
+\]</p>
+<hr/>
+<h2>Importancia industrial</h2>
+<p>Los balances permiten:</p>
+<ul>
+<li>Diseñar equipos.</li>
+<li>Calcular producción.</li>
+<li>Estimar pérdidas.</li>
+<li>Controlar calidad.</li>
+<li>Optimizar procesos.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una corriente de 200 kg/h de solución entra a una unidad de proceso y sale sin reacción química.
+    </p>
+<div class="formula">
+<p>\[
+Entrada = Salida
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+200 = 200
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-2">
+<div class="concepto">
+<h1>2. Divisores o Splitters</h1>
+<h2>Definición</h2>
+<p>Un <strong>splitter</strong> divide una corriente de entrada en dos o más corrientes de salida.</p>
+<p>Ejemplo:</p>
+<p>\[
+F \rightarrow F_1 + F_2
+\]</p>
+<hr/>
+<h2>Características</h2>
+<ul>
+<li>No ocurre reacción química.</li>
+<li>No cambia la composición.</li>
+<li>Solo cambian los caudales.</li>
+</ul>
+<hr/>
+<h2>Ejemplo</h2>
+<p>Si una corriente contiene:</p>
+<ul>
+<li>40% agua</li>
+<li>60% etanol</li>
+</ul>
+<p>Todas las corrientes de salida tendrán:</p>
+<ul>
+<li>40% agua</li>
+<li>60% etanol</li>
+</ul>
+<hr/>
+</div>
+
+
+<div id="simulador-splitter-p5">
+  <style>
+    #simulador-splitter-p5 {
+      --azul: #2563eb;
+      --verde: #16a34a;
+      --rojo: #dc2626;
+      --fondo: #f8fafc;
+      --texto: #172033;
+      --borde: #cbd5e1;
+
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px;
+      box-sizing: border-box;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #simulador-splitter-p5 * {
+      box-sizing: border-box;
+    }
+
+    #simulador-splitter-p5 .splitter-titulo {
+      margin: 0 0 4px;
+      text-align: center;
+      font-size: clamp(20px, 3vw, 30px);
+    }
+
+    #simulador-splitter-p5 .splitter-subtitulo {
+      margin: 0 0 14px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    #simulador-splitter-p5 .splitter-controles {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    #simulador-splitter-p5 .splitter-control {
+      padding: 10px;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      background: white;
+    }
+
+    #simulador-splitter-p5 .splitter-control label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 7px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    #simulador-splitter-p5 input[type="range"] {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    #simulador-splitter-p5 .color-a {
+      color: var(--azul);
+    }
+
+    #simulador-splitter-p5 .color-b {
+      color: var(--verde);
+    }
+
+    #simulador-splitter-p5 .color-c {
+      color: var(--rojo);
+    }
+
+    #simulador-splitter-p5 .splitter-canvas {
+      width: 100%;
+      min-height: 480px;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: white;
+    }
+
+    #simulador-splitter-p5 .splitter-canvas canvas {
+      display: block;
+    }
+
+    #simulador-splitter-p5 .splitter-leyenda {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    #simulador-splitter-p5 .leyenda-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #simulador-splitter-p5 .leyenda-color {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 850px) {
+      #simulador-splitter-p5 .splitter-controles {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+      }
+    }
+
+    @media (max-width: 500px) {
+      #simulador-splitter-p5 {
+        padding: 10px;
+      }
+
+      #simulador-splitter-p5 .splitter-controles {
+        grid-template-columns: 1fr;
+      }
+
+      #simulador-splitter-p5 .splitter-canvas {
+        min-height: 560px;
+      }
+    }
+  </style>
+
+  <h2 class="splitter-titulo">Divisor de corriente — Splitter</h2>
+ 
+
+  <div class="splitter-controles">
+    <div class="splitter-control">
+      <label>
+        <span>Caudal de entrada</span>
+        <span id="sp-q-valor">100 u/h</span>
+      </label>
+      <input id="sp-q" type="range" min="20" max="200" step="1" value="100">
+    </div>
+
+    <div class="splitter-control">
+      <label>
+        <span>Fracción hacia salida 1</span>
+        <span id="sp-split-valor">40 %</span>
+      </label>
+      <input id="sp-split" type="range" min="5" max="95" step="1" value="40">
+    </div>
+
+    <div class="splitter-control">
+      <label class="color-a">
+        <span>Componente A</span>
+        <span id="sp-a-valor">40 %</span>
+      </label>
+      <input id="sp-a" type="range" min="0" max="100" step="1" value="40">
+    </div>
+
+    <div class="splitter-control">
+      <label class="color-b">
+        <span>Componente B</span>
+        <span id="sp-b-valor">35 %</span>
+      </label>
+      <input id="sp-b" type="range" min="0" max="100" step="1" value="35">
+    </div>
+
+    <div class="splitter-control">
+      <label class="color-c">
+        <span>Componente C</span>
+        <span id="sp-c-valor">25 %</span>
+      </label>
+      <input id="sp-c" type="range" min="0" max="100" step="1" value="25">
+    </div>
+  </div>
+
+  <div id="sp-canvas" class="splitter-canvas"></div>
+
+  <div class="splitter-leyenda">
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#2563eb"></span>
+      Componente A
+    </div>
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#16a34a"></span>
+      Componente B
+    </div>
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#dc2626"></span>
+      Componente C
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const raiz = document.getElementById("simulador-splitter-p5");
+      if (!raiz || raiz.dataset.iniciado === "true") return;
+      raiz.dataset.iniciado = "true";
+
+      const cargarP5 = (callback) => {
+        if (window.p5) {
+          callback();
+          return;
+        }
+
+        const scriptExistente = document.querySelector(
+          'script[data-p5-splitter="true"]'
+        );
+
+        if (scriptExistente) {
+          scriptExistente.addEventListener("load", callback, { once: true });
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js";
+        script.dataset.p5Splitter = "true";
+        script.onload = callback;
+        script.onerror = () => {
+          raiz.querySelector("#sp-canvas").innerHTML =
+            "<p style='padding:20px;color:#b91c1c'>No se pudo cargar p5.js.</p>";
+        };
+        document.head.appendChild(script);
+      };
+
+      cargarP5(() => {
+        const qSlider = raiz.querySelector("#sp-q");
+        const splitSlider = raiz.querySelector("#sp-split");
+        const aSlider = raiz.querySelector("#sp-a");
+        const bSlider = raiz.querySelector("#sp-b");
+        const cSlider = raiz.querySelector("#sp-c");
+
+        const qValor = raiz.querySelector("#sp-q-valor");
+        const splitValor = raiz.querySelector("#sp-split-valor");
+        const aValor = raiz.querySelector("#sp-a-valor");
+        const bValor = raiz.querySelector("#sp-b-valor");
+        const cValor = raiz.querySelector("#sp-c-valor");
+        const canvasContenedor = raiz.querySelector("#sp-canvas");
+
+        let actualizandoComposicion = false;
+
+        function normalizarComposicion(sliderModificado) {
+          if (actualizandoComposicion) return;
+          actualizandoComposicion = true;
+
+          let valores = [
+            Number(aSlider.value),
+            Number(bSlider.value),
+            Number(cSlider.value)
+          ];
+
+          const indice = {
+            [aSlider.id]: 0,
+            [bSlider.id]: 1,
+            [cSlider.id]: 2
+          }[sliderModificado.id];
+
+          const restante = 100 - valores[indice];
+          const otros = [0, 1, 2].filter(i => i !== indice);
+          const sumaOtros = valores[otros[0]] + valores[otros[1]];
+
+          if (sumaOtros <= 0) {
+            valores[otros[0]] = restante / 2;
+            valores[otros[1]] = restante / 2;
+          } else {
+            valores[otros[0]] =
+              restante * valores[otros[0]] / sumaOtros;
+            valores[otros[1]] =
+              restante * valores[otros[1]] / sumaOtros;
+          }
+
+          valores = valores.map(v => Math.max(0, Math.min(100, v)));
+
+          let redondeados = valores.map(v => Math.round(v));
+          const diferencia =
+            100 - redondeados.reduce((suma, valor) => suma + valor, 0);
+
+          redondeados[otros[1]] += diferencia;
+
+          aSlider.value = redondeados[0];
+          bSlider.value = redondeados[1];
+          cSlider.value = redondeados[2];
+
+          actualizandoComposicion = false;
+          actualizarTextos();
+        }
+
+        function actualizarTextos() {
+          qValor.textContent = `${Number(qSlider.value).toFixed(0)} u/h`;
+          splitValor.textContent = `${Number(splitSlider.value).toFixed(0)} %`;
+          aValor.textContent = `${Number(aSlider.value).toFixed(0)} %`;
+          bValor.textContent = `${Number(bSlider.value).toFixed(0)} %`;
+          cValor.textContent = `${Number(cSlider.value).toFixed(0)} %`;
+        }
+
+        [aSlider, bSlider, cSlider].forEach(slider => {
+          slider.addEventListener("input", () => normalizarComposicion(slider));
+        });
+
+        qSlider.addEventListener("input", actualizarTextos);
+        splitSlider.addEventListener("input", actualizarTextos);
+
+        actualizarTextos();
+
+        const sketch = p => {
+          let particulas = [];
+          let acumuladorEmision = 0;
+
+          const colores = [
+            [37, 99, 235],
+            [22, 163, 74],
+            [220, 38, 38]
+          ];
+
+          const obtenerDatos = () => {
+            const q = Number(qSlider.value);
+            const fraccion1 = Number(splitSlider.value) / 100;
+            const composicion = [
+              Number(aSlider.value) / 100,
+              Number(bSlider.value) / 100,
+              Number(cSlider.value) / 100
+            ];
+
+            return {
+              q,
+              fraccion1,
+              q1: q * fraccion1,
+              q2: q * (1 - fraccion1),
+              composicion
+            };
+          };
+
+          const elegirComponente = composicion => {
+            const r = Math.random();
+            if (r < composicion[0]) return 0;
+            if (r < composicion[0] + composicion[1]) return 1;
+            return 2;
+          };
+
+          class Particula {
+            constructor(datos) {
+              this.componente = elegirComponente(datos.composicion);
+              this.salida = Math.random() < datos.fraccion1 ? 1 : 2;
+              this.progreso = 0;
+              this.velocidad = p.random(0.0035, 0.0065);
+              this.tamano = p.random(9, 13);
+              this.desfase = p.random(-7, 7);
+            }
+
+            puntoBezier(t, p0, p1, p2, p3) {
+              const u = 1 - t;
+              return {
+                x:
+                  u * u * u * p0.x +
+                  3 * u * u * t * p1.x +
+                  3 * u * t * t * p2.x +
+                  t * t * t * p3.x,
+                y:
+                  u * u * u * p0.y +
+                  3 * u * u * t * p1.y +
+                  3 * u * t * t * p2.y +
+                  t * t * t * p3.y
+              };
+            }
+
+            posicion(geometria) {
+              const tEntrada = 0.55;
+
+              if (this.progreso <= tEntrada) {
+                const t = this.progreso / tEntrada;
+                return {
+                  x: p.lerp(geometria.inicioX, geometria.splitterX, t),
+                  y: geometria.centroY + this.desfase
+                };
+              }
+
+              const t = (this.progreso - tEntrada) / (1 - tEntrada);
+              const destinoY =
+                this.salida === 1
+                  ? geometria.salida1Y
+                  : geometria.salida2Y;
+
+              return this.puntoBezier(
+                t,
+                { x: geometria.splitterX, y: geometria.centroY },
+                {
+                  x: geometria.splitterX + geometria.ancho * 0.11,
+                  y: geometria.centroY
+                },
+                {
+                  x: geometria.finX - geometria.ancho * 0.18,
+                  y: destinoY
+                },
+                { x: geometria.finX, y: destinoY }
+              );
+            }
+
+            actualizar() {
+              this.progreso += this.velocidad;
+            }
+
+            dibujar(geometria) {
+              const pos = this.posicion(geometria);
+              const color = colores[this.componente];
+
+              p.noStroke();
+              p.fill(color[0], color[1], color[2], 235);
+              p.circle(pos.x, pos.y, this.tamano);
+
+              p.fill(255, 255, 255, 75);
+              p.circle(
+                pos.x - this.tamano * 0.17,
+                pos.y - this.tamano * 0.17,
+                this.tamano * 0.3
+              );
+            }
+
+            termino() {
+              return this.progreso > 1.03;
+            }
+          }
+
+          function geometriaActual() {
+            const ancho = p.width;
+            const alto = p.height;
+
+            return {
+              ancho,
+              alto,
+              inicioX: ancho * 0.045,
+              splitterX: ancho * 0.44,
+              splitterAncho: Math.max(95, ancho * 0.12),
+              finX: ancho * 0.94,
+              centroY: alto * 0.51,
+              salida1Y: alto * 0.25,
+              salida2Y: alto * 0.77
+            };
+          }
+
+          function dibujarTuberia(geometria) {
+            const grosorExterior = Math.max(18, p.width * 0.021);
+            const grosorInterior = Math.max(10, p.width * 0.012);
+
+            p.noFill();
+            p.strokeCap(p.ROUND);
+
+            p.stroke(148, 163, 184);
+            p.strokeWeight(grosorExterior);
+            p.line(
+              geometria.inicioX,
+              geometria.centroY,
+              geometria.splitterX,
+              geometria.centroY
+            );
+
+            dibujarRama(geometria, geometria.salida1Y, grosorExterior);
+            dibujarRama(geometria, geometria.salida2Y, grosorExterior);
+
+            p.stroke(255);
+            p.strokeWeight(grosorInterior);
+            p.line(
+              geometria.inicioX,
+              geometria.centroY,
+              geometria.splitterX,
+              geometria.centroY
+            );
+
+            dibujarRama(geometria, geometria.salida1Y, grosorInterior);
+            dibujarRama(geometria, geometria.salida2Y, grosorInterior);
+          }
+
+          function dibujarRama(geometria, destinoY, grosor) {
+            p.bezier(
+              geometria.splitterX,
+              geometria.centroY,
+              geometria.splitterX + geometria.ancho * 0.11,
+              geometria.centroY,
+              geometria.finX - geometria.ancho * 0.18,
+              destinoY,
+              geometria.finX,
+              destinoY
+            );
+          }
+
+          function dibujarSplitter(geometria) {
+            const x =
+              geometria.splitterX - geometria.splitterAncho * 0.48;
+            const y = geometria.centroY - 64;
+            const w = geometria.splitterAncho;
+            const h = 128;
+
+            p.stroke(71, 85, 105);
+            p.strokeWeight(2);
+            p.fill(241, 245, 249);
+            p.rect(x, y, w, h, 8);
+
+            p.noStroke();
+            p.fill(23, 32, 51);
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(16, p.width * 0.019));
+            p.text("SPLITTER", x + w / 2, y + h / 2 - 9);
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(10, p.width * 0.011));
+            p.fill(100, 116, 139);
+            p.text("Sin reacción", x + w / 2, y + h / 2 + 17);
+          }
+
+          function textoCorriente(
+            titulo,
+            caudal,
+            composicion,
+            x,
+            y,
+            alineacion
+          ) {
+            p.noStroke();
+            p.textAlign(alineacion, p.BOTTOM);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(14, p.width * 0.017));
+            p.fill(23, 32, 51);
+            p.text(`${titulo}: ${caudal.toFixed(1)} u/h`, x, y);
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(10, p.width * 0.0115));
+
+            const texto =
+              `A: ${(composicion[0] * 100).toFixed(0)} %  |  ` +
+              `B: ${(composicion[1] * 100).toFixed(0)} %  |  ` +
+              `C: ${(composicion[2] * 100).toFixed(0)} %`;
+
+            p.fill(100, 116, 139);
+            p.text(texto, x, y + 22);
+          }
+
+          function dibujarInformacion(geometria, datos) {
+            textoCorriente(
+              "Entrada",
+              datos.q,
+              datos.composicion,
+              geometria.inicioX,
+              geometria.centroY - 34,
+              p.LEFT
+            );
+
+            textoCorriente(
+              "Salida 1",
+              datos.q1,
+              datos.composicion,
+              geometria.finX,
+              geometria.salida1Y - 34,
+              p.RIGHT
+            );
+
+            textoCorriente(
+              "Salida 2",
+              datos.q2,
+              datos.composicion,
+              geometria.finX,
+              geometria.salida2Y - 34,
+              p.RIGHT
+            );
+
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(13, p.width * 0.014));
+            p.fill(30, 64, 175);
+            p.text(
+              `Qentrada = Q1 + Q2`,
+              geometria.ancho / 2,
+              geometria.alto - 48
+            );
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(11, p.width * 0.012));
+            p.fill(71, 85, 105);
+            p.text(
+              `${datos.q.toFixed(1)} = ${datos.q1.toFixed(1)} + ${datos.q2.toFixed(1)} u/h`,
+              geometria.ancho / 2,
+              geometria.alto - 27
+            );
+          }
+
+          p.setup = () => {
+            const ancho = Math.max(320, canvasContenedor.clientWidth);
+            const alto = ancho < 600 ? 560 : 480;
+            const canvas = p.createCanvas(ancho, alto);
+            canvas.parent(canvasContenedor);
+            p.pixelDensity(Math.min(window.devicePixelRatio || 1, 2));
+          };
+
+          p.draw = () => {
+            p.background(255);
+
+            const geometria = geometriaActual();
+            const datos = obtenerDatos();
+
+            dibujarTuberia(geometria);
+            dibujarSplitter(geometria);
+
+            const emisionesPorSegundo = p.map(datos.q, 20, 200, 4, 24);
+            acumuladorEmision += emisionesPorSegundo / 60;
+
+            while (acumuladorEmision >= 1) {
+              particulas.push(new Particula(datos));
+              acumuladorEmision -= 1;
+            }
+
+            particulas.forEach(particula => {
+              particula.actualizar();
+              particula.dibujar(geometria);
+            });
+
+            particulas = particulas.filter(particula => !particula.termino());
+
+            if (particulas.length > 350) {
+              particulas.splice(0, particulas.length - 350);
+            }
+
+            dibujarInformacion(geometria, datos);
+          };
+
+          p.windowResized = () => {
+            const ancho = Math.max(320, canvasContenedor.clientWidth);
+            const alto = ancho < 600 ? 560 : 480;
+            p.resizeCanvas(ancho, alto);
+          };
+        };
+
+        new p5(sketch);
+      });
+    })();
+  </script>
+</div>
+<hr/>
+</section>
+<section id="section-3">
+<div class="concepto">
+<h1>3. Balance Total en un Splitter</h1>
+<p>La conservación de masa establece:</p>
+<p>\[
+F=F_1+F_2+F_3+\cdots
+\]</p>
+<p>donde:</p>
+<ul>
+<li>\(F\) = flujo de entrada</li>
+<li>\(F_i\) = flujos de salida</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Entrada:
+    </p>
+<div class="formula">
+<p>\[
+900\ kg/h
+\]</p>
+</div>
+<p>
+     Salida 1:
+    </p>
+<div class="formula">
+<p>\[
+250\ kg/h
+\]</p>
+</div>
+<p>
+     Calcular salida 2:
+    </p>
+<div class="formula">
+<p>\[
+900=250+F_2
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+F_2=650\ kg/h
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-4">
+<div class="concepto">
+<h1>4. Conservación de la Composición en un Splitter</h1>
+<p>La composición permanece constante.</p>
+<p>Para cualquier componente \(A\):</p>
+<p>\[
+x_{A,entrada}=x_{A,salida}
+\]</p>
+<p>o</p>
+<p>\[
+w_{A,entrada}=w_{A,salida}
+\]</p>
+<hr/>
+<h2>Razón física</h2>
+<p>No existe:</p>
+<ul>
+<li>separación</li>
+<li>reacción</li>
+<li>evaporación</li>
+</ul>
+<p>Simplemente se divide el flujo.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Alimento:
+    </p>
+<ul>
+<li>
+      30% proteína
+     </li>
+<li>
+      70% agua
+     </li>
+</ul>
+<p>
+     Después de dividir la corriente:
+    </p>
+<p>
+     Ambas salidas siguen siendo:
+    </p>
+<ul>
+<li>
+      30% proteína
+     </li>
+<li>
+      70% agua
+     </li>
+</ul>
+</div>
+<hr/>
+</section>
+<section id="section-5">
+<div class="concepto">
+<h1>5. Cálculo de Componentes en Corrientes Divididas</h1>
+<h2>Distribución proporcional</h2>
+<p>Para un componente \(A\):</p>
+<p>\[
+m_A=w_AF
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Corriente:
+    </p>
+<div class="formula">
+<p>\[
+400\ kg/h
+\]</p>
+</div>
+<p>
+     Composición:
+    </p>
+<ul>
+<li>
+      25% azúcar
+     </li>
+</ul>
+<p>
+     Azúcar total:
+    </p>
+<div class="formula">
+<p>\[
+400\times0.25=100\ kg/h
+\]</p>
+</div>
+<p>
+     Si se divide en dos corrientes iguales:
+    </p>
+<div class="formula">
+<p>\[
+50\ kg/h
+\]</p>
+</div>
+<p>
+     de azúcar en cada una.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-6">
+<div class="concepto">
+<h1>6. Procedimiento para Resolver Problemas con Splitters</h1>
+<h3>Paso 1</h3>
+<p>Dibujar el equipo.</p>
+<h3>Paso 2</h3>
+<p>Identificar corrientes.</p>
+<h3>Paso 3</h3>
+<p>Aplicar:</p>
+<p>\[
+F=F_1+F_2
+\]</p>
+<h3>Paso 4</h3>
+<p>Aplicar conservación de composición.</p>
+<h3>Paso 5</h3>
+<p>Calcular componentes.</p>
+<h3>Paso 6</h3>
+<p>Verificar balances.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una corriente de:
+    </p>
+<div class="formula">
+<p>\[
+1000\ kg/h
+\]</p>
+</div>
+<p>
+     se divide:
+    </p>
+<ul>
+<li>
+      40% a línea A
+     </li>
+<li>
+      60% a línea B
+     </li>
+</ul>
+<div class="formula">
+<p>\[
+A=400\ kg/h
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+B=600\ kg/h
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-7">
+<div class="concepto">
+<h1>7. Mezcladores (Mixers)</h1>
+<h2>Definición</h2>
+<p>Un mezclador combina varias corrientes de entrada en una sola corriente de salida.</p>
+<p>\[
+F_1+F_2+F_3 \rightarrow F
+\]</p>
+<hr/>
+<h2>Características</h2>
+<ul>
+<li>Mezcla física.</li>
+<li>No hay reacción.</li>
+<li>La composición final depende de todas las entradas.</li>
+</ul>
+<hr/>
+</div>
+
+<div id="simulador-mixer-p5">
+  <style>
+    #simulador-mixer-p5 {
+      --azul: #2563eb;
+      --verde: #16a34a;
+      --rojo: #dc2626;
+      --fondo: #f8fafc;
+      --texto: #172033;
+      --borde: #cbd5e1;
+
+      width: 100%;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 16px;
+      box-sizing: border-box;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #simulador-mixer-p5 * {
+      box-sizing: border-box;
+    }
+
+    #simulador-mixer-p5 .mixer-titulo {
+      margin: 0 0 4px;
+      text-align: center;
+      font-size: clamp(20px, 3vw, 30px);
+    }
+
+    #simulador-mixer-p5 .mixer-subtitulo {
+      margin: 0 0 14px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    #simulador-mixer-p5 .mixer-paneles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    #simulador-mixer-p5 .mixer-panel {
+      padding: 12px;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: white;
+    }
+
+    #simulador-mixer-p5 .mixer-panel h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #334155;
+    }
+
+    #simulador-mixer-p5 .mixer-controles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(130px, 1fr));
+      gap: 10px;
+    }
+
+    #simulador-mixer-p5 .mixer-control {
+      padding: 9px;
+      border: 1px solid #e2e8f0;
+      border-radius: 9px;
+      background: #f8fafc;
+    }
+
+    #simulador-mixer-p5 .mixer-control label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    #simulador-mixer-p5 input[type="range"] {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    #simulador-mixer-p5 .color-a {
+      color: var(--azul);
+    }
+
+    #simulador-mixer-p5 .color-b {
+      color: var(--verde);
+    }
+
+    #simulador-mixer-p5 .color-c {
+      color: var(--rojo);
+    }
+
+    #simulador-mixer-p5 .mixer-canvas {
+      width: 100%;
+      min-height: 500px;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: white;
+    }
+
+    #simulador-mixer-p5 .mixer-canvas canvas {
+      display: block;
+    }
+
+    #simulador-mixer-p5 .mixer-leyenda {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    #simulador-mixer-p5 .leyenda-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #simulador-mixer-p5 .leyenda-color {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 850px) {
+      #simulador-mixer-p5 .mixer-paneles {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      #simulador-mixer-p5 {
+        padding: 10px;
+      }
+
+      #simulador-mixer-p5 .mixer-controles {
+        grid-template-columns: 1fr;
+      }
+
+      #simulador-mixer-p5 .mixer-canvas {
+        min-height: 620px;
+      }
+    }
+  </style>
+
+  <h2 class="mixer-titulo">Mezclador de corrientes — Mixer</h2>
+
+
+  <div class="mixer-paneles">
+    <div class="mixer-panel">
+      <h3>Corriente de entrada 1</h3>
+
+      <div class="mixer-controles">
+        <div class="mixer-control">
+          <label>
+            <span>Caudal Q1</span>
+            <span id="mx-q1-valor">60 u/h</span>
+          </label>
+          <input id="mx-q1" type="range" min="5" max="150" step="1" value="60">
+        </div>
+
+        <div class="mixer-control">
+          <label class="color-a">
+            <span>Componente A</span>
+            <span id="mx-a1-valor">60 %</span>
+          </label>
+          <input id="mx-a1" type="range" min="0" max="100" step="1" value="60">
+        </div>
+
+        <div class="mixer-control">
+          <label class="color-b">
+            <span>Componente B</span>
+            <span id="mx-b1-valor">30 %</span>
+          </label>
+          <input id="mx-b1" type="range" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="mixer-control">
+          <label class="color-c">
+            <span>Componente C</span>
+            <span id="mx-c1-valor">10 %</span>
+          </label>
+          <input id="mx-c1" type="range" min="0" max="100" step="1" value="10">
+        </div>
+      </div>
+    </div>
+
+    <div class="mixer-panel">
+      <h3>Corriente de entrada 2</h3>
+
+      <div class="mixer-controles">
+        <div class="mixer-control">
+          <label>
+            <span>Caudal Q2</span>
+            <span id="mx-q2-valor">40 u/h</span>
+          </label>
+          <input id="mx-q2" type="range" min="5" max="150" step="1" value="40">
+        </div>
+
+        <div class="mixer-control">
+          <label class="color-a">
+            <span>Componente A</span>
+            <span id="mx-a2-valor">10 %</span>
+          </label>
+          <input id="mx-a2" type="range" min="0" max="100" step="1" value="10">
+        </div>
+
+        <div class="mixer-control">
+          <label class="color-b">
+            <span>Componente B</span>
+            <span id="mx-b2-valor">30 %</span>
+          </label>
+          <input id="mx-b2" type="range" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div class="mixer-control">
+          <label class="color-c">
+            <span>Componente C</span>
+            <span id="mx-c2-valor">60 %</span>
+          </label>
+          <input id="mx-c2" type="range" min="0" max="100" step="1" value="60">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mx-canvas" class="mixer-canvas"></div>
+
+  <div class="mixer-leyenda">
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#2563eb"></span>
+      Componente A
+    </div>
+
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#16a34a"></span>
+      Componente B
+    </div>
+
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#dc2626"></span>
+      Componente C
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const raiz = document.getElementById("simulador-mixer-p5");
+
+      if (!raiz || raiz.dataset.iniciado === "true") return;
+
+      raiz.dataset.iniciado = "true";
+
+      function cargarP5(callback) {
+        if (window.p5) {
+          callback();
+          return;
+        }
+
+        const scriptExistente = document.querySelector(
+          'script[data-p5-mixer="true"]'
+        );
+
+        if (scriptExistente) {
+          scriptExistente.addEventListener("load", callback, { once: true });
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.src =
+          "https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js";
+        script.dataset.p5Mixer = "true";
+
+        script.onload = callback;
+
+        script.onerror = () => {
+          raiz.querySelector("#mx-canvas").innerHTML =
+            "<p style='padding:20px;color:#b91c1c'>No se pudo cargar p5.js.</p>";
+        };
+
+        document.head.appendChild(script);
+      }
+
+      cargarP5(() => {
+        const q1Slider = raiz.querySelector("#mx-q1");
+        const q2Slider = raiz.querySelector("#mx-q2");
+
+        const a1Slider = raiz.querySelector("#mx-a1");
+        const b1Slider = raiz.querySelector("#mx-b1");
+        const c1Slider = raiz.querySelector("#mx-c1");
+
+        const a2Slider = raiz.querySelector("#mx-a2");
+        const b2Slider = raiz.querySelector("#mx-b2");
+        const c2Slider = raiz.querySelector("#mx-c2");
+
+        const q1Valor = raiz.querySelector("#mx-q1-valor");
+        const q2Valor = raiz.querySelector("#mx-q2-valor");
+
+        const a1Valor = raiz.querySelector("#mx-a1-valor");
+        const b1Valor = raiz.querySelector("#mx-b1-valor");
+        const c1Valor = raiz.querySelector("#mx-c1-valor");
+
+        const a2Valor = raiz.querySelector("#mx-a2-valor");
+        const b2Valor = raiz.querySelector("#mx-b2-valor");
+        const c2Valor = raiz.querySelector("#mx-c2-valor");
+
+        const canvasContenedor = raiz.querySelector("#mx-canvas");
+
+        let actualizando = false;
+
+        function normalizarGrupo(sliderModificado, sliders) {
+          if (actualizando) return;
+
+          actualizando = true;
+
+          let valores = sliders.map(slider => Number(slider.value));
+          const indice = sliders.indexOf(sliderModificado);
+          const otros = [0, 1, 2].filter(i => i !== indice);
+
+          const restante = 100 - valores[indice];
+          const sumaOtros =
+            valores[otros[0]] + valores[otros[1]];
+
+          if (sumaOtros <= 0) {
+            valores[otros[0]] = restante / 2;
+            valores[otros[1]] = restante / 2;
+          } else {
+            valores[otros[0]] =
+              restante * valores[otros[0]] / sumaOtros;
+
+            valores[otros[1]] =
+              restante * valores[otros[1]] / sumaOtros;
+          }
+
+          let redondeados = valores.map(valor =>
+            Math.max(0, Math.min(100, Math.round(valor)))
+          );
+
+          const diferencia =
+            100 - redondeados.reduce((suma, valor) => suma + valor, 0);
+
+          redondeados[otros[1]] += diferencia;
+
+          sliders.forEach((slider, i) => {
+            slider.value = redondeados[i];
+          });
+
+          actualizando = false;
+          actualizarTextos();
+        }
+
+        function actualizarTextos() {
+          q1Valor.textContent = `${Number(q1Slider.value).toFixed(0)} u/h`;
+          q2Valor.textContent = `${Number(q2Slider.value).toFixed(0)} u/h`;
+
+          a1Valor.textContent = `${Number(a1Slider.value).toFixed(0)} %`;
+          b1Valor.textContent = `${Number(b1Slider.value).toFixed(0)} %`;
+          c1Valor.textContent = `${Number(c1Slider.value).toFixed(0)} %`;
+
+          a2Valor.textContent = `${Number(a2Slider.value).toFixed(0)} %`;
+          b2Valor.textContent = `${Number(b2Slider.value).toFixed(0)} %`;
+          c2Valor.textContent = `${Number(c2Slider.value).toFixed(0)} %`;
+        }
+
+        [a1Slider, b1Slider, c1Slider].forEach(slider => {
+          slider.addEventListener("input", () => {
+            normalizarGrupo(
+              slider,
+              [a1Slider, b1Slider, c1Slider]
+            );
+          });
+        });
+
+        [a2Slider, b2Slider, c2Slider].forEach(slider => {
+          slider.addEventListener("input", () => {
+            normalizarGrupo(
+              slider,
+              [a2Slider, b2Slider, c2Slider]
+            );
+          });
+        });
+
+        q1Slider.addEventListener("input", actualizarTextos);
+        q2Slider.addEventListener("input", actualizarTextos);
+
+        actualizarTextos();
+
+        const sketch = p => {
+          let particulas = [];
+          let acumulador1 = 0;
+          let acumulador2 = 0;
+
+          const colores = [
+            [37, 99, 235],
+            [22, 163, 74],
+            [220, 38, 38]
+          ];
+
+          function obtenerDatos() {
+            const q1 = Number(q1Slider.value);
+            const q2 = Number(q2Slider.value);
+            const qSalida = q1 + q2;
+
+            const composicion1 = [
+              Number(a1Slider.value) / 100,
+              Number(b1Slider.value) / 100,
+              Number(c1Slider.value) / 100
+            ];
+
+            const composicion2 = [
+              Number(a2Slider.value) / 100,
+              Number(b2Slider.value) / 100,
+              Number(c2Slider.value) / 100
+            ];
+
+            const composicionSalida = [
+              (
+                q1 * composicion1[0] +
+                q2 * composicion2[0]
+              ) / qSalida,
+
+              (
+                q1 * composicion1[1] +
+                q2 * composicion2[1]
+              ) / qSalida,
+
+              (
+                q1 * composicion1[2] +
+                q2 * composicion2[2]
+              ) / qSalida
+            ];
+
+            return {
+              q1,
+              q2,
+              qSalida,
+              composicion1,
+              composicion2,
+              composicionSalida
+            };
+          }
+
+          function elegirComponente(composicion) {
+            const r = Math.random();
+
+            if (r < composicion[0]) return 0;
+
+            if (r < composicion[0] + composicion[1]) return 1;
+
+            return 2;
+          }
+
+          function puntoBezier(t, p0, p1, p2, p3) {
+            const u = 1 - t;
+
+            return {
+              x:
+                u * u * u * p0.x +
+                3 * u * u * t * p1.x +
+                3 * u * t * t * p2.x +
+                t * t * t * p3.x,
+
+              y:
+                u * u * u * p0.y +
+                3 * u * u * t * p1.y +
+                3 * u * t * t * p2.y +
+                t * t * t * p3.y
+            };
+          }
+
+          class Particula {
+            constructor(entrada, composicion) {
+              this.entrada = entrada;
+              this.componente = elegirComponente(composicion);
+              this.progreso = 0;
+              this.velocidad = p.random(0.0035, 0.006);
+              this.tamano = p.random(9, 13);
+              this.desfase = p.random(-6, 6);
+            }
+
+            posicion(geometria) {
+              const puntoUnion = 0.58;
+
+              if (this.progreso <= puntoUnion) {
+                const t = this.progreso / puntoUnion;
+
+                const inicioY =
+                  this.entrada === 1
+                    ? geometria.entrada1Y
+                    : geometria.entrada2Y;
+
+                return puntoBezier(
+                  t,
+                  {
+                    x: geometria.inicioX,
+                    y: inicioY + this.desfase
+                  },
+                  {
+                    x: geometria.ancho * 0.28,
+                    y: inicioY + this.desfase
+                  },
+                  {
+                    x: geometria.mixerX - geometria.ancho * 0.08,
+                    y: geometria.centroY + this.desfase
+                  },
+                  {
+                    x: geometria.mixerX,
+                    y: geometria.centroY + this.desfase
+                  }
+                );
+              }
+
+              const t =
+                (this.progreso - puntoUnion) /
+                (1 - puntoUnion);
+
+              return {
+                x: p.lerp(
+                  geometria.mixerX,
+                  geometria.finX,
+                  t
+                ),
+
+                y: geometria.centroY + this.desfase
+              };
+            }
+
+            actualizar() {
+              this.progreso += this.velocidad;
+            }
+
+            dibujar(geometria) {
+              const pos = this.posicion(geometria);
+              const color = colores[this.componente];
+
+              p.noStroke();
+              p.fill(color[0], color[1], color[2], 235);
+              p.circle(pos.x, pos.y, this.tamano);
+
+              p.fill(255, 255, 255, 75);
+              p.circle(
+                pos.x - this.tamano * 0.17,
+                pos.y - this.tamano * 0.17,
+                this.tamano * 0.3
+              );
+            }
+
+            termino() {
+              return this.progreso > 1.03;
+            }
+          }
+
+          function geometriaActual() {
+            return {
+              ancho: p.width,
+              alto: p.height,
+              inicioX: p.width * 0.055,
+              mixerX: p.width * 0.48,
+              finX: p.width * 0.94,
+              centroY: p.height * 0.5,
+              entrada1Y: p.height * 0.27,
+              entrada2Y: p.height * 0.73,
+              mixerAncho: Math.max(100, p.width * 0.12),
+              mixerAlto: 130
+            };
+          }
+
+          function dibujarTuberias(geometria) {
+            const grosorExterior = Math.max(18, p.width * 0.021);
+            const grosorInterior = Math.max(10, p.width * 0.012);
+
+            p.noFill();
+            p.strokeCap(p.ROUND);
+
+            p.stroke(148, 163, 184);
+            p.strokeWeight(grosorExterior);
+
+            dibujarEntrada(
+              geometria,
+              geometria.entrada1Y
+            );
+
+            dibujarEntrada(
+              geometria,
+              geometria.entrada2Y
+            );
+
+            p.line(
+              geometria.mixerX,
+              geometria.centroY,
+              geometria.finX,
+              geometria.centroY
+            );
+
+            p.stroke(255);
+            p.strokeWeight(grosorInterior);
+
+            dibujarEntrada(
+              geometria,
+              geometria.entrada1Y
+            );
+
+            dibujarEntrada(
+              geometria,
+              geometria.entrada2Y
+            );
+
+            p.line(
+              geometria.mixerX,
+              geometria.centroY,
+              geometria.finX,
+              geometria.centroY
+            );
+          }
+
+          function dibujarEntrada(geometria, inicioY) {
+            p.bezier(
+              geometria.inicioX,
+              inicioY,
+              geometria.ancho * 0.28,
+              inicioY,
+              geometria.mixerX - geometria.ancho * 0.08,
+              geometria.centroY,
+              geometria.mixerX,
+              geometria.centroY
+            );
+          }
+
+          function dibujarMixer(geometria) {
+            const x =
+              geometria.mixerX -
+              geometria.mixerAncho * 0.48;
+
+            const y =
+              geometria.centroY -
+              geometria.mixerAlto / 2;
+
+            p.stroke(71, 85, 105);
+            p.strokeWeight(2);
+            p.fill(241, 245, 249);
+
+            p.rect(
+              x,
+              y,
+              geometria.mixerAncho,
+              geometria.mixerAlto,
+              8
+            );
+
+            p.noStroke();
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(16, p.width * 0.018));
+            p.fill(23, 32, 51);
+
+            p.text(
+              "MIXER",
+              x + geometria.mixerAncho / 2,
+              y + geometria.mixerAlto / 2 - 10
+            );
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(10, p.width * 0.011));
+            p.fill(100, 116, 139);
+
+            p.text(
+              "Mezcla completa",
+              x + geometria.mixerAncho / 2,
+              y + geometria.mixerAlto / 2 + 18
+            );
+          }
+
+          function textoCorriente(
+            titulo,
+            caudal,
+            composicion,
+            x,
+            y,
+            alineacion
+          ) {
+            p.noStroke();
+            p.textAlign(alineacion, p.BOTTOM);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(13, p.width * 0.016));
+            p.fill(23, 32, 51);
+
+            p.text(
+              `${titulo}: ${caudal.toFixed(1)} u/h`,
+              x,
+              y
+            );
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(9, p.width * 0.0105));
+            p.fill(100, 116, 139);
+
+            const texto =
+              `A: ${(composicion[0] * 100).toFixed(1)} %  |  ` +
+              `B: ${(composicion[1] * 100).toFixed(1)} %  |  ` +
+              `C: ${(composicion[2] * 100).toFixed(1)} %`;
+
+            p.text(texto, x, y + 21);
+          }
+
+          function dibujarInformacion(geometria, datos) {
+            textoCorriente(
+              "Entrada 1",
+              datos.q1,
+              datos.composicion1,
+              geometria.inicioX,
+              geometria.entrada1Y - 38,
+              p.LEFT
+            );
+
+            textoCorriente(
+              "Entrada 2",
+              datos.q2,
+              datos.composicion2,
+              geometria.inicioX,
+              geometria.entrada2Y - 38,
+              p.LEFT
+            );
+
+            textoCorriente(
+              "Salida",
+              datos.qSalida,
+              datos.composicionSalida,
+              geometria.finX,
+              geometria.centroY - 38,
+              p.RIGHT
+            );
+
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(13, p.width * 0.014));
+            p.fill(30, 64, 175);
+
+            p.text(
+              "Qsalida = Q1 + Q2",
+              geometria.ancho / 2,
+              geometria.alto - 58
+            );
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(11, p.width * 0.012));
+            p.fill(71, 85, 105);
+
+            p.text(
+              `${datos.qSalida.toFixed(1)} = ` +
+              `${datos.q1.toFixed(1)} + ` +
+              `${datos.q2.toFixed(1)} u/h`,
+              geometria.ancho / 2,
+              geometria.alto - 36
+            );
+
+            p.textSize(Math.max(9, p.width * 0.0105));
+
+            p.text(
+              "xi,salida = " +
+              "(Q1·xi,1 + Q2·xi,2) / (Q1 + Q2)",
+              geometria.ancho / 2,
+              geometria.alto - 16
+            );
+          }
+
+          p.setup = () => {
+            const ancho = Math.max(
+              320,
+              canvasContenedor.clientWidth
+            );
+
+            const alto = ancho < 600 ? 620 : 500;
+
+            const canvas = p.createCanvas(ancho, alto);
+            canvas.parent(canvasContenedor);
+
+            p.pixelDensity(
+              Math.min(window.devicePixelRatio || 1, 2)
+            );
+          };
+
+          p.draw = () => {
+            p.background(255);
+
+            const geometria = geometriaActual();
+            const datos = obtenerDatos();
+
+            dibujarTuberias(geometria);
+            dibujarMixer(geometria);
+
+            const emisiones1 = p.map(
+              datos.q1,
+              5,
+              150,
+              2,
+              18
+            );
+
+            const emisiones2 = p.map(
+              datos.q2,
+              5,
+              150,
+              2,
+              18
+            );
+
+            acumulador1 += emisiones1 / 60;
+            acumulador2 += emisiones2 / 60;
+
+            while (acumulador1 >= 1) {
+              particulas.push(
+                new Particula(
+                  1,
+                  datos.composicion1
+                )
+              );
+
+              acumulador1 -= 1;
+            }
+
+            while (acumulador2 >= 1) {
+              particulas.push(
+                new Particula(
+                  2,
+                  datos.composicion2
+                )
+              );
+
+              acumulador2 -= 1;
+            }
+
+            particulas.forEach(particula => {
+              particula.actualizar();
+              particula.dibujar(geometria);
+            });
+
+            particulas = particulas.filter(
+              particula => !particula.termino()
+            );
+
+            if (particulas.length > 400) {
+              particulas.splice(
+                0,
+                particulas.length - 400
+              );
+            }
+
+            dibujarInformacion(geometria, datos);
+          };
+
+          p.windowResized = () => {
+            const ancho = Math.max(
+              320,
+              canvasContenedor.clientWidth
+            );
+
+            const alto = ancho < 600 ? 620 : 500;
+
+            p.resizeCanvas(ancho, alto);
+          };
+        };
+
+        new p5(sketch);
+      });
+    })();
+  </script>
+</div>
+<hr/>
+</section>
+<section id="section-8">
+<div class="concepto">
+<h1>8. Balance Total en un Mezclador</h1>
+<p>En estado estacionario:</p>
+<p>\[
+F=F_1+F_2+F_3
+\]</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>\[
+100+200+300=600kg/h
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Entradas:
+    </p>
+<div class="formula">
+<p>\[
+250\ kg/h
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+350\ kg/h
+\]</p>
+</div>
+<p>
+     Salida:
+    </p>
+<div class="formula">
+<p>\[
+600\ kg/h
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-9">
+<div class="concepto">
+<h1>9. Balances por Componentes en un Mezclador</h1>
+<p>Para cada componente:</p>
+<p>\[
+m_{i,salida}=m_{i,1}+m_{i,2}+m_{i,3}
+\]</p>
+<hr/>
+<h2>Número de ecuaciones independientes</h2>
+<p>Si existen \(n\) componentes:</p>
+<p>\[
+n
+\]</p>
+<p>balances independientes.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Corriente 1:
+    </p>
+<div class="formula">
+<p>\[
+100\ kg/h
+\]</p>
+</div>
+<p>
+     con 40% de sal.
+    </p>
+<p>
+     Corriente 2:
+    </p>
+<div class="formula">
+<p>\[
+200\ kg/h
+\]</p>
+</div>
+<p>
+     sin sal.
+    </p>
+<p>
+     Sal total:
+    </p>
+<div class="formula">
+<p>\[
+40\ kg/h
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-10">
+<div class="concepto">
+<h1>10. Determinación de Composición de Mezclas</h1>
+<h2>Uso de balances por componentes</h2>
+<p>Primero se calcula la masa total de cada componente.</p>
+<p>Posteriormente:</p>
+<p>\[
+w_i=\frac{m_i}{m_{total}}
+\]</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>Agua:</p>
+<p>\[
+300kg/h
+\]</p>
+<p>Sal:</p>
+<p>\[
+100kg/h
+\]</p>
+<p>Total:</p>
+<p>\[
+400kg/h
+\]</p>
+<p>Fracciones:</p>
+<p>\[
+w_{agua}=0.75
+\]</p>
+<p>\[
+w_{sal}=0.25
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Mezclar:
+    </p>
+<ul>
+<li>
+      100 kg de solución al 20%
+     </li>
+<li>
+      100 kg de solución al 40%
+     </li>
+</ul>
+<p>
+     Soluto total:
+    </p>
+<div class="formula">
+<p>\[
+20+40=60\ kg
+\]</p>
+</div>
+<p>
+     Masa total:
+    </p>
+<div class="formula">
+<p>\[
+200\ kg
+\]</p>
+</div>
+<p>
+     Composición final:
+    </p>
+<div class="formula">
+<p>\[
+30\%
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-11">
+<div class="concepto">
+<h1>11. Conversión de Volumen a Masa en Balances</h1>
+<h2>Uso de densidad</h2>
+<p>\[
+m=\rho V
+\]</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>\[
+V=2m^3
+\]</p>
+<p>\[
+\rho=1000kg/m^3
+\]</p>
+<p>\[
+m=2000kg
+\]</p>
+<hr/>
+<h2>Preferencia por balances en masa</h2>
+<p>La masa se conserva directamente.</p>
+<p>El volumen puede cambiar con:</p>
+<ul>
+<li>Temperatura.</li>
+<li>Presión.</li>
+<li>Mezcla.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Volumen:
+    </p>
+<div class="formula">
+<p>\[
+8\ L
+\]</p>
+</div>
+<p>
+     Densidad:
+    </p>
+<div class="formula">
+<p>\[
+1.25\ kg/L
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+m=8\times1.25
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+m=10\ kg
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-12">
+<div class="concepto">
+<h1>12. Verificación de Resultados mediante Balances Alternativos</h1>
+<p>Siempre es recomendable comprobar resultados.</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>Resolver usando:</p>
+<ul>
+<li>Balance de agua.</li>
+<li>Balance de sal.</li>
+</ul>
+<p>Los resultados deben coincidir con el balance total.</p>
+<hr/>
+<h2>Beneficios</h2>
+<ul>
+<li>Detecta errores.</li>
+<li>Confirma consistencia.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Si se obtiene una composición final del 15% de sal, verificar mediante:
+    </p>
+<ul>
+<li>
+      Balance total.
+     </li>
+<li>
+      Balance de agua.
+     </li>
+<li>
+      Balance de sal.
+     </li>
+</ul>
+<p>
+     Los tres deben ser consistentes.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-13">
+<div class="concepto">
+<h1>13. Secadores (Dryers)</h1>
+<h2>Definición</h2>
+<p>Un secador elimina solvente mediante calentamiento.</p>
+<p>Normalmente el solvente es agua.</p>
+<hr/>
+<h2>Alimentación</h2>
+<p>Puede ser:</p>
+<ul>
+<li>Sólido húmedo.</li>
+<li>Solución.</li>
+<li>Suspensión.</li>
+</ul>
+<hr/>
+<h2>Productos</h2>
+<p>El agua sale como vapor.</p>
+<p>Los sólidos permanecen en el producto.</p>
+<hr/>
+</div>
+
+<div id="simulador-dryer-p5">
+  <style>
+    #simulador-dryer-p5 {
+      --solido: #b45309;
+      --agua: #0ea5e9;
+      --aire: #94a3b8;
+      --fondo: #f8fafc;
+      --texto: #172033;
+      --borde: #cbd5e1;
+
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px;
+      box-sizing: border-box;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #simulador-dryer-p5 * {
+      box-sizing: border-box;
+    }
+
+    #simulador-dryer-p5 .dryer-titulo {
+      margin: 0 0 4px;
+      text-align: center;
+      font-size: clamp(21px, 3vw, 30px);
+    }
+
+    #simulador-dryer-p5 .dryer-subtitulo {
+      margin: 0 0 14px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    #simulador-dryer-p5 .dryer-controles {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    #simulador-dryer-p5 .dryer-control {
+      padding: 10px;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      background: white;
+    }
+
+    #simulador-dryer-p5 .dryer-control label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 7px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    #simulador-dryer-p5 input[type="range"] {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    #simulador-dryer-p5 .color-solido {
+      color: var(--solido);
+    }
+
+    #simulador-dryer-p5 .color-agua {
+      color: var(--agua);
+    }
+
+    #simulador-dryer-p5 .color-aire {
+      color: #64748b;
+    }
+
+    #simulador-dryer-p5 .dryer-canvas {
+      width: 100%;
+      min-height: 540px;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: white;
+    }
+
+    #simulador-dryer-p5 .dryer-canvas canvas {
+      display: block;
+    }
+
+    #simulador-dryer-p5 .dryer-leyenda {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    #simulador-dryer-p5 .leyenda-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #simulador-dryer-p5 .leyenda-color {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    #simulador-dryer-p5 .dryer-nota {
+      margin: 10px 0 0;
+      text-align: center;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      #simulador-dryer-p5 .dryer-controles {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+      }
+    }
+
+    @media (max-width: 540px) {
+      #simulador-dryer-p5 {
+        padding: 10px;
+      }
+
+      #simulador-dryer-p5 .dryer-controles {
+        grid-template-columns: 1fr;
+      }
+
+      #simulador-dryer-p5 .dryer-canvas {
+        min-height: 680px;
+      }
+    }
+  </style>
+
+  <h2 class="dryer-titulo">Secador de sólidos — Dryer</h2>
+
+
+  <div class="dryer-controles">
+    <div class="dryer-control">
+      <label class="color-solido">
+        <span>Alimentación húmeda</span>
+        <span id="dr-feed-valor">100 kg/h</span>
+      </label>
+      <input
+        id="dr-feed"
+        type="range"
+        min="20"
+        max="200"
+        step="1"
+        value="100"
+      >
+    </div>
+
+    <div class="dryer-control">
+      <label class="color-agua">
+        <span>Humedad de entrada</span>
+        <span id="dr-xin-valor">35 %</span>
+      </label>
+      <input
+        id="dr-xin"
+        type="range"
+        min="5"
+        max="70"
+        step="1"
+        value="35"
+      >
+    </div>
+
+    <div class="dryer-control">
+      <label class="color-agua">
+        <span>Humedad del producto</span>
+        <span id="dr-xout-valor">8 %</span>
+      </label>
+      <input
+        id="dr-xout"
+        type="range"
+        min="1"
+        max="34"
+        step="1"
+        value="8"
+      >
+    </div>
+
+    <div class="dryer-control">
+      <label class="color-aire">
+        <span>Aire seco de entrada</span>
+        <span id="dr-air-valor">160 kg/h</span>
+      </label>
+      <input
+        id="dr-air"
+        type="range"
+        min="30"
+        max="300"
+        step="1"
+        value="160"
+      >
+    </div>
+  </div>
+
+  <div id="dr-canvas" class="dryer-canvas"></div>
+
+  <div class="dryer-leyenda">
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#b45309"></span>
+      Sólido seco
+    </div>
+
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#0ea5e9"></span>
+      Agua / vapor
+    </div>
+
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#94a3b8"></span>
+      Aire
+    </div>
+  </div>
+
+  <p class="dryer-nota">
+    Las humedades se expresan en base húmeda.
+  </p>
+
+  <script>
+    (() => {
+      const raiz = document.getElementById("simulador-dryer-p5");
+
+      if (!raiz || raiz.dataset.iniciado === "true") return;
+
+      raiz.dataset.iniciado = "true";
+
+      function cargarP5(callback) {
+        if (window.p5) {
+          callback();
+          return;
+        }
+
+        const scriptExistente = document.querySelector(
+          'script[data-p5-dryer="true"]'
+        );
+
+        if (scriptExistente) {
+          scriptExistente.addEventListener("load", callback, {
+            once: true
+          });
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.src =
+          "https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js";
+        script.dataset.p5Dryer = "true";
+
+        script.onload = callback;
+
+        script.onerror = () => {
+          raiz.querySelector("#dr-canvas").innerHTML =
+            "<p style='padding:20px;color:#b91c1c'>No se pudo cargar p5.js.</p>";
+        };
+
+        document.head.appendChild(script);
+      }
+
+      cargarP5(() => {
+        const feedSlider = raiz.querySelector("#dr-feed");
+        const xinSlider = raiz.querySelector("#dr-xin");
+        const xoutSlider = raiz.querySelector("#dr-xout");
+        const airSlider = raiz.querySelector("#dr-air");
+
+        const feedValor = raiz.querySelector("#dr-feed-valor");
+        const xinValor = raiz.querySelector("#dr-xin-valor");
+        const xoutValor = raiz.querySelector("#dr-xout-valor");
+        const airValor = raiz.querySelector("#dr-air-valor");
+
+        const canvasContenedor = raiz.querySelector("#dr-canvas");
+
+        function validarHumedades() {
+          const xin = Number(xinSlider.value);
+
+          xoutSlider.max = Math.max(1, xin - 1);
+
+          if (Number(xoutSlider.value) >= xin) {
+            xoutSlider.value = Math.max(1, xin - 1);
+          }
+
+          actualizarTextos();
+        }
+
+        function actualizarTextos() {
+          feedValor.textContent =
+            `${Number(feedSlider.value).toFixed(0)} kg/h`;
+
+          xinValor.textContent =
+            `${Number(xinSlider.value).toFixed(0)} %`;
+
+          xoutValor.textContent =
+            `${Number(xoutSlider.value).toFixed(0)} %`;
+
+          airValor.textContent =
+            `${Number(airSlider.value).toFixed(0)} kg/h`;
+        }
+
+        feedSlider.addEventListener("input", actualizarTextos);
+        xoutSlider.addEventListener("input", actualizarTextos);
+        airSlider.addEventListener("input", actualizarTextos);
+        xinSlider.addEventListener("input", validarHumedades);
+
+        validarHumedades();
+
+        const sketch = p => {
+          let particulas = [];
+
+          let acumuladorSolido = 0;
+          let acumuladorAguaEntrada = 0;
+          let acumuladorAire = 0;
+          let acumuladorVapor = 0;
+
+          const COLOR_SOLIDO = [180, 83, 9];
+          const COLOR_AGUA = [14, 165, 233];
+          const COLOR_AIRE = [148, 163, 184];
+
+          function obtenerDatos() {
+            const alimentacion = Number(feedSlider.value);
+            const humedadEntrada = Number(xinSlider.value) / 100;
+            const humedadSalida = Number(xoutSlider.value) / 100;
+            const aireSeco = Number(airSlider.value);
+
+            const solidoSeco =
+              alimentacion * (1 - humedadEntrada);
+
+            const aguaEntrada =
+              alimentacion * humedadEntrada;
+
+            const aguaProducto =
+              solidoSeco *
+              humedadSalida /
+              Math.max(0.001, 1 - humedadSalida);
+
+            const aguaEvaporada =
+              Math.max(0, aguaEntrada - aguaProducto);
+
+            const productoSeco =
+              solidoSeco + aguaProducto;
+
+            const gasHumedo =
+              aireSeco + aguaEvaporada;
+
+            const humedadGasSalida =
+              aguaEvaporada /
+              Math.max(0.001, gasHumedo);
+
+            const fraccionAguaRemanente =
+              aguaEntrada > 0
+                ? aguaProducto / aguaEntrada
+                : 0;
+
+            return {
+              alimentacion,
+              humedadEntrada,
+              humedadSalida,
+              aireSeco,
+              solidoSeco,
+              aguaEntrada,
+              aguaProducto,
+              aguaEvaporada,
+              productoSeco,
+              gasHumedo,
+              humedadGasSalida,
+              fraccionAguaRemanente
+            };
+          }
+
+          function geometriaActual() {
+            const movil = p.width < 600;
+
+            if (movil) {
+              return {
+                movil: true,
+                ancho: p.width,
+                alto: p.height,
+
+                camaraX: p.width * 0.25,
+                camaraY: p.height * 0.25,
+                camaraW: p.width * 0.5,
+                camaraH: p.height * 0.38,
+
+                solidoEntradaX: p.width * 0.08,
+                solidoEntradaY: p.height * 0.33,
+
+                productoX: p.width * 0.91,
+                productoY: p.height * 0.55,
+
+                aireEntradaX: p.width * 0.13,
+                aireEntradaY: p.height * 0.74,
+
+                gasSalidaX: p.width * 0.87,
+                gasSalidaY: p.height * 0.14
+              };
+            }
+
+            return {
+              movil: false,
+              ancho: p.width,
+              alto: p.height,
+
+              camaraX: p.width * 0.37,
+              camaraY: p.height * 0.25,
+              camaraW: p.width * 0.26,
+              camaraH: p.height * 0.46,
+
+              solidoEntradaX: p.width * 0.045,
+              solidoEntradaY: p.height * 0.39,
+
+              productoX: p.width * 0.95,
+              productoY: p.height * 0.59,
+
+              aireEntradaX: p.width * 0.13,
+              aireEntradaY: p.height * 0.79,
+
+              gasSalidaX: p.width * 0.87,
+              gasSalidaY: p.height * 0.14
+            };
+          }
+
+          function puntoBezier(t, p0, p1, p2, p3) {
+            const u = 1 - t;
+
+            return {
+              x:
+                u * u * u * p0.x +
+                3 * u * u * t * p1.x +
+                3 * u * t * t * p2.x +
+                t * t * t * p3.x,
+
+              y:
+                u * u * u * p0.y +
+                3 * u * u * t * p1.y +
+                3 * u * t * t * p2.y +
+                t * t * t * p3.y
+            };
+          }
+
+          class Particula {
+            constructor(tipo, datos) {
+              this.tipo = tipo;
+              this.progreso = 0;
+              this.velocidad = p.random(0.0032, 0.0062);
+              this.desfase = p.random(-7, 7);
+              this.tamano = p.random(8, 13);
+              this.remanente =
+                Math.random() < datos.fraccionAguaRemanente;
+            }
+
+            posicion(g) {
+              if (this.tipo === "solido") {
+                return this.rutaSolido(g);
+              }
+
+              if (this.tipo === "aguaEntrada") {
+                if (this.remanente) {
+                  return this.rutaSolido(g);
+                }
+
+                return this.rutaAguaEvaporada(g);
+              }
+
+              if (this.tipo === "aire") {
+                return this.rutaAire(g);
+              }
+
+              return this.rutaVapor(g);
+            }
+
+            rutaSolido(g) {
+              const entradaCamara = 0.34;
+              const salidaCamara = 0.72;
+
+              if (this.progreso <= entradaCamara) {
+                const t = this.progreso / entradaCamara;
+
+                return {
+                  x: p.lerp(
+                    g.solidoEntradaX,
+                    g.camaraX,
+                    t
+                  ),
+
+                  y:
+                    p.lerp(
+                      g.solidoEntradaY,
+                      g.camaraY + g.camaraH * 0.34,
+                      t
+                    ) + this.desfase
+                };
+              }
+
+              if (this.progreso <= salidaCamara) {
+                const t =
+                  (this.progreso - entradaCamara) /
+                  (salidaCamara - entradaCamara);
+
+                return {
+                  x: p.lerp(
+                    g.camaraX,
+                    g.camaraX + g.camaraW,
+                    t
+                  ),
+
+                  y:
+                    p.lerp(
+                      g.camaraY + g.camaraH * 0.34,
+                      g.camaraY + g.camaraH * 0.68,
+                      t
+                    ) +
+                    Math.sin(t * Math.PI * 4) * 8 +
+                    this.desfase
+                };
+              }
+
+              const t =
+                (this.progreso - salidaCamara) /
+                (1 - salidaCamara);
+
+              return {
+                x: p.lerp(
+                  g.camaraX + g.camaraW,
+                  g.productoX,
+                  t
+                ),
+
+                y:
+                  p.lerp(
+                    g.camaraY + g.camaraH * 0.68,
+                    g.productoY,
+                    t
+                  ) + this.desfase
+              };
+            }
+
+            rutaAguaEvaporada(g) {
+              const hastaCamara = 0.4;
+
+              if (this.progreso <= hastaCamara) {
+                const t = this.progreso / hastaCamara;
+
+                return {
+                  x: p.lerp(
+                    g.solidoEntradaX,
+                    g.camaraX + g.camaraW * 0.42,
+                    t
+                  ),
+
+                  y:
+                    p.lerp(
+                      g.solidoEntradaY,
+                      g.camaraY + g.camaraH * 0.52,
+                      t
+                    ) + this.desfase
+                };
+              }
+
+              const t =
+                (this.progreso - hastaCamara) /
+                (1 - hastaCamara);
+
+              return puntoBezier(
+                t,
+                {
+                  x: g.camaraX + g.camaraW * 0.42,
+                  y: g.camaraY + g.camaraH * 0.52
+                },
+                {
+                  x: g.camaraX + g.camaraW * 0.52,
+                  y: g.camaraY - g.camaraH * 0.08
+                },
+                {
+                  x: g.gasSalidaX - g.ancho * 0.12,
+                  y: g.gasSalidaY
+                },
+                {
+                  x: g.gasSalidaX,
+                  y: g.gasSalidaY
+                }
+              );
+            }
+
+            rutaAire(g) {
+              return puntoBezier(
+                this.progreso,
+                {
+                  x: g.aireEntradaX,
+                  y: g.aireEntradaY + this.desfase
+                },
+                {
+                  x: g.camaraX - g.ancho * 0.06,
+                  y: g.aireEntradaY + this.desfase
+                },
+                {
+                  x: g.camaraX + g.camaraW * 0.2,
+                  y: g.camaraY + g.camaraH * 0.8
+                },
+                {
+                  x: g.gasSalidaX,
+                  y: g.gasSalidaY + this.desfase
+                }
+              );
+            }
+
+            rutaVapor(g) {
+              return puntoBezier(
+                this.progreso,
+                {
+                  x: g.camaraX + g.camaraW * 0.48,
+                  y: g.camaraY + g.camaraH * 0.55
+                },
+                {
+                  x: g.camaraX + g.camaraW * 0.6,
+                  y: g.camaraY
+                },
+                {
+                  x: g.gasSalidaX - g.ancho * 0.12,
+                  y: g.gasSalidaY
+                },
+                {
+                  x: g.gasSalidaX,
+                  y: g.gasSalidaY
+                }
+              );
+            }
+
+            actualizar() {
+              this.progreso += this.velocidad;
+            }
+
+            dibujar(g) {
+              const pos = this.posicion(g);
+
+              let color = COLOR_AGUA;
+
+              if (this.tipo === "solido") {
+                color = COLOR_SOLIDO;
+              }
+
+              if (this.tipo === "aire") {
+                color = COLOR_AIRE;
+              }
+
+              p.noStroke();
+              p.fill(color[0], color[1], color[2], 230);
+              p.circle(pos.x, pos.y, this.tamano);
+
+              p.fill(255, 255, 255, 85);
+              p.circle(
+                pos.x - this.tamano * 0.18,
+                pos.y - this.tamano * 0.18,
+                this.tamano * 0.28
+              );
+            }
+
+            termino() {
+              return this.progreso > 1.04;
+            }
+          }
+
+          function dibujarTuberias(g) {
+            const exterior = Math.max(17, p.width * 0.018);
+            const interior = Math.max(9, p.width * 0.01);
+
+            p.noFill();
+            p.strokeCap(p.ROUND);
+
+            p.stroke(148, 163, 184);
+            p.strokeWeight(exterior);
+            dibujarLineasTuberia(g);
+
+            p.stroke(255);
+            p.strokeWeight(interior);
+            dibujarLineasTuberia(g);
+          }
+
+          function dibujarLineasTuberia(g) {
+            p.line(
+              g.solidoEntradaX,
+              g.solidoEntradaY,
+              g.camaraX,
+              g.camaraY + g.camaraH * 0.34
+            );
+
+            p.line(
+              g.camaraX + g.camaraW,
+              g.camaraY + g.camaraH * 0.68,
+              g.productoX,
+              g.productoY
+            );
+
+            p.bezier(
+              g.aireEntradaX,
+              g.aireEntradaY,
+              g.camaraX - g.ancho * 0.06,
+              g.aireEntradaY,
+              g.camaraX,
+              g.camaraY + g.camaraH * 0.85,
+              g.camaraX + g.camaraW * 0.2,
+              g.camaraY + g.camaraH * 0.8
+            );
+
+            p.bezier(
+              g.camaraX + g.camaraW * 0.55,
+              g.camaraY,
+              g.camaraX + g.camaraW * 0.65,
+              g.camaraY - g.camaraH * 0.18,
+              g.gasSalidaX - g.ancho * 0.1,
+              g.gasSalidaY,
+              g.gasSalidaX,
+              g.gasSalidaY
+            );
+          }
+
+          function dibujarCamara(g) {
+            p.stroke(71, 85, 105);
+            p.strokeWeight(2);
+            p.fill(241, 245, 249);
+
+            p.rect(
+              g.camaraX,
+              g.camaraY,
+              g.camaraW,
+              g.camaraH,
+              12
+            );
+
+            for (let i = 0; i < 5; i++) {
+              const x =
+                g.camaraX +
+                g.camaraW * (0.16 + i * 0.17);
+
+              p.stroke(251, 146, 60, 150);
+              p.strokeWeight(3);
+
+              p.line(
+                x,
+                g.camaraY + g.camaraH * 0.18,
+                x,
+                g.camaraY + g.camaraH * 0.82
+              );
+            }
+
+            p.noStroke();
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(16, p.width * 0.018));
+            p.fill(23, 32, 51);
+
+            p.text(
+              "SECADOR",
+              g.camaraX + g.camaraW / 2,
+              g.camaraY + g.camaraH * 0.43
+            );
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(10, p.width * 0.0105));
+            p.fill(100, 116, 139);
+
+            p.text(
+              "Evaporación de agua",
+              g.camaraX + g.camaraW / 2,
+              g.camaraY + g.camaraH * 0.55
+            );
+          }
+
+          function textoCorriente(
+            titulo,
+            linea1,
+            linea2,
+            x,
+            y,
+            alineacion
+          ) {
+            p.noStroke();
+            p.textAlign(alineacion, p.BOTTOM);
+
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(12, p.width * 0.014));
+            p.fill(23, 32, 51);
+            p.text(titulo, x, y);
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(9, p.width * 0.0098));
+            p.fill(71, 85, 105);
+            p.text(linea1, x, y + 19);
+            p.text(linea2, x, y + 35);
+          }
+
+          function dibujarInformacion(g, d) {
+            const margen = Math.max(8, g.ancho * 0.025);
+
+            textoCorriente(
+              "Sólido húmedo",
+              `F = ${d.alimentacion.toFixed(1)} kg/h`,
+              `Humedad = ${(d.humedadEntrada * 100).toFixed(1)} %`,
+              margen,
+              g.solidoEntradaY - 37,
+              p.LEFT
+            );
+
+            textoCorriente(
+              "Sólido seco",
+              `P = ${d.productoSeco.toFixed(1)} kg/h`,
+              `Humedad = ${(d.humedadSalida * 100).toFixed(1)} %`,
+              g.ancho - margen,
+              g.productoY - 37,
+              p.RIGHT
+            );
+
+            textoCorriente(
+              "Aire seco",
+              `A = ${d.aireSeco.toFixed(1)} kg/h`,
+              "Agua = 0.0 kg/h",
+              margen,
+              g.aireEntradaY - 37,
+              p.LEFT
+            );
+
+            textoCorriente(
+              "Aire húmedo",
+              `G = ${d.gasHumedo.toFixed(1)} kg/h`,
+              `Vapor = ${d.aguaEvaporada.toFixed(1)} kg/h`,
+              g.ancho - margen,
+              g.gasSalidaY - 33,
+              p.RIGHT
+            );
+
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(12, p.width * 0.0125));
+            p.fill(30, 64, 175);
+
+            p.text(
+              "Balance global: entradas = salidas",
+              g.ancho / 2,
+              g.alto - 55
+            );
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(10, p.width * 0.0105));
+            p.fill(71, 85, 105);
+
+            const entradas =
+              d.alimentacion + d.aireSeco;
+
+            const salidas =
+              d.productoSeco + d.gasHumedo;
+
+            p.text(
+              `${entradas.toFixed(1)} = ` +
+              `${d.productoSeco.toFixed(1)} + ` +
+              `${d.gasHumedo.toFixed(1)} kg/h`,
+              g.ancho / 2,
+              g.alto - 34
+            );
+
+            p.text(
+              `Agua evaporada = ${d.aguaEvaporada.toFixed(1)} kg/h`,
+              g.ancho / 2,
+              g.alto - 15
+            );
+          }
+
+          function emitirParticulas(datos) {
+            const tasaSolido = p.map(
+              datos.solidoSeco,
+              10,
+              150,
+              2,
+              17,
+              true
+            );
+
+            const tasaAguaEntrada = p.map(
+              datos.aguaEntrada,
+              1,
+              120,
+              1,
+              15,
+              true
+            );
+
+            const tasaAire = p.map(
+              datos.aireSeco,
+              30,
+              300,
+              3,
+              20,
+              true
+            );
+
+            const tasaVapor = p.map(
+              datos.aguaEvaporada,
+              0,
+              100,
+              0,
+              11,
+              true
+            );
+
+            acumuladorSolido += tasaSolido / 60;
+            acumuladorAguaEntrada += tasaAguaEntrada / 60;
+            acumuladorAire += tasaAire / 60;
+            acumuladorVapor += tasaVapor / 60;
+
+            while (acumuladorSolido >= 1) {
+              particulas.push(
+                new Particula("solido", datos)
+              );
+              acumuladorSolido -= 1;
+            }
+
+            while (acumuladorAguaEntrada >= 1) {
+              particulas.push(
+                new Particula("aguaEntrada", datos)
+              );
+              acumuladorAguaEntrada -= 1;
+            }
+
+            while (acumuladorAire >= 1) {
+              particulas.push(
+                new Particula("aire", datos)
+              );
+              acumuladorAire -= 1;
+            }
+
+            while (acumuladorVapor >= 1) {
+              particulas.push(
+                new Particula("vapor", datos)
+              );
+              acumuladorVapor -= 1;
+            }
+          }
+
+          p.setup = () => {
+            const ancho = Math.max(
+              320,
+              canvasContenedor.clientWidth
+            );
+
+            const alto = ancho < 600 ? 680 : 540;
+
+            const canvas = p.createCanvas(ancho, alto);
+            canvas.parent(canvasContenedor);
+
+            p.pixelDensity(
+              Math.min(window.devicePixelRatio || 1, 2)
+            );
+          };
+
+          p.draw = () => {
+            p.background(255);
+
+            const geometria = geometriaActual();
+            const datos = obtenerDatos();
+
+            dibujarTuberias(geometria);
+            dibujarCamara(geometria);
+
+            emitirParticulas(datos);
+
+            particulas.forEach(particula => {
+              particula.actualizar();
+              particula.dibujar(geometria);
+            });
+
+            particulas = particulas.filter(
+              particula => !particula.termino()
+            );
+
+            if (particulas.length > 500) {
+              particulas.splice(
+                0,
+                particulas.length - 500
+              );
+            }
+
+            dibujarInformacion(geometria, datos);
+          };
+
+          p.windowResized = () => {
+            const ancho = Math.max(
+              320,
+              canvasContenedor.clientWidth
+            );
+
+            const alto = ancho < 600 ? 680 : 540;
+
+            p.resizeCanvas(ancho, alto);
+          };
+        };
+
+        new p5(sketch);
+      });
+    })();
+  </script>
+</div>
+<hr/>
+</section>
+
+<section id="section-14">
+<div class="concepto">
+<h1>14. Corrientes de un Secador</h1>
+
+<h2>Alimentación húmeda</h2>
+<p>Contiene:</p>
+<ul>
+<li>Sólidos secos (\(S\))</li>
+<li>Agua (\(A_f\))</li>
+</ul>
+
+<hr/>
+
+<h2>Corriente de vapor</h2>
+<p>Contiene únicamente el agua evaporada (\(A_v\)).</p>
+
+<hr/>
+
+<h2>Producto seco</h2>
+<p>Contiene:</p>
+<ul>
+<li>Sólidos secos (\(S\))</li>
+<li>Agua residual (\(A_p\))</li>
+</ul>
+
+<hr/>
+
+<h3>Balance de masa</h3>
+
+<p><strong>Balance global:</strong></p>
+
+<div class="formula">
+\[
+F=P+V
+\]
+</div>
+
+<p><strong>Balance de sólidos:</strong></p>
+
+<div class="formula">
+\[
+S_f=S_p
+\]
+</div>
+
+<p>Los sólidos no se evaporan; únicamente cambia su contenido de humedad.</p>
+
+<p><strong>Balance de agua:</strong></p>
+
+<div class="formula">
+\[
+A_f=A_p+A_v
+\]
+</div>
+
+<p>El agua presente en la alimentación se divide entre el agua que permanece en el producto y la que se evapora.</p>
+
+<hr/>
+
+<h3>Esquema</h3>
+
+<div class="formula">
+\[
+\text{Alimentación húmeda}
+\rightarrow
+\boxed{\text{Secador}}
+\rightarrow
+\text{Producto seco}+\text{Vapor}
+\]
+</div>
+
+<hr/>
+
+<div class="ejemplo">
+
+<h3>Ejemplo</h3>
+
+<p>Alimentación:</p>
+
+<div class="formula">
+\[
+500\;kg/h
+\]
+</div>
+
+<p>Composición de la alimentación:</p>
+
+<ul>
+<li>Sólidos: \(300\;kg/h\)</li>
+<li>Agua: \(200\;kg/h\)</li>
+</ul>
+
+<p>Durante el secado se evaporan:</p>
+
+<div class="formula">
+\[
+120\;kg/h
+\]
+</div>
+
+<p>Entonces el producto contiene:</p>
+
+<ul>
+<li>Sólidos: \(300\;kg/h\)</li>
+<li>Agua: \(80\;kg/h\)</li>
+</ul>
+
+<div class="formula">
+\[
+P=300+80=380\;kg/h
+\]
+</div>
+
+<p><strong>Verificación del balance:</strong></p>
+
+<div class="formula">
+\[
+500=380+120
+\]
+</div>
+
+<p><strong>Balance de agua:</strong></p>
+
+<div class="formula">
+\[
+200=80+120
+\]
+</div>
+
+<p><strong>Balance de sólidos:</strong></p>
+
+<div class="formula">
+\[
+300=300
+\]
+</div>
+<hr/> </section> <section id="section-15"> <div class="concepto">
+
+<h1>15. Evaporadores</h1>
+<h2>Definición</h2>
+<p>Equipo que elimina parte del solvente de una solución líquida.</p>
+<hr/>
+<h2>Objetivo</h2>
+<p>Concentrar el soluto.</p>
+<hr/>
+<h2>Ejemplos</h2>
+<ul>
+<li>Jarabes.</li>
+<li>Leche condensada.</li>
+<li>Soluciones salinas.</li>
+<li>Productos farmacéuticos.</li>
+</ul>
+<hr/>
+</div>
+
+<div id="simulador-evaporador-p5">
+  <style>
+    #simulador-evaporador-p5 {
+      --soluto: #7c3aed;
+      --solvente: #0ea5e9;
+      --vapor: #94a3b8;
+      --calor: #f97316;
+      --fondo: #f8fafc;
+      --texto: #172033;
+      --borde: #cbd5e1;
+
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px;
+      box-sizing: border-box;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #simulador-evaporador-p5 * {
+      box-sizing: border-box;
+    }
+
+    #simulador-evaporador-p5 .ev-titulo {
+      margin: 0 0 4px;
+      text-align: center;
+      font-size: clamp(21px, 3vw, 30px);
+    }
+
+    #simulador-evaporador-p5 .ev-subtitulo {
+      margin: 0 0 14px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    #simulador-evaporador-p5 .ev-controles {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    #simulador-evaporador-p5 .ev-control {
+      padding: 10px;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      background: white;
+    }
+
+    #simulador-evaporador-p5 .ev-control label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 7px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    #simulador-evaporador-p5 input[type="range"] {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    #simulador-evaporador-p5 .color-soluto {
+      color: var(--soluto);
+    }
+
+    #simulador-evaporador-p5 .color-solvente {
+      color: var(--solvente);
+    }
+
+    #simulador-evaporador-p5 .color-calor {
+      color: var(--calor);
+    }
+
+    #simulador-evaporador-p5 .ev-canvas {
+      width: 100%;
+      min-height: 560px;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: white;
+    }
+
+    #simulador-evaporador-p5 .ev-canvas canvas {
+      display: block;
+    }
+
+    #simulador-evaporador-p5 .ev-leyenda {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    #simulador-evaporador-p5 .leyenda-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #simulador-evaporador-p5 .leyenda-color {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    #simulador-evaporador-p5 .ev-nota {
+      margin: 10px 0 0;
+      text-align: center;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      #simulador-evaporador-p5 .ev-controles {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+      }
+    }
+
+    @media (max-width: 540px) {
+      #simulador-evaporador-p5 {
+        padding: 10px;
+      }
+
+      #simulador-evaporador-p5 .ev-controles {
+        grid-template-columns: 1fr;
+      }
+
+      #simulador-evaporador-p5 .ev-canvas {
+        min-height: 700px;
+      }
+    }
+  </style>
+
+  <h2 class="ev-titulo">Evaporador de una etapa</h2>
+
+  <p class="ev-subtitulo">
+    El evaporador elimina parte del solvente de una solución para aumentar la concentración del soluto.
+  </p>
+
+  <div class="ev-controles">
+    <div class="ev-control">
+      <label>
+        <span>Alimentación</span>
+        <span id="ev-feed-valor">100 kg/h</span>
+      </label>
+      <input
+        id="ev-feed"
+        type="range"
+        min="20"
+        max="200"
+        step="1"
+        value="100"
+      >
+    </div>
+
+    <div class="ev-control">
+      <label class="color-soluto">
+        <span>Soluto en la alimentación</span>
+        <span id="ev-xf-valor">20 %</span>
+      </label>
+      <input
+        id="ev-xf"
+        type="range"
+        min="2"
+        max="70"
+        step="1"
+        value="20"
+      >
+    </div>
+
+    <div class="ev-control">
+      <label class="color-solvente">
+        <span>Solvente evaporado</span>
+        <span id="ev-fraccion-valor">50 %</span>
+      </label>
+      <input
+        id="ev-fraccion"
+        type="range"
+        min="0"
+        max="95"
+        step="1"
+        value="50"
+      >
+    </div>
+
+    <div class="ev-control">
+      <label class="color-calor">
+        <span>Vapor de calentamiento</span>
+        <span id="ev-steam-valor">60 kg/h</span>
+      </label>
+      <input
+        id="ev-steam"
+        type="range"
+        min="10"
+        max="160"
+        step="1"
+        value="60"
+      >
+    </div>
+  </div>
+
+  <div id="ev-canvas" class="ev-canvas"></div>
+
+  <div class="ev-leyenda">
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#7c3aed"></span>
+      Soluto
+    </div>
+
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#0ea5e9"></span>
+      Solvente líquido
+    </div>
+
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#94a3b8"></span>
+      Vapor de solvente
+    </div>
+
+    <div class="leyenda-item">
+      <span class="leyenda-color" style="background:#f97316"></span>
+      Vapor de calentamiento
+    </div>
+  </div>
+
+  <p class="ev-nota">
+    Se supone que el soluto no es volátil y permanece completamente en el producto concentrado.
+  </p>
+
+  <script>
+    (() => {
+      const raiz = document.getElementById("simulador-evaporador-p5");
+
+      if (!raiz || raiz.dataset.iniciado === "true") return;
+
+      raiz.dataset.iniciado = "true";
+
+      function cargarP5(callback) {
+        if (window.p5) {
+          callback();
+          return;
+        }
+
+        const scriptExistente = document.querySelector(
+          'script[data-p5-evaporador="true"]'
+        );
+
+        if (scriptExistente) {
+          scriptExistente.addEventListener("load", callback, {
+            once: true
+          });
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.src =
+          "https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js";
+        script.dataset.p5Evaporador = "true";
+
+        script.onload = callback;
+
+        script.onerror = () => {
+          raiz.querySelector("#ev-canvas").innerHTML =
+            "<p style='padding:20px;color:#b91c1c'>No se pudo cargar p5.js.</p>";
+        };
+
+        document.head.appendChild(script);
+      }
+
+      cargarP5(() => {
+        const feedSlider = raiz.querySelector("#ev-feed");
+        const xfSlider = raiz.querySelector("#ev-xf");
+        const fraccionSlider = raiz.querySelector("#ev-fraccion");
+        const steamSlider = raiz.querySelector("#ev-steam");
+
+        const feedValor = raiz.querySelector("#ev-feed-valor");
+        const xfValor = raiz.querySelector("#ev-xf-valor");
+        const fraccionValor = raiz.querySelector("#ev-fraccion-valor");
+        const steamValor = raiz.querySelector("#ev-steam-valor");
+
+        const canvasContenedor = raiz.querySelector("#ev-canvas");
+
+        function actualizarTextos() {
+          feedValor.textContent =
+            `${Number(feedSlider.value).toFixed(0)} kg/h`;
+
+          xfValor.textContent =
+            `${Number(xfSlider.value).toFixed(0)} %`;
+
+          fraccionValor.textContent =
+            `${Number(fraccionSlider.value).toFixed(0)} %`;
+
+          steamValor.textContent =
+            `${Number(steamSlider.value).toFixed(0)} kg/h`;
+        }
+
+        [
+          feedSlider,
+          xfSlider,
+          fraccionSlider,
+          steamSlider
+        ].forEach(slider => {
+          slider.addEventListener("input", actualizarTextos);
+        });
+
+        actualizarTextos();
+
+        const sketch = p => {
+          let particulas = [];
+
+          let acumuladorSoluto = 0;
+          let acumuladorSolvente = 0;
+          let acumuladorVapor = 0;
+          let acumuladorCalor = 0;
+
+          const COLOR_SOLUTO = [124, 58, 237];
+          const COLOR_SOLVENTE = [14, 165, 233];
+          const COLOR_VAPOR = [148, 163, 184];
+          const COLOR_CALOR = [249, 115, 22];
+
+          function obtenerDatos() {
+            const alimentacion = Number(feedSlider.value);
+            const fraccionSoluto =
+              Number(xfSlider.value) / 100;
+
+            const fraccionEvaporada =
+              Number(fraccionSlider.value) / 100;
+
+            const vaporCalentamiento =
+              Number(steamSlider.value);
+
+            const soluto =
+              alimentacion * fraccionSoluto;
+
+            const solventeEntrada =
+              alimentacion * (1 - fraccionSoluto);
+
+            const vaporProducto =
+              solventeEntrada * fraccionEvaporada;
+
+            const solventeLiquido =
+              solventeEntrada - vaporProducto;
+
+            const productoConcentrado =
+              soluto + solventeLiquido;
+
+            const concentracionProducto =
+              soluto /
+              Math.max(0.001, productoConcentrado);
+
+            return {
+              alimentacion,
+              fraccionSoluto,
+              fraccionEvaporada,
+              vaporCalentamiento,
+              soluto,
+              solventeEntrada,
+              vaporProducto,
+              solventeLiquido,
+              productoConcentrado,
+              concentracionProducto,
+              condensado: vaporCalentamiento
+            };
+          }
+
+          function geometriaActual() {
+            const movil = p.width < 600;
+
+            if (movil) {
+              return {
+                movil: true,
+                ancho: p.width,
+                alto: p.height,
+
+                tanqueX: p.width * 0.27,
+                tanqueY: p.height * 0.23,
+                tanqueW: p.width * 0.46,
+                tanqueH: p.height * 0.38,
+
+                feedX: p.width * 0.06,
+                feedY: p.height * 0.38,
+
+                productoX: p.width * 0.92,
+                productoY: p.height * 0.56,
+
+                vaporX: p.width * 0.84,
+                vaporY: p.height * 0.13,
+
+                steamX: p.width * 0.12,
+                steamY: p.height * 0.76,
+
+                condensadoX: p.width * 0.86,
+                condensadoY: p.height * 0.78
+              };
+            }
+
+            return {
+              movil: false,
+              ancho: p.width,
+              alto: p.height,
+
+              tanqueX: p.width * 0.39,
+              tanqueY: p.height * 0.23,
+              tanqueW: p.width * 0.24,
+              tanqueH: p.height * 0.45,
+
+              feedX: p.width * 0.05,
+              feedY: p.height * 0.43,
+
+              productoX: p.width * 0.95,
+              productoY: p.height * 0.58,
+
+              vaporX: p.width * 0.85,
+              vaporY: p.height * 0.13,
+
+              steamX: p.width * 0.13,
+              steamY: p.height * 0.78,
+
+              condensadoX: p.width * 0.87,
+              condensadoY: p.height * 0.79
+            };
+          }
+
+          function puntoBezier(t, p0, p1, p2, p3) {
+            const u = 1 - t;
+
+            return {
+              x:
+                u * u * u * p0.x +
+                3 * u * u * t * p1.x +
+                3 * u * t * t * p2.x +
+                t * t * t * p3.x,
+
+              y:
+                u * u * u * p0.y +
+                3 * u * u * t * p1.y +
+                3 * u * t * t * p2.y +
+                t * t * t * p3.y
+            };
+          }
+
+          class Particula {
+            constructor(tipo, datos) {
+              this.tipo = tipo;
+              this.progreso = 0;
+              this.velocidad = p.random(0.0032, 0.0063);
+              this.tamano = p.random(8, 13);
+              this.desfase = p.random(-7, 7);
+
+              this.evaporada =
+                tipo === "solvente" &&
+                Math.random() < datos.fraccionEvaporada;
+            }
+
+            posicion(g) {
+              if (this.tipo === "soluto") {
+                return this.rutaProducto(g);
+              }
+
+              if (this.tipo === "solvente") {
+                return this.evaporada
+                  ? this.rutaVapor(g)
+                  : this.rutaProducto(g);
+              }
+
+              if (this.tipo === "vaporCalor") {
+                return this.rutaCalentamiento(g);
+              }
+
+              return this.rutaCondensado(g);
+            }
+
+            rutaProducto(g) {
+              const entradaTanque = 0.36;
+              const salidaTanque = 0.73;
+
+              if (this.progreso <= entradaTanque) {
+                const t =
+                  this.progreso / entradaTanque;
+
+                return {
+                  x: p.lerp(
+                    g.feedX,
+                    g.tanqueX,
+                    t
+                  ),
+
+                  y:
+                    p.lerp(
+                      g.feedY,
+                      g.tanqueY + g.tanqueH * 0.42,
+                      t
+                    ) + this.desfase
+                };
+              }
+
+              if (this.progreso <= salidaTanque) {
+                const t =
+                  (this.progreso - entradaTanque) /
+                  (salidaTanque - entradaTanque);
+
+                return {
+                  x:
+                    g.tanqueX +
+                    g.tanqueW *
+                    (0.18 + 0.64 * t),
+
+                  y:
+                    g.tanqueY +
+                    g.tanqueH *
+                    (0.58 +
+                      0.08 *
+                      Math.sin(t * Math.PI * 4)) +
+                    this.desfase
+                };
+              }
+
+              const t =
+                (this.progreso - salidaTanque) /
+                (1 - salidaTanque);
+
+              return {
+                x: p.lerp(
+                  g.tanqueX + g.tanqueW,
+                  g.productoX,
+                  t
+                ),
+
+                y:
+                  p.lerp(
+                    g.tanqueY + g.tanqueH * 0.72,
+                    g.productoY,
+                    t
+                  ) + this.desfase
+              };
+            }
+
+            rutaVapor(g) {
+              const entradaTanque = 0.4;
+
+              if (this.progreso <= entradaTanque) {
+                const t =
+                  this.progreso / entradaTanque;
+
+                return {
+                  x: p.lerp(
+                    g.feedX,
+                    g.tanqueX + g.tanqueW * 0.45,
+                    t
+                  ),
+
+                  y:
+                    p.lerp(
+                      g.feedY,
+                      g.tanqueY + g.tanqueH * 0.55,
+                      t
+                    ) + this.desfase
+                };
+              }
+
+              const t =
+                (this.progreso - entradaTanque) /
+                (1 - entradaTanque);
+
+              return puntoBezier(
+                t,
+                {
+                  x: g.tanqueX + g.tanqueW * 0.45,
+                  y: g.tanqueY + g.tanqueH * 0.55
+                },
+                {
+                  x: g.tanqueX + g.tanqueW * 0.5,
+                  y: g.tanqueY - g.tanqueH * 0.15
+                },
+                {
+                  x: g.vaporX - g.ancho * 0.12,
+                  y: g.vaporY
+                },
+                {
+                  x: g.vaporX,
+                  y: g.vaporY
+                }
+              );
+            }
+
+            rutaCalentamiento(g) {
+              return puntoBezier(
+                this.progreso,
+                {
+                  x: g.steamX,
+                  y: g.steamY + this.desfase
+                },
+                {
+                  x: g.tanqueX - g.ancho * 0.08,
+                  y: g.steamY
+                },
+                {
+                  x: g.tanqueX + g.tanqueW * 0.15,
+                  y: g.tanqueY + g.tanqueH * 0.85
+                },
+                {
+                  x: g.tanqueX + g.tanqueW * 0.42,
+                  y: g.tanqueY + g.tanqueH * 0.82
+                }
+              );
+            }
+
+            rutaCondensado(g) {
+              return puntoBezier(
+                this.progreso,
+                {
+                  x: g.tanqueX + g.tanqueW * 0.42,
+                  y: g.tanqueY + g.tanqueH * 0.82
+                },
+                {
+                  x: g.tanqueX + g.tanqueW * 0.65,
+                  y: g.tanqueY + g.tanqueH * 0.95
+                },
+                {
+                  x: g.condensadoX - g.ancho * 0.08,
+                  y: g.condensadoY
+                },
+                {
+                  x: g.condensadoX,
+                  y: g.condensadoY
+                }
+              );
+            }
+
+            actualizar() {
+              this.progreso += this.velocidad;
+            }
+
+            dibujar(g) {
+              const pos = this.posicion(g);
+
+              let color = COLOR_SOLVENTE;
+
+              if (this.tipo === "soluto") {
+                color = COLOR_SOLUTO;
+              }
+
+              if (
+                this.tipo === "solvente" &&
+                this.evaporada
+              ) {
+                color = COLOR_VAPOR;
+              }
+
+              if (this.tipo === "vaporCalor") {
+                color = COLOR_CALOR;
+              }
+
+              if (this.tipo === "condensado") {
+                color = [251, 146, 60];
+              }
+
+              p.noStroke();
+              p.fill(color[0], color[1], color[2], 230);
+              p.circle(pos.x, pos.y, this.tamano);
+
+              p.fill(255, 255, 255, 85);
+              p.circle(
+                pos.x - this.tamano * 0.18,
+                pos.y - this.tamano * 0.18,
+                this.tamano * 0.28
+              );
+            }
+
+            termino() {
+              return this.progreso > 1.04;
+            }
+          }
+
+          function dibujarTuberias(g) {
+            const exterior =
+              Math.max(17, p.width * 0.018);
+
+            const interior =
+              Math.max(9, p.width * 0.01);
+
+            p.noFill();
+            p.strokeCap(p.ROUND);
+
+            p.stroke(148, 163, 184);
+            p.strokeWeight(exterior);
+            dibujarLineas(g);
+
+            p.stroke(255);
+            p.strokeWeight(interior);
+            dibujarLineas(g);
+          }
+
+          function dibujarLineas(g) {
+            p.line(
+              g.feedX,
+              g.feedY,
+              g.tanqueX,
+              g.tanqueY + g.tanqueH * 0.42
+            );
+
+            p.line(
+              g.tanqueX + g.tanqueW,
+              g.tanqueY + g.tanqueH * 0.72,
+              g.productoX,
+              g.productoY
+            );
+
+            p.bezier(
+              g.tanqueX + g.tanqueW * 0.5,
+              g.tanqueY,
+              g.tanqueX + g.tanqueW * 0.55,
+              g.tanqueY - g.tanqueH * 0.18,
+              g.vaporX - g.ancho * 0.1,
+              g.vaporY,
+              g.vaporX,
+              g.vaporY
+            );
+
+            p.bezier(
+              g.steamX,
+              g.steamY,
+              g.tanqueX - g.ancho * 0.08,
+              g.steamY,
+              g.tanqueX,
+              g.tanqueY + g.tanqueH * 0.88,
+              g.tanqueX + g.tanqueW * 0.42,
+              g.tanqueY + g.tanqueH * 0.82
+            );
+
+            p.bezier(
+              g.tanqueX + g.tanqueW * 0.42,
+              g.tanqueY + g.tanqueH * 0.82,
+              g.tanqueX + g.tanqueW * 0.65,
+              g.tanqueY + g.tanqueH * 0.95,
+              g.condensadoX - g.ancho * 0.08,
+              g.condensadoY,
+              g.condensadoX,
+              g.condensadoY
+            );
+          }
+
+          function dibujarTanque(g) {
+            p.stroke(71, 85, 105);
+            p.strokeWeight(2);
+            p.fill(241, 245, 249);
+
+            p.rect(
+              g.tanqueX,
+              g.tanqueY,
+              g.tanqueW,
+              g.tanqueH,
+              18
+            );
+
+            p.noStroke();
+            p.fill(186, 230, 253, 150);
+
+            p.rect(
+              g.tanqueX + 4,
+              g.tanqueY + g.tanqueH * 0.55,
+              g.tanqueW - 8,
+              g.tanqueH * 0.42,
+              0,
+              0,
+              14,
+              14
+            );
+
+            p.stroke(249, 115, 22);
+            p.strokeWeight(4);
+            p.noFill();
+
+            for (let i = 0; i < 4; i++) {
+              const y =
+                g.tanqueY +
+                g.tanqueH * (0.68 + i * 0.055);
+
+              p.arc(
+                g.tanqueX + g.tanqueW * 0.5,
+                y,
+                g.tanqueW * 0.62,
+                g.tanqueH * 0.09,
+                0,
+                Math.PI
+              );
+            }
+
+            p.noStroke();
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(15, p.width * 0.017));
+            p.fill(23, 32, 51);
+
+            p.text(
+              "EVAPORADOR",
+              g.tanqueX + g.tanqueW / 2,
+              g.tanqueY + g.tanqueH * 0.33
+            );
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(10, p.width * 0.0105));
+            p.fill(100, 116, 139);
+
+            p.text(
+              "Concentración por evaporación",
+              g.tanqueX + g.tanqueW / 2,
+              g.tanqueY + g.tanqueH * 0.43
+            );
+          }
+
+          function textoCorriente(
+            titulo,
+            linea1,
+            linea2,
+            x,
+            y,
+            alineacion
+          ) {
+            p.noStroke();
+            p.textAlign(alineacion, p.BOTTOM);
+
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(12, p.width * 0.014));
+            p.fill(23, 32, 51);
+            p.text(titulo, x, y);
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(9, p.width * 0.0097));
+            p.fill(71, 85, 105);
+            p.text(linea1, x, y + 19);
+            p.text(linea2, x, y + 35);
+          }
+
+          function dibujarInformacion(g, d) {
+            const margen =
+              Math.max(8, g.ancho * 0.025);
+
+            textoCorriente(
+              "Alimentación",
+              `F = ${d.alimentacion.toFixed(1)} kg/h`,
+              `Soluto = ${(d.fraccionSoluto * 100).toFixed(1)} %`,
+              margen,
+              g.feedY - 38,
+              p.LEFT
+            );
+
+            textoCorriente(
+              "Producto concentrado",
+              `L = ${d.productoConcentrado.toFixed(1)} kg/h`,
+              `Soluto = ${(d.concentracionProducto * 100).toFixed(1)} %`,
+              g.ancho - margen,
+              g.productoY - 38,
+              p.RIGHT
+            );
+
+            textoCorriente(
+              "Vapor de solvente",
+              `V = ${d.vaporProducto.toFixed(1)} kg/h`,
+              "Soluto = 0.0 kg/h",
+              g.ancho - margen,
+              g.vaporY - 32,
+              p.RIGHT
+            );
+
+            textoCorriente(
+              "Vapor de calentamiento",
+              `S = ${d.vaporCalentamiento.toFixed(1)} kg/h`,
+              "Aporta energía",
+              margen,
+              g.steamY - 38,
+              p.LEFT
+            );
+
+            textoCorriente(
+              "Condensado",
+              `C = ${d.condensado.toFixed(1)} kg/h`,
+              "Corriente térmica",
+              g.ancho - margen,
+              g.condensadoY - 38,
+              p.RIGHT
+            );
+
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textStyle(p.BOLD);
+            p.textSize(Math.max(12, p.width * 0.0125));
+            p.fill(30, 64, 175);
+
+            p.text(
+              "Balance de proceso: F = L + V",
+              g.ancho / 2,
+              g.alto - 58
+            );
+
+            p.textStyle(p.NORMAL);
+            p.textSize(Math.max(10, p.width * 0.0105));
+            p.fill(71, 85, 105);
+
+            p.text(
+              `${d.alimentacion.toFixed(1)} = ` +
+              `${d.productoConcentrado.toFixed(1)} + ` +
+              `${d.vaporProducto.toFixed(1)} kg/h`,
+              g.ancho / 2,
+              g.alto - 36
+            );
+
+            p.text(
+              `Soluto: ${d.soluto.toFixed(1)} kg/h permanece en el producto`,
+              g.ancho / 2,
+              g.alto - 16
+            );
+          }
+
+          function emitirParticulas(datos) {
+            const tasaSoluto = p.map(
+              datos.soluto,
+              1,
+              140,
+              1,
+              15,
+              true
+            );
+
+            const tasaSolvente = p.map(
+              datos.solventeEntrada,
+              1,
+              190,
+              2,
+              18,
+              true
+            );
+
+            const tasaCalor = p.map(
+              datos.vaporCalentamiento,
+              10,
+              160,
+              2,
+              14,
+              true
+            );
+
+            acumuladorSoluto += tasaSoluto / 60;
+            acumuladorSolvente += tasaSolvente / 60;
+            acumuladorCalor += tasaCalor / 60;
+            acumuladorVapor += tasaCalor / 60;
+
+            while (acumuladorSoluto >= 1) {
+              particulas.push(
+                new Particula("soluto", datos)
+              );
+              acumuladorSoluto -= 1;
+            }
+
+            while (acumuladorSolvente >= 1) {
+              particulas.push(
+                new Particula("solvente", datos)
+              );
+              acumuladorSolvente -= 1;
+            }
+
+            while (acumuladorCalor >= 1) {
+              particulas.push(
+                new Particula("vaporCalor", datos)
+              );
+              acumuladorCalor -= 1;
+            }
+
+            while (acumuladorVapor >= 1) {
+              particulas.push(
+                new Particula("condensado", datos)
+              );
+              acumuladorVapor -= 1;
+            }
+          }
+
+          p.setup = () => {
+            const ancho = Math.max(
+              320,
+              canvasContenedor.clientWidth
+            );
+
+            const alto = ancho < 600 ? 700 : 560;
+
+            const canvas = p.createCanvas(ancho, alto);
+            canvas.parent(canvasContenedor);
+
+            p.pixelDensity(
+              Math.min(window.devicePixelRatio || 1, 2)
+            );
+          };
+
+          p.draw = () => {
+            p.background(255);
+
+            const geometria = geometriaActual();
+            const datos = obtenerDatos();
+
+            dibujarTuberias(geometria);
+            dibujarTanque(geometria);
+
+            emitirParticulas(datos);
+
+            particulas.forEach(particula => {
+              particula.actualizar();
+              particula.dibujar(geometria);
+            });
+
+            particulas = particulas.filter(
+              particula => !particula.termino()
+            );
+
+            if (particulas.length > 520) {
+              particulas.splice(
+                0,
+                particulas.length - 520
+              );
+            }
+
+            dibujarInformacion(geometria, datos);
+          };
+
+          p.windowResized = () => {
+            const ancho = Math.max(
+              320,
+              canvasContenedor.clientWidth
+            );
+
+            const alto = ancho < 600 ? 700 : 560;
+
+            p.resizeCanvas(ancho, alto);
+          };
+        };
+
+        new p5(sketch);
+      });
+    })();
+  </script>
+</div>
+<hr/>
+</section>
+<section id="section-16">
+<div class="concepto">
+<h1>16. Balance Total en un Evaporador</h1>
+<p>Para estado estacionario:</p>
+<p>\[
+F=P+V
+\]</p>
+<p>donde:</p>
+<ul>
+<li>\(F\) = alimentación</li>
+<li>\(P\) = producto concentrado</li>
+<li>\(V\) = vapor generado</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Alimentación:
+    </p>
+<div class="formula">
+<p>\[
+700\ kg
+\]</p>
+</div>
+<p>
+     Vapor:
+    </p>
+<div class="formula">
+<p>\[
+250\ kg
+\]</p>
+</div>
+<p>
+     Producto:
+    </p>
+<div class="formula">
+<p>\[
+450\ kg
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-17">
+<div class="concepto">
+<h1>17. Balance de Solvente en un Evaporador</h1>
+<p>Generalmente el solvente es agua.</p>
+<p>\[
+Agua_{entrada} =
+Agua_{producto}
++
+Agua_{vapor}
+\]</p>
+<hr/>
+<h2>Determinación de agua evaporada</h2>
+<p>\[
+Agua_{vapor} = Agua_{entrada} -  Agua_{producto}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una solución contiene:
+    </p>
+<div class="formula">
+<p>\[
+500\ kg
+\]</p>
+</div>
+<p>
+     de agua.
+    </p>
+<p>
+     Se evapora:
+    </p>
+<div class="formula">
+<p>\[
+40\%
+\]</p>
+</div>
+<p>
+     Agua evaporada:
+    </p>
+<div class="formula">
+<p>\[
+200\ kg
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-18">
+<div class="concepto">
+<h1>18. Balance de Solutos en un Evaporador</h1>
+<p>Los sólidos no se evaporan.</p>
+<p>Por tanto:</p>
+<p>\[
+Soluto_{entrada}= Soluto_{producto}
+\]</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>\[
+100kg;sal
+\]</p>
+<p>entran.</p>
+<p>\[
+100kg;sal
+\]</p>
+<p>salen.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Alimentación:
+    </p>
+<div class="formula">
+<p>\[
+100\ kg
+\]</p>
+</div>
+<p>
+     con 12 kg de sólidos.
+    </p>
+<p>
+     Producto final:
+    </p>
+<div class="formula">
+<p>\[
+12\ kg
+\]</p>
+</div>
+<p>
+     de sólidos.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-19">
+<div class="concepto">
+<h1>19. Cálculo de la Composición Final después de Evaporación</h1>
+<h2>Paso 1</h2>
+<p>Aplicar balance de soluto.</p>
+<p>\[
+m_{soluto,F} = m_{soluto,P}
+\]</p>
+<h2>Paso 2</h2>
+<p>Calcular masa final.</p>
+<p>\[
+P
+\]</p>
+<h2>Paso 3</h2>
+<p>Calcular fracción másica.</p>
+<p>\[
+w_i = \frac{m_i}{P}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Alimentación:
+    </p>
+<ul>
+<li>
+      200 kg de agua
+     </li>
+<li>
+      50 kg de sólidos
+     </li>
+</ul>
+<p>
+     Se evaporan:
+    </p>
+<div class="formula">
+<p>\[
+100\ kg
+\]</p>
+</div>
+<p>
+     de agua.
+    </p>
+<p>
+     Producto:
+    </p>
+<ul>
+<li>
+      100 kg agua
+     </li>
+<li>
+      50 kg sólidos
+     </li>
+</ul>
+<p>
+     Masa total:
+    </p>
+<div class="formula">
+<p>\[
+150\ kg
+\]</p>
+</div>
+<p>
+     Fracción de sólidos:
+    </p>
+<div class="formula">
+<p>\[
+\frac{50}{150}=0.333
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+33.3\%
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-20">
+<div class="concepto">
+<h1>20. Estrategia General para Resolver Problemas de Equipos sin Reacción</h1>
+<h3>1. Dibujar el diagrama de flujo.</h3>
+<h3>2. Identificar entradas y salidas.</h3>
+<h3>3. Elegir base de cálculo.</h3>
+<h3>4. Convertir todo a masa o moles.</h3>
+<h3>5. Aplicar balance total.</h3>
+<h3>6. Aplicar balances por componente.</h3>
+<h3>7. Resolver ecuaciones.</h3>
+<h3>8. Verificar resultados.</h3>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Proceso:
+    </p>
+<ul>
+<li>
+      Alimentación = 1000 kg/h
+     </li>
+<li>
+      Producto = ?
+     </li>
+<li>
+      Vapor = 300 kg/h
+     </li>
+</ul>
+<p>
+     Balance total:
+    </p>
+<div class="formula">
+<p>\[
+1000=P+300
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+P=700\ kg/h
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-21">
+<div class="concepto">
+<h1>21. Errores Comunes en Balances de Materia</h1>
+<h2>Mezclar unidades de masa y volumen</h2>
+<p>Incorrecto:</p>
+<p>\[
+100kg + 50L
+\]</p>
+<p>Siempre convertir previamente.</p>
+<hr/>
+<h2>No considerar todas las corrientes</h2>
+<p>Omitir una corriente produce errores importantes.</p>
+<hr/>
+<h2>No verificar resultados</h2>
+<p>Todo balance debe comprobarse.</p>
+<hr/>
+<h2>Omitir balances por componentes</h2>
+<p>Muchas veces el balance total no es suficiente.</p>
+<hr/>
+<h2>Confundir composición de entrada y salida</h2>
+<p>Especialmente en mixers y evaporadores.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Un estudiante suma:
+    </p>
+<div class="formula">
+<p>\[
+10L + 5kg
+\]</p>
+</div>
+<p>
+     directamente.
+    </p>
+<p>
+     Esto es incorrecto porque primero deben convertirse a una misma base.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-22">
+<div class="concepto">
+<h1>22. Resumen Integrador</h1>
+<h2>Splitters</h2>
+<ul>
+<li>Una entrada.</li>
+<li>Varias salidas.</li>
+<li>Composición constante.</li>
+</ul>
+<p>\[
+F=F_1+F_2
+\]</p>
+<hr/>
+<h2>Mixers</h2>
+<ul>
+<li>Varias entradas.</li>
+<li>Una salida.</li>
+</ul>
+<p>\[
+F=F_1+F_2+F_3
+\]</p>
+<hr/>
+<h2>Dryers</h2>
+<ul>
+<li>Eliminan solvente.</li>
+<li>Los sólidos permanecen.</li>
+</ul>
+<hr/>
+<h2>Evaporators</h2>
+<ul>
+<li>Eliminan parte del solvente.</li>
+<li>Concentran el soluto.</li>
+</ul>
+<hr/>
+<h2>Balance Total</h2>
+<p>Conservación de toda la masa:</p>
+<p>\[
+Entrada=Salida
+\]</p>
+<p>(en estado estacionario y sin reacción).</p>
+<hr/>
+<h2>Balance por Componentes</h2>
+<p>Seguimiento individual de cada especie:</p>
+<p>\[
+Entrada_i=Salida_i
+\]</p>
+<hr/>
+<h2>Conservación de Masa</h2>
+<p>Principio fundamental:</p>
+<p>\[
+Entrada-Salida+Generación-Consumo=Acumulación
+\]</p>
+<p>Para equipos sin reacción química y en estado estacionario:</p>
+<p>\[
+Entrada=Salida
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo integrador
+    </h3>
+<p>
+     Una solución de azúcar entra a un evaporador:
+    </p>
+<div class="formula">
+<p>\[
+500\ kg
+\]</p>
+</div>
+<p>
+     con:
+    </p>
+<ul>
+<li>
+      20% azúcar
+     </li>
+<li>
+      80% agua
+     </li>
+</ul>
+<p>
+     Se evaporan:
+    </p>
+<div class="formula">
+<p>\[
+150\ kg
+\]</p>
+</div>
+<p>
+     de agua.
+    </p>
+<p>
+     Azúcar permanece:
+    </p>
+<div class="formula">
+<p>\[
+100\ kg
+\]</p>
+</div>
+<p>
+     Producto:
+    </p>
+<div class="formula">
+<p>\[
+350\ kg
+\]</p>
+</div>
+<p>
+     Nueva concentración:
+    </p>
+<div class="formula">
+<p>\[
+\frac{100}{350}=0.286
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+28.6\%
+\]</p>
+</div>
+<p>
+     Este ejemplo integra los conceptos de balance total, balance de componentes y concentración utilizados en toda la lección.
+    </p>
+</div>
+</section>
+<section id="section-23">
+<div class="concepto">
+<h1>Conclusión General</h1>
+<p>Los <strong>splitters, mixers, secadores y evaporadores</strong> son ejemplos clásicos de unidades simples utilizadas en ingeniería química y biotecnológica. Su análisis se basa en la <strong>ley de conservación de la masa</strong>, aplicando balances totales y balances por componentes. Los splitters conservan la composición y solo modifican caudales; los mixers combinan corrientes para generar una nueva composición; los secadores eliminan solvente dejando los sólidos; y los evaporadores concentran soluciones mediante la remoción parcial del solvente. El dominio de estas operaciones constituye la base para el análisis de procesos más complejos y para el diseño de plantas industriales.</p>
+</div>
+</section>

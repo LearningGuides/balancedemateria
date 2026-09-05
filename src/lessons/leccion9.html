@@ -1,0 +1,1352 @@
+<h1>Lección 9: Estrategias para Resolver Procesos con Múltiples Unidades</h1>
+<section id="section-1">
+<div class="concepto">
+<h1>1. Introducción: Estrategias para Resolver Procesos con Múltiples Unidades</h1>
+<p>El análisis de procesos con múltiples unidades es una continuación natural de los balances de materia aplicados a sistemas sin reacción química.</p>
+<p>En estos procesos, varias operaciones unitarias se encuentran conectadas mediante corrientes internas. Por ejemplo:</p>
+<p>\[
+\text{Mezclador}
+\rightarrow
+\text{Evaporador}
+\rightarrow
+\text{Filtro}
+\rightarrow
+\text{Secador}
+\]</p>
+<p>Aunque el principio fundamental sigue siendo la conservación de la masa, la dificultad aumenta porque aparecen:</p>
+<ul>
+<li>Más corrientes.</li>
+<li>Más composiciones.</li>
+<li>Más variables desconocidas.</li>
+<li>Dependencias entre equipos.</li>
+<li>Posibles recirculaciones, purgas y divisiones de flujo.</li>
+</ul>
+<p>La clave no consiste únicamente en escribir muchos balances, sino en <strong>seleccionar correctamente el sistema de análisis</strong>.</p>
+<hr/>
+<h2>Continuación del análisis de procesos sin reacción</h2>
+<p>Para un sistema sin reacción química:</p>
+<p>\[
+\text{Entrada}-\text{Salida}=\text{Acumulación}
+\]</p>
+<p>Si además opera en estado estacionario:</p>
+<p>\[
+\text{Acumulación}=0
+\]</p>
+<p>por tanto:</p>
+<p>\[
+\boxed{\text{Entrada}=\text{Salida}}
+\]</p>
+<p>Para cada componente (i):</p>
+<p>\[
+\boxed{
+\sum \dot m_{i,\text{entrada}}
+==============================</p>
+<p>\sum \dot m_{i,\text{salida}}
+}
+\]</p>
+<p>Estas ecuaciones pueden aplicarse a:</p>
+<ul>
+<li>Todo el proceso.</li>
+<li>Una unidad individual.</li>
+<li>Dos o más unidades combinadas.</li>
+<li>Una sección específica de la planta.</li>
+</ul>
+<hr/>
+<h2>Importancia de seleccionar el sistema</h2>
+<p>Una frontera bien elegida puede eliminar corrientes internas y reducir el número de incógnitas.</p>
+<p>Una frontera poco conveniente puede producir un sistema con demasiadas variables desconocidas.</p>
+<p>Por eso, antes de plantear ecuaciones debe preguntarse:</p>
+<ol>
+<li>¿Qué corrientes cruzan la frontera?</li>
+<li>¿Cuántas incógnitas aparecen?</li>
+<li>¿Cuántos balances independientes pueden escribirse?</li>
+<li>¿Existe información suficiente para resolverlos?</li>
+<li>¿Conviene analizar una unidad o combinar varias?</li>
+</ol>
+<hr/>
+<h2>Resolución mediante balances sucesivos</h2>
+<p>En muchos procesos no es posible encontrar todas las variables mediante una sola ecuación global. Se emplea entonces una resolución sucesiva:</p>
+<ol>
+<li>Se selecciona un sistema resoluble.</li>
+<li>Se calculan algunas corrientes.</li>
+<li>Los resultados se convierten en datos conocidos.</li>
+<li>Se selecciona otro sistema.</li>
+<li>Se repite el procedimiento.</li>
+</ol>
+<p>Esta estrategia se denomina <strong>resolución secuencial</strong>.</p>
+<hr/>
+<h2>Estrategias alternativas al balance global</h2>
+<p>El balance global suele ser útil, pero no siempre es el mejor punto de partida.</p>
+<p>También puede iniciarse el análisis mediante:</p>
+<ul>
+<li>Una unidad individual.</li>
+<li>La última unidad del proceso.</li>
+<li>Un subsistema combinado.</li>
+<li>Una corriente de producto conocida.</li>
+<li>Un equipo con pocas incógnitas.</li>
+<li>Un conjunto de ecuaciones simultáneas.</li>
+</ul>
+<p>La estrategia correcta depende de la estructura del proceso y de los datos disponibles.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una planta de tratamiento de aire cuenta con un absorbedor, un secador y un filtro. No se conocen todas las corrientes del proceso, por lo que se debe decidir en qué unidad iniciar los balances para obtener las variables desconocidas.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-2">
+<div class="concepto">
+<h1>2. Criterios para Seleccionar el Primer Sistema de Análisis</h1>
+<p>El primer sistema debe elegirse con base en criterios cuantitativos y prácticos.</p>
+<hr/>
+<h2>Número de incógnitas</h2>
+<p>Se deben contar todas las variables desconocidas que aparecen en las corrientes que cruzan la frontera.</p>
+<p>Una corriente puede tener como incógnitas:</p>
+<ul>
+<li>Flujo total.</li>
+<li>Fracción másica de uno o más componentes.</li>
+<li>Fracción molar.</li>
+<li>Cantidad de sólidos.</li>
+<li>Cantidad de solvente.</li>
+<li>Humedad.</li>
+<li>Recuperación.</li>
+</ul>
+<p>Ejemplo:</p>
+<p>Una corriente binaria desconocida puede requerir:</p>
+<ul>
+<li>Su caudal total (F).</li>
+<li>La fracción másica de A, (w_A).</li>
+</ul>
+<p>La fracción de B no es independiente porque:</p>
+<p>\[
+w_B=1-w_A
+\]</p>
+<p>Por tanto, esa corriente introduce dos incógnitas independientes.</p>
+<hr/>
+<h2>Número de ecuaciones independientes</h2>
+<p>En un sistema sin reacción pueden escribirse balances por componente.</p>
+<p>Para una mezcla de (N) componentes existen normalmente (N) balances independientes.</p>
+<p>También puede utilizarse:</p>
+<ul>
+<li>Un balance total.</li>
+<li>(N-1) balances por componente.</li>
+</ul>
+<p>No deben contarse como independientes simultáneamente:</p>
+<ul>
+<li>El balance total.</li>
+<li>Todos los balances de componentes.</li>
+</ul>
+<p>Esto se debe a que el balance total es la suma de los balances individuales.</p>
+<hr/>
+<h2>Información disponible</h2>
+<p>Debe revisarse si se conocen:</p>
+<ul>
+<li>Flujos de alimentación.</li>
+<li>Composiciones.</li>
+<li>Relaciones de división.</li>
+<li>Recuperaciones.</li>
+<li>Humedades.</li>
+<li>Porcentajes de evaporación.</li>
+<li>Concentraciones de producto.</li>
+<li>Relaciones entre corrientes.</li>
+</ul>
+<p>Una unidad con pocos flujos conocidos puede seguir siendo irresoluble si sus composiciones también son desconocidas.</p>
+<hr/>
+<h2>Viabilidad del sistema seleccionado</h2>
+<p>La viabilidad puede evaluarse mediante los grados de libertad:</p>
+<p>\[
+\boxed{
+GDL=N_I-N_E
+}
+\]</p>
+<p>donde:</p>
+<ul>
+<li>(N_I): número de incógnitas.</li>
+<li>(N_E): número de ecuaciones independientes.</li>
+</ul>
+<p>Interpretación:</p>
+<p>\[
+GDL=0
+\]</p>
+<p>El sistema puede resolverse.</p>
+<p>\[
+GDL&gt;0
+\]</p>
+<p>Falta información.</p>
+<p>\[
+GDL&lt;0
+\]</p>
+<p>Existen ecuaciones o datos redundantes, o posiblemente inconsistentes.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En una planta de producción de etanol existen cuatro equipos conectados. Solo el primer equipo tiene suficientes datos de alimentación y composición, por lo que se selecciona como punto inicial del análisis.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-3">
+<div class="concepto">
+<h1>3. Resolución de Balances en una Unidad Individual</h1>
+<p>Analizar una unidad individual es conveniente cuando sus entradas, salidas y relaciones están suficientemente especificadas.</p>
+<hr/>
+<h2>Balance total</h2>
+<p>Para una unidad sin reacción y en estado estacionario:</p>
+<p>\[
+\sum \dot m_{\text{entrada}}
+============================</p>
+<p>\sum \dot m_{\text{salida}}
+\]</p>
+<p>Ejemplo, para un mezclador:</p>
+<p>\[
+F_1+F_2=M
+\]</p>
+<p>Para un separador:</p>
+<p>\[
+F=P_1+P_2
+\]</p>
+<hr/>
+<h2>Balances por componente</h2>
+<p>Para el componente A:</p>
+<p>\[
+\sum F_jw_{A,j}
+===============</p>
+<p>\sum P_kw_{A,k}
+\]</p>
+<p>Para un mezclador con dos entradas:</p>
+<p>\[
+F_1w_{A,1}+F_2w_{A,2}
+=====================</p>
+<p>Mw_{A,M}
+\]</p>
+<hr/>
+<h2>Selección de la base de cálculo</h2>
+<p>Si las corrientes se expresan como flujos reales, puede trabajarse con:</p>
+<p>\[
+kg/h
+\]</p>
+<p>Si solo se conocen composiciones porcentuales, puede elegirse una base como:</p>
+<p>\[
+100;kg\text{ de alimentación}
+\]</p>
+<p>La base no modifica las composiciones; solo facilita los cálculos.</p>
+<hr/>
+<h2>Determinación de corrientes desconocidas</h2>
+<p>Una vez planteadas las ecuaciones, se despejan:</p>
+<ul>
+<li>Caudales.</li>
+<li>Composiciones.</li>
+<li>Cantidades de componentes.</li>
+<li>Relaciones entre corrientes.</li>
+</ul>
+<p>Es importante no resolver automáticamente todas las unidades en el orden físico del proceso. Debe comenzar con la unidad que tenga cero grados de libertad.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Un humidificador recibe aire seco y agua líquida. Mediante un balance total y un balance de vapor de agua se determina el flujo de aire humidificado.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-4">
+<div class="concepto">
+<h1>4. Uso de la Base de Cálculo</h1>
+<p>La <strong>base de cálculo</strong> es una cantidad de referencia elegida para transformar composiciones relativas en cantidades absolutas.</p>
+<hr/>
+<h2>Selección de una base conveniente</h2>
+<p>Algunas bases comunes son:</p>
+<p>\[
+100;kg\text{ de mezcla}
+\]</p>
+<p>\[
+100;kmol\text{ de mezcla}
+\]</p>
+<p>\[
+1;h\text{ de operación}
+\]</p>
+<p>\[
+1000;kg/h\text{ de alimentación}
+\]</p>
+<p>Una base conveniente debe:</p>
+<ul>
+<li>Evitar decimales innecesarios.</li>
+<li>Ser compatible con las composiciones dadas.</li>
+<li>Facilitar conversiones.</li>
+<li>Mantener coherencia con el problema.</li>
+</ul>
+<hr/>
+<h2>Flujo horario</h2>
+<p>Si el proceso es continuo, suele ser conveniente usar una base temporal:</p>
+<p>\[
+1;h
+\]</p>
+<p>De esta forma, un caudal de:</p>
+<p>\[
+500;kg/h
+\]</p>
+<p>equivale a procesar:</p>
+<p>\[
+500;kg
+\]</p>
+<p>durante una hora.</p>
+<hr/>
+<h2>Consistencia de unidades</h2>
+<p>Todos los balances deben emplear la misma base.</p>
+<p>No debe combinarse directamente:</p>
+<p>\[
+kg/h
+\]</p>
+<p>con:</p>
+<p>\[
+kg/día
+\]</p>
+<p>sin convertir.</p>
+<p>Por ejemplo:</p>
+<p>\[
+2400;kg/día
+===========</p>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Se establece una base de 500 kg/h de alimentación para calcular los caudales de todas las corrientes de un sistema de concentración de soluciones.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-5">
+<div class="concepto">
+<h1>\frac{2400}{24}</h1>
+<p>100;kg/h
+\]</p>
+<hr/>
+<h2>Simplificación de cálculos</h2>
+<p>Si una corriente contiene:</p>
+<ul>
+<li>40% de A.</li>
+<li>35% de B.</li>
+<li>25% de C.</li>
+</ul>
+<p>Elegir una base de 100 kg produce directamente:</p>
+<p>\[
+m_A=40;kg
+\]</p>
+<p>\[
+m_B=35;kg
+\]</p>
+<p>\[
+m_C=25;kg
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una mezcla de agua y sal entra a un tanque separador. El balance de sal permite calcular la cantidad de solución concentrada producida.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-6">
+<div class="concepto">
+<h1>5. Aplicación de Balances por Componentes</h1>
+<p>Los balances por componente siguen individualmente cada especie.</p>
+<hr/>
+<h2>Conservación individual</h2>
+<p>Para un componente (i), sin reacción:</p>
+<p>\[
+\sum m_{i,\text{entrada}}
+=========================</p>
+<p>\sum m_{i,\text{salida}}
+\]</p>
+<p>En flujo continuo:</p>
+<p>\[
+\sum \dot m_{i,\text{entrada}}
+==============================</p>
+<p>\sum \dot m_{i,\text{salida}}
+\]</p>
+<hr/>
+<h2>Relación entre composición y flujo</h2>
+<p>La cantidad de un componente se calcula como:</p>
+<p>\[
+\dot m_i=w_i\dot m
+\]</p>
+<p>donde:</p>
+<ul>
+<li>(w_i): fracción másica.</li>
+<li>(\dot m): flujo total.</li>
+<li>(\dot m_i): flujo del componente.</li>
+</ul>
+<p>En base molar:</p>
+<p>\[
+\dot n_i=x_i\dot n
+\]</p>
+<hr/>
+<h2>Obtención de variables desconocidas</h2>
+<p>Considérese una separación binaria:</p>
+<p>\[
+F=D+B
+\]</p>
+<p>Para el componente A:</p>
+<p>\[
+Fw_{A,F}=Dw_{A,D}+Bw_{A,B}
+\]</p>
+<p>Si se conocen (F), (w_{A,F}), (w_{A,D}) y (w_{A,B}), pueden determinarse (D) y (B) resolviendo simultáneamente ambas ecuaciones.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Se analizan conjuntamente un evaporador y un condensador para calcular únicamente los flujos de entrada y salida, ignorando las corrientes internas entre ambos equipos.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-7">
+<div class="concepto">
+<h1>6. Selección de un Subsistema Combinado</h1>
+<p>Un subsistema combinado contiene dos o más unidades dentro de una misma frontera.</p>
+<hr/>
+<h2>Agrupación de varias unidades</h2>
+<p>Supóngase el proceso:</p>
+<p>\[
+F
+\rightarrow
+\boxed{\text{Mezclador}}
+\rightarrow M
+\rightarrow
+\boxed{\text{Evaporador}}
+\rightarrow P+V
+\]</p>
+<p>Si se agrupan mezclador y evaporador, la corriente (M) queda dentro de la frontera.</p>
+<hr/>
+<h2>Eliminación de corrientes internas</h2>
+<p>Para el subsistema combinado:</p>
+<p>\[
+F_1+F_2=P+V
+\]</p>
+<p>La corriente intermedia (M) no aparece porque no cruza la frontera.</p>
+<hr/>
+<h2>Reducción de incógnitas</h2>
+<p>Si (M) era desconocida, agrupar las unidades elimina temporalmente esa variable.</p>
+<p>Esto puede transformar un sistema irresoluble en uno con:</p>
+<p>\[
+GDL=0
+\]</p>
+<hr/>
+<h2>Simplificación del problema</h2>
+<p>Los subsistemas combinados son especialmente útiles cuando:</p>
+<ul>
+<li>La corriente entre equipos es desconocida.</li>
+<li>Las entradas externas son conocidas.</li>
+<li>Los productos externos tienen datos disponibles.</li>
+<li>Se desea calcular primero una corriente global.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Un sistema de separación produce dos corrientes de salida. Utilizando un balance total y un balance del componente principal se determinan ambos caudales.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-8">
+<div class="concepto">
+<h1>7. Resolución Simultánea de Ecuaciones de Balance</h1>
+<p>En muchos casos, una sola ecuación no permite encontrar todas las incógnitas.</p>
+<hr/>
+<h2>Balance total</h2>
+<p>Para una unidad con una entrada y dos salidas:</p>
+<p>\[
+F=P_1+P_2
+\]</p>
+<hr/>
+<h2>Balance por componente</h2>
+<p>Para el componente A:</p>
+<p>\[
+Fw_{A,F}
+========</p>
+<p>P_1w_{A,1}
++
+P_2w_{A,2}
+\]</p>
+<hr/>
+<h2>Sistema de ecuaciones</h2>
+<p>Si (P_1) y (P_2) son desconocidos:</p>
+<p>\[
+P_1+P_2=F
+\]</p>
+<p>\[
+w_{A,1}P_1+w_{A,2}P_2=Fw_{A,F}
+\]</p>
+<p>Estas ecuaciones deben resolverse simultáneamente.</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>Una alimentación de 1000 kg/h contiene 30% de A y se separa en:</p>
+<ul>
+<li>Un producto con 60% de A.</li>
+<li>Un residuo con 10% de A.</li>
+</ul>
+<p>Balance total:</p>
+<p>\[
+1000=P+R
+\]</p>
+<p>Balance de A:</p>
+<p>\[
+1000(0.30)=P(0.60)+R(0.10)
+\]</p>
+<p>Sustituyendo:</p>
+<p>\[
+R=1000-P
+\]</p>
+<p>\[
+300=0.60P+0.10(1000-P)
+\]</p>
+<p>\[
+300=0.60P+100-0.10P
+\]</p>
+<p>\[
+200=0.50P
+\]</p>
+<p>\[
+P=400;kg/h
+\]</p>
+<p>Por tanto:</p>
+<p>\[
+R=600;kg/h
+\]</p>
+<p>Verificación:</p>
+<p>\[
+400(0.60)+600(0.10)=240+60=300;kg/h
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En una planta de procesamiento de leche se decide comenzar el análisis en el concentrador porque es la unidad con mayor cantidad de información conocida.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-9">
+<div class="concepto">
+<h1>8. Importancia de Elegir el Sistema Correcto</h1>
+<p>La selección de la frontera puede determinar si un problema es sencillo o innecesariamente complicado.</p>
+<hr/>
+<h2>Reducción de complejidad</h2>
+<p>Un sistema adecuado:</p>
+<ul>
+<li>Elimina corrientes internas.</li>
+<li>Reduce ecuaciones.</li>
+<li>Disminuye variables.</li>
+<li>Facilita la interpretación física.</li>
+</ul>
+<hr/>
+<h2>Disminución del número de incógnitas</h2>
+<p>Supóngase que dos equipos están conectados mediante una corriente con flujo y composición desconocidos.</p>
+<p>Si se analizan por separado, esa corriente introduce varias incógnitas.</p>
+<p>Si se agrupan, desaparece del balance combinado.</p>
+<hr/>
+<h2>Estrategia de resolución</h2>
+<p>Una buena estrategia busca sucesivamente sistemas con:</p>
+<p>\[
+GDL=0
+\]</p>
+<p>No es recomendable comenzar a despejar ecuaciones antes de comprobar si el sistema está suficientemente especificado.</p>
+<hr/>
+<h2>Optimización del procedimiento</h2>
+<p>Elegir bien el sistema permite:</p>
+<ul>
+<li>Reducir cálculos.</li>
+<li>Evitar ecuaciones redundantes.</li>
+<li>Disminuir errores.</li>
+<li>Obtener resultados en un orden lógico.</li>
+<li>Facilitar la validación.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En una planta de reciclaje de solventes solo se conoce el flujo del producto final. El balance global no permite resolver el problema y es necesario comenzar desde una unidad específica.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-10">
+<div class="concepto">
+<h1>9. Procesos donde el Balance Global No es Suficiente</h1>
+<p>El balance global elimina todas las corrientes internas, pero a veces conserva demasiadas incógnitas externas.</p>
+<hr/>
+<h2>Limitaciones del balance global</h2>
+<p>Considérese un proceso con:</p>
+<ul>
+<li>Dos alimentaciones desconocidas.</li>
+<li>Dos productos desconocidos.</li>
+<li>Composiciones parcialmente desconocidas.</li>
+</ul>
+<p>Aunque se planteen balances globales, puede no existir información suficiente para resolver todas las variables.</p>
+<hr/>
+<h2>Exceso de incógnitas</h2>
+<p>Si el sistema global tiene:</p>
+<p>\[
+N_I=5
+\]</p>
+<p>y solo pueden escribirse:</p>
+<p>\[
+N_E=3
+\]</p>
+<p>entonces:</p>
+<p>\[
+GDL=5-3=2
+\]</p>
+<p>El balance global no es resoluble por sí solo.</p>
+<hr/>
+<h2>Necesidad de balances locales</h2>
+<p>Puede existir información específica de una unidad, como:</p>
+<ul>
+<li>Una relación de división.</li>
+<li>Una humedad de torta.</li>
+<li>Un porcentaje de evaporación.</li>
+<li>Una recuperación.</li>
+<li>Una composición de salida.</li>
+<li>Una concentración de producto.</li>
+</ul>
+<p>Esta información solo puede aprovecharse mediante balances locales.</p>
+<hr/>
+<h2>Análisis secuencial</h2>
+<p>Una estrategia posible es:</p>
+<ol>
+<li>Resolver una unidad con datos suficientes.</li>
+<li>Calcular una corriente interna.</li>
+<li>Usarla en un subsistema combinado.</li>
+<li>Continuar hacia otras unidades.</li>
+<li>Aplicar el balance global como comprobación.</li>
+</ol>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una planta de cristalización produce 800 kg/h de cristales. A partir de este dato se determina el flujo de alimentación hacia el cristalizador.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-11">
+<div class="concepto">
+<h1>10. Estrategias para Iniciar el Análisis desde la Corriente de Producto</h1>
+<p>No siempre debe comenzarse desde la alimentación.</p>
+<hr/>
+<h2>Disponibilidad de datos del producto</h2>
+<p>En muchos problemas se especifica:</p>
+<ul>
+<li>El flujo de producto.</li>
+<li>Su pureza.</li>
+<li>Su contenido de humedad.</li>
+<li>La recuperación deseada.</li>
+<li>La composición del residuo.</li>
+</ul>
+<p>Estos datos pueden hacer que la última unidad sea la más fácil de resolver.</p>
+<hr/>
+<h2>Análisis inverso del proceso</h2>
+<p>El análisis inverso consiste en avanzar desde el producto hacia las unidades anteriores.</p>
+<p>Ejemplo:</p>
+<p>\[
+F
+\rightarrow
+U_1
+\rightarrow
+U_2
+\rightarrow
+P
+\]</p>
+<p>Si (P) y la operación de (U_2) están completamente especificados, puede calcularse la alimentación de (U_2). Después, esa corriente se utiliza para resolver (U_1).</p>
+<hr/>
+<h2>Resolución desde la última unidad</h2>
+<p>Es común en procesos de:</p>
+<ul>
+<li>Secado.</li>
+<li>Filtración.</li>
+<li>Cristalización.</li>
+<li>Evaporación.</li>
+<li>Destilación.</li>
+<li>Concentración.</li>
+</ul>
+<p>Por ejemplo, si se conoce la masa de sólido seco en el producto y su humedad, puede calcularse primero la torta húmeda y después la alimentación al filtro.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Después de resolver el balance del cristalizador, los resultados obtenidos se utilizan para calcular las corrientes del evaporador conectado aguas arriba.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-12">
+<div class="concepto">
+<h1>11. Resolución Secuencial Unidad por Unidad</h1>
+<p>La resolución secuencial consiste en calcular una unidad a la vez.</p>
+<hr/>
+<h2>Avance progresivo</h2>
+<p>Cada etapa produce nueva información.</p>
+<p>Una secuencia típica es:</p>
+<p>\[
+\text{Unidad resoluble}
+\rightarrow
+\text{corriente calculada}
+\rightarrow
+\text{siguiente unidad resoluble}
+\]</p>
+<hr/>
+<h2>Uso de resultados previos</h2>
+<p>Una corriente inicialmente desconocida puede convertirse en conocida después de resolver otra unidad.</p>
+<p>Por ejemplo:</p>
+<ol>
+<li>El secador permite calcular su alimentación húmeda.</li>
+<li>Esa alimentación es la salida del filtro.</li>
+<li>El filtro puede entonces resolverse.</li>
+<li>Su alimentación permite analizar el mezclador anterior.</li>
+</ol>
+<hr/>
+<h2>Dependencia entre unidades</h2>
+<p>Los equipos están conectados por corrientes compartidas.</p>
+<p>La salida de una unidad es la entrada de la siguiente:</p>
+<p>\[
+\dot m_{\text{salida de }U_1}
+=============================</p>
+<p>\dot m_{\text{entrada a }U_2}
+\]</p>
+<p>La composición también debe ser idéntica.</p>
+<hr/>
+<h2>Cálculo de corrientes internas</h2>
+<p>Las corrientes internas suelen determinarse después de calcular flujos externos o productos conocidos.</p>
+<p>El orden de resolución puede ser:</p>
+<ul>
+<li>Hacia adelante.</li>
+<li>Hacia atrás.</li>
+<li>Desde el centro.</li>
+<li>Mediante subsistemas combinados.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En una corriente sólida se conoce el porcentaje de sólidos, pero no la distribución entre humedad e impurezas. Se plantea una variable para determinar ambas composiciones mediante balances.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-13">
+<div class="concepto">
+<h1>12. Determinación de Composiciones Desconocidas</h1>
+<p>Una composición desconocida se representa mediante una variable.</p>
+<hr/>
+<h2>Fracciones másicas</h2>
+<p>Para una corriente binaria:</p>
+<p>\[
+w_A=x
+\]</p>
+<p>\[
+w_B=1-x
+\]</p>
+<p>Para una corriente de tres componentes:</p>
+<p>\[
+w_A+w_B+w_C=1
+\]</p>
+<hr/>
+<h2>Suposición de variables</h2>
+<p>No significa asignar un valor arbitrario. Significa representar la incógnita algebraicamente.</p>
+<p>Ejemplo:</p>
+<p>\[
+w_{A,P}=x
+\]</p>
+<p>Entonces:</p>
+<p>\[
+w_{B,P}=1-x
+\]</p>
+<p>en una mezcla binaria.</p>
+<hr/>
+<h2>Balances por componente</h2>
+<p>La variable puede determinarse mediante:</p>
+<p>\[
+\sum F_jw_{A,j}
+===============</p>
+<p>\sum P_kw_{A,k}
+\]</p>
+<hr/>
+<h2>Verificación de composiciones</h2>
+<p>Toda composición debe cumplir:</p>
+<p>\[
+0\leq w_i\leq1
+\]</p>
+<p>y:</p>
+<p>\[
+\sum_iw_i=1
+\]</p>
+<p>Si una fracción resulta negativa o mayor que 1, existe un error en:</p>
+<ul>
+<li>Los datos.</li>
+<li>Las ecuaciones.</li>
+<li>Las unidades.</li>
+<li>La selección de la base.</li>
+<li>La interpretación del proceso.</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una corriente contiene proteína, agua y grasa. A partir de balances de proteína y agua se determina la composición completa de la mezcla.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-14">
+<div class="concepto">
+<h1>13. Cálculo de Corrientes con Tres Componentes</h1>
+<p>Los sistemas de tres componentes requieren seguir individualmente cada especie.</p>
+<hr/>
+<h2>Mezclas multicomponente</h2>
+<p>Considérese una corriente con A, B y C:</p>
+<p>\[
+w_A+w_B+w_C=1
+\]</p>
+<p>Si se conocen dos fracciones, la tercera se calcula como:</p>
+<p>\[
+w_C=1-w_A-w_B
+\]</p>
+<hr/>
+<h2>Conservación individual</h2>
+<p>Para una unidad sin reacción:</p>
+<p>\[
+\sum \dot m_A^{entrada}
+=======================</p>
+<p>\sum \dot m_A^{salida}
+\]</p>
+<p>\[
+\sum \dot m_B^{entrada}
+=======================</p>
+<p>\sum \dot m_B^{salida}
+\]</p>
+<p>\[
+\sum \dot m_C^{entrada}
+=======================</p>
+<p>\sum \dot m_C^{salida}
+\]</p>
+<hr/>
+<h2>Restricción de suma de fracciones</h2>
+<p>Para cada corriente:</p>
+<p>\[
+w_A+w_B+w_C=1
+\]</p>
+<p>Esta relación reduce el número de composiciones independientes.</p>
+<p>Una corriente ternaria requiere:</p>
+<ul>
+<li>Un flujo total.</li>
+<li>Dos fracciones independientes.</li>
+</ul>
+<p>La tercera fracción se obtiene por diferencia.</p>
+<hr/>
+<h2>Ejemplo de mezcla ternaria</h2>
+<p>Se mezclan:</p>
+<h3>Corriente 1</h3>
+<p>\[
+F_1=100;kg/h
+\]</p>
+<p>\[
+w_{A,1}=0.50,\quad
+w_{B,1}=0.30,\quad
+w_{C,1}=0.20
+\]</p>
+<h3>Corriente 2</h3>
+<p>\[
+F_2=200;kg/h
+\]</p>
+<p>\[
+w_{A,2}=0.10,\quad
+w_{B,2}=0.40,\quad
+w_{C,2}=0.50
+\]</p>
+<p>Balance total:</p>
+<p>\[
+M=100+200=300;kg/h
+\]</p>
+<p>Balance de A:</p>
+<p>\[
+m_A=100(0.50)+200(0.10)=70;kg/h
+\]</p>
+<p>\[
+w_{A,M}=\frac{70}{300}=0.2333
+\]</p>
+<p>Balance de B:</p>
+<p>\[
+m_B=100(0.30)+200(0.40)=110;kg/h
+\]</p>
+<p>\[
+w_{B,M}=\frac{110}{300}=0.3667
+\]</p>
+<p>Balance de C:</p>
+<p>\[
+m_C=100(0.20)+200(0.50)=120;kg/h
+\]</p>
+<p>\[
+w_{C,M}=\frac{120}{300}=0.4000
+\]</p>
+<p>Verificación:</p>
+<p>\[
+0.2333+0.3667+0.4000=1
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una línea de producción está formada por un mezclador, un filtro y un secador. Cada balance utiliza los resultados obtenidos en la unidad anterior.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-15">
+<div class="concepto">
+<h1>14. Análisis de Equipos en Serie</h1>
+<p>Los equipos en serie están conectados de modo que la salida de uno alimenta al siguiente.</p>
+<hr/>
+<h2>Resolución consecutiva</h2>
+<p>Si las unidades pueden resolverse en la dirección del flujo:</p>
+<p>\[
+U_1\rightarrow U_2\rightarrow U_3
+\]</p>
+<p>se calcula primero (U_1), después (U_2) y finalmente (U_3).</p>
+<p>Sin embargo, si los datos están disponibles en el producto final, puede resolverse en sentido inverso:</p>
+<p>\[
+U_3\rightarrow U_2\rightarrow U_1
+\]</p>
+<p>desde el punto de vista matemático.</p>
+<hr/>
+<h2>Dependencia entre equipos</h2>
+<p>Una corriente calculada incorrectamente afecta todas las unidades posteriores.</p>
+<p>Por eso debe verificarse cada paso antes de continuar.</p>
+<hr/>
+<h2>Propagación de resultados</h2>
+<p>Si una corriente tiene:</p>
+<p>\[
+F=500;kg/h
+\]</p>
+<p>y:</p>
+<p>\[
+w_A=0.40
+\]</p>
+<p>estos valores deben mantenerse cuando la corriente se use como entrada de la unidad siguiente.</p>
+<hr/>
+<h2>Organización del procedimiento</h2>
+<p>Es recomendable elaborar una tabla:</p>
+<table>
+<thead>
+<tr>
+<th>Corriente</th>
+<th style="text-align: right;">Flujo</th>
+<th style="text-align: right;">(w_A)</th>
+<th style="text-align: right;">(w_B)</th>
+<th style="text-align: right;">(w_C)</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">Conocido</td>
+<td style="text-align: right;">Conocido</td>
+<td style="text-align: right;">Conocido</td>
+<td style="text-align: right;">Conocido</td>
+<td>Dato</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">Calculado</td>
+<td style="text-align: right;">Calculado</td>
+<td style="text-align: right;">Calculado</td>
+<td style="text-align: right;">Calculado</td>
+<td>Resultado</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">Desconocido</td>
+<td style="text-align: right;">Parcial</td>
+<td style="text-align: right;">Parcial</td>
+<td style="text-align: right;">Parcial</td>
+<td>Pendiente</td>
+</tr>
+</tbody>
+</table>
+<p>Esto ayuda a observar qué unidad se vuelve resoluble después de cada cálculo.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una planta recupera cobre a partir de una solución acuosa. Comparando el cobre alimentado con el cobre obtenido como producto se calcula el porcentaje de recuperación.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-16">
+<div class="concepto">
+<h1>15. Determinación del Rendimiento de Recuperación</h1>
+<p>La recuperación mide la fracción del componente alimentado que aparece en la corriente de producto deseada.</p>
+<hr/>
+<h2>Recuperación de producto</h2>
+<p>Para el componente A:</p>
+<p>\[
+\boxed{
+R_A=
+\frac{\text{cantidad de A en el producto}}
+{\text{cantidad de A en la alimentación}}
+}
+\]</p>
+<p>En porcentaje:</p>
+<p>\[
+\boxed{
+%R_A=
+\frac{\dot m_{A,P}}
+{\dot m_{A,F}}
+\times100
+}
+\]</p>
+<hr/>
+<h2>Balance global del componente</h2>
+<p>Si no hay reacción:</p>
+<p>\[
+\dot m_{A,F}
+============</p>
+<p>\dot m_{A,P}
++
+\dot m_{A,R}
+\]</p>
+<p>donde (R) representa el residuo o pérdida.</p>
+<hr/>
+<h2>Relación entre alimentación y producto</h2>
+<p>Usando fracciones másicas:</p>
+<p>\[
+\dot m_{A,F}=Fw_{A,F}
+\]</p>
+<p>\[
+\dot m_{A,P}=Pw_{A,P}
+\]</p>
+<p>Por tanto:</p>
+<p>\[
+\boxed{
+%R_A=
+\frac{Pw_{A,P}}
+{Fw_{A,F}}
+\times100
+}
+\]</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>Una alimentación de 1000 kg/h contiene 20% de A.</p>
+<p>El producto es de 300 kg/h y contiene 60% de A.</p>
+<p>Cantidad alimentada de A:</p>
+<p>\[
+m_{A,F}=1000(0.20)=200;kg/h
+\]</p>
+<p>Cantidad de A en el producto:</p>
+<p>\[
+m_{A,P}=300(0.60)=180;kg/h
+\]</p>
+<p>Recuperación:</p>
+<p>\[
+%R_A=
+\frac{180}{200}(100)
+====================</p>
+<p>90%
+\]</p>
+<hr/>
+<h2>Eficiencia del proceso</h2>
+<p>Una recuperación alta no siempre significa alta pureza.</p>
+<p>Deben distinguirse:</p>
+<h3>Recuperación</h3>
+<p>Cuánto del componente alimentado se recupera.</p>
+<h3>Pureza</h3>
+<p>Qué proporción del producto corresponde al componente de interés.</p>
+<p>En el ejemplo:</p>
+<p>\[
+\text{Recuperación}=90%
+\]</p>
+<p>\[
+\text{Pureza}=60%
+\]</p>
+<p>Son conceptos diferentes.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     En una planta de alimentos con seis operaciones unitarias se elabora una estrategia donde primero se identifican las unidades con menor número de incógnitas antes de efectuar cualquier cálculo.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-17">
+<div class="concepto">
+<h1>16. Estrategias Generales para Resolver Procesos Complejos</h1>
+<h2>Identificación del sistema adecuado</h2>
+<p>Antes de escribir ecuaciones:</p>
+<ol>
+<li>Dibujar el diagrama.</li>
+<li>Numerar corrientes.</li>
+<li>Identificar componentes.</li>
+<li>Marcar datos conocidos.</li>
+<li>Marcar incógnitas.</li>
+<li>Probar distintas fronteras.</li>
+<li>Calcular grados de libertad.</li>
+</ol>
+<hr/>
+<h2>Resolución por etapas</h2>
+<p>Una secuencia recomendable es:</p>
+<ol>
+<li>Buscar una unidad con cero grados de libertad.</li>
+<li>Resolverla.</li>
+<li>Actualizar el diagrama.</li>
+<li>Buscar el siguiente sistema resoluble.</li>
+<li>Combinar unidades cuando convenga.</li>
+<li>Usar el balance global como herramienta o comprobación.</li>
+</ol>
+<hr/>
+<h2>Validación de resultados</h2>
+<p>Después de cada etapa debe verificarse:</p>
+<h3>Balance total</h3>
+<p>\[
+\sum \text{Entradas}
+====================</p>
+<p>\sum \text{Salidas}
+\]</p>
+<h3>Balance por componente</h3>
+<p>\[
+\sum \text{Entradas}_i
+======================</p>
+<p>\sum \text{Salidas}_i
+\]</p>
+<h3>Suma de composiciones</h3>
+<p>\[
+\sum_iw_i=1
+\]</p>
+<h3>Unidades</h3>
+<p>Todos los términos de una ecuación deben tener unidades compatibles.</p>
+<h3>Significado físico</h3>
+<ul>
+<li>Flujos positivos.</li>
+<li>Fracciones entre 0 y 1.</li>
+<li>Recuperaciones entre 0 y 100%.</li>
+<li>Productos con composiciones razonables.</li>
+</ul>
+<hr/>
+<h2>Experiencia en selección de sistemas</h2>
+<p>La selección de fronteras mejora con la práctica.</p>
+<p>Algunas recomendaciones son:</p>
+<ul>
+<li>No asumir que el sistema global siempre es el mejor.</li>
+<li>Comenzar por donde haya más información.</li>
+<li>Eliminar corrientes internas mediante subsistemas combinados.</li>
+<li>Resolver desde el producto cuando esté mejor especificado.</li>
+<li>No escribir ecuaciones antes de contar incógnitas.</li>
+<li>Usar balances del componente más fácil de seguir.</li>
+<li>Aprovechar componentes que aparezcan en pocas corrientes.</li>
+</ul>
+<p>Un componente que entra o sale por una sola corriente puede producir una ecuación especialmente sencilla.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo integrador
+    </h3>
+<p>
+     Una planta de producción de jugo concentrado está compuesta por un extractor, un clarificador, un evaporador y un secador. Se conoce únicamente el flujo del producto final y algunas composiciones intermedias. El análisis comienza en el secador, continúa hacia el evaporador y luego hacia las unidades anteriores. Mediante balances de materia en cada etapa se determinan todas las corrientes internas y finalmente se calcula el porcentaje de recuperación del jugo concentrado.
+    </p>
+</div>
+</section>
+<section id="section-18">
+<div class="concepto">
+<h1>17. Resumen Integrador</h1>
+<h2>Selección estratégica del sistema</h2>
+<p>El proceso puede analizarse mediante:</p>
+<ul>
+<li>Sistema global.</li>
+<li>Unidad individual.</li>
+<li>Subsistema combinado.</li>
+<li>Resolución desde el producto.</li>
+<li>Resolución secuencial.</li>
+</ul>
+<p>La frontera adecuada es aquella que produce suficientes ecuaciones independientes para las incógnitas presentes.</p>
+<hr/>
+<h2>Balances totales y por componentes</h2>
+<p>Para estado estacionario y sin reacción:</p>
+<p>\[
+\sum \text{Entradas}
+====================</p>
+<p>\sum \text{Salidas}
+\]</p>
+<p>Para cada componente:</p>
+<p>\[
+\sum \text{Entradas}_i
+======================</p>
+<p>\sum \text{Salidas}_i
+\]</p>
+<p>La cantidad de componente se calcula mediante:</p>
+<p>\[
+\dot m_i=w_i\dot m
+\]</p>
+<p>o:</p>
+<p>\[
+\dot n_i=x_i\dot n
+\]</p>
+<hr/>
+<h2>Resolución secuencial</h2>
+<p>Consiste en:</p>
+<ol>
+<li>Resolver un sistema con cero grados de libertad.</li>
+<li>Obtener una nueva corriente conocida.</li>
+<li>Utilizarla en otro sistema.</li>
+<li>Continuar hasta determinar todas las variables.</li>
+</ol>
+<hr/>
+<h2>Uso de subsistemas</h2>
+<p>Agrupar unidades permite eliminar corrientes internas:</p>
+<p>\[
+\text{Entradas externas al subsistema}
+======================================</p>
+<p>\text{Salidas externas del subsistema}
+\]</p>
+<p>Esto reduce el número de incógnitas.</p>
+<hr/>
+<h2>Cálculo de composiciones</h2>
+<p>Para una corriente multicomponente:</p>
+<p>\[
+\sum_iw_i=1
+\]</p>
+<p>En una mezcla ternaria solo dos fracciones son independientes.</p>
+<p>Las composiciones desconocidas se determinan con balances individuales.</p>
+<hr/>
+<h2>Determinación de recuperación</h2>
+<p>La recuperación del componente A es:</p>
+<p>\[
+\boxed{
+%R_A=
+\frac{Pw_{A,P}}
+{Fw_{A,F}}
+\times100
+}
+\]</p>
+<p>Debe diferenciarse de la pureza del producto.</p>
+<hr/>
+</div>
+</section><section id="section-19">
+<div class="concepto">
+<h1>Procedimiento general recomendado</h1>
+<ol>
+<li>Leer cuidadosamente el problema.</li>
+<li>Dibujar el diagrama de flujo.</li>
+<li>Numerar todas las corrientes.</li>
+<li>Elegir una base de cálculo.</li>
+<li>Convertir unidades.</li>
+<li>Identificar componentes.</li>
+<li>Marcar variables conocidas y desconocidas.</li>
+<li>Probar diferentes fronteras.</li>
+<li>Realizar el análisis de grados de libertad.</li>
+<li>Seleccionar un sistema con (GDL=0).</li>
+<li>Escribir balances independientes.</li>
+<li>Resolver las ecuaciones.</li>
+<li>Actualizar los datos del diagrama.</li>
+<li>Seleccionar el siguiente sistema.</li>
+<li>Repetir hasta determinar todas las corrientes.</li>
+<li>Calcular purezas y recuperaciones.</li>
+<li>Verificar balances totales y por componente.</li>
+<li>Comprobar unidades y consistencia física.</li>
+</ol>
+<hr/>
+</div>
+</section><section id="section-20">
+<div class="concepto">
+<h1>Conclusión general</h1>
+<p>La resolución de procesos con múltiples unidades no depende únicamente de aplicar la ecuación de conservación de la masa, sino de elegir estratégicamente la frontera de análisis. El balance global es útil para eliminar corrientes internas, pero puede ser insuficiente cuando existen demasiadas incógnitas externas. En esos casos deben utilizarse balances locales, subsistemas combinados o una resolución secuencial desde la unidad que tenga más información disponible.</p>
+<p>El análisis de grados de libertad permite determinar si una unidad o subsistema puede resolverse. Los balances totales y por componentes, junto con una base de cálculo consistente, permiten calcular flujos, composiciones y recuperaciones. Una resolución ordenada, acompañada de verificaciones continuas, reduce errores y facilita el análisis de procesos industriales complejos.</p>
+</div>
+</section>

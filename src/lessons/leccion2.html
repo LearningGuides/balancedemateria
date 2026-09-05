@@ -1,0 +1,1431 @@
+<h1>Lección 2: Parámetros y Variables de Proceso</h1>
+<section id="section-1">
+<div class="concepto">
+<h1>1. Masa y Volumen</h1>
+<h2>Masa y volumen como parámetros básicos de un sistema</h2>
+<p>La <strong>masa</strong> y el <strong>volumen</strong> son dos propiedades fundamentales utilizadas para describir cualquier sistema físico.</p>
+<h3>Masa</h3>
+<p>La masa representa la cantidad de materia contenida en un cuerpo.</p>
+<p>Unidades comunes:</p>
+<ul>
+<li>kg (Sistema Internacional)</li>
+<li>g (Sistema CGS)</li>
+<li>lbm (Sistema Inglés)</li>
+</ul>
+<p>Ejemplo:</p>
+<p>Un tanque contiene 500 kg de agua.</p>
+<hr/>
+<h3>Volumen</h3>
+<p>El volumen representa el espacio ocupado por una sustancia.</p>
+<p>Unidades comunes:</p>
+<ul>
+<li>m³</li>
+<li>cm³</li>
+<li>L</li>
+<li>ft³</li>
+</ul>
+<p>Ejemplo:</p>
+<p>Un tanque puede contener 2 m³ de agua.</p>
+<hr/>
+<h2>Conversión entre masa y volumen</h2>
+<p>La relación entre ambas se realiza mediante la densidad:</p>
+<p>\[
+\rho=\frac{m}{V}
+\]</p>
+<p>donde:</p>
+<ul>
+<li>(\rho) = densidad</li>
+<li>(m) = masa</li>
+<li>(V) = volumen</li>
+</ul>
+<hr/>
+<h2>Densidad</h2>
+<p>La densidad expresa cuánta masa existe por unidad de volumen.</p>
+<p>\[
+\rho=\frac{m}{V}
+\]</p>
+<p>Unidades:</p>
+<p>\[
+kg/m^3
+\]</p>
+<p>Ejemplo:</p>
+<p>Agua:</p>
+<p>\[
+\rho=1000;kg/m^3
+\]</p>
+<p>Significa que cada metro cúbico contiene 1000 kg.</p>
+<hr/>
+<h2>Volumen específico</h2>
+<p>Es el volumen ocupado por unidad de masa.</p>
+<p>\[
+v=\frac{V}{m}
+\]</p>
+<p>Unidades:</p>
+<p>\[
+m^3/kg
+\]</p>
+<hr/>
+<h2>Relación entre densidad y volumen específico</h2>
+<p>Son magnitudes inversas:</p>
+<p>\[
+v=\frac{1}{\rho}
+\]</p>
+<p>\[
+\rho=\frac{1}{v}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Calcular el volumen ocupado por
+     <strong>
+      5 kg de aceite
+     </strong>
+     con densidad de
+     <strong>
+      900 kg/m³
+     </strong>
+     .
+    </p>
+<div class="formula">
+<p>\[
+V=\frac{m}{\rho}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+V=\frac{5}{900}=0.00556\ m^3
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-2">
+<div class="concepto">
+<h1>2. Densidad y Conversión Masa-Volumen</h1>
+<h2>Uso de la densidad como factor de conversión</h2>
+<p>La densidad permite convertir masa en volumen y viceversa.</p>
+<p>\[
+\rho=\frac{m}{V}
+\]</p>
+<hr/>
+<h2>Conversión de masa a volumen</h2>
+<p>\[
+V=\frac{m}{\rho}
+\]</p>
+<p>Ejemplo:</p>
+<p>50 kg de aceite</p>
+<p>\[
+\rho=850 kg/m^3
+\]</p>
+<p>\[
+V=\frac{50}{850}
+\]</p>
+<p>\[
+V=0.0588,m^3
+\]</p>
+<hr/>
+<h2>Conversión de volumen a masa</h2>
+<p>\[
+m=\rho V
+\]</p>
+<p>Ejemplo:</p>
+<p>\[
+V=2m^3
+\]</p>
+<p>\[
+\rho=1000kg/m^3
+\]</p>
+<p>\[
+m=2000kg
+\]</p>
+<hr/>
+<h2>Importancia de mantener las unidades</h2>
+<p>Las unidades garantizan que el cálculo sea correcto.</p>
+<p>Ejemplo:</p>
+<p>\[
+kg/m^3 \times m^3=kg
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     ¿Cuál es la masa de
+     <strong>
+      2.5 L de leche
+     </strong>
+     si su densidad es
+     <strong>
+      1.03 kg/L
+     </strong>
+     ?
+    </p>
+<div class="formula">
+<p>\[
+m=V \cdot \rho
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+m=2.5\times1.03=2.575\ kg
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-3">
+<div class="concepto">
+<h1>3. Gravedad Específica</h1>
+<h2>Definición de gravedad específica</h2>
+<p>Es la relación entre la densidad de una sustancia y la densidad de una sustancia de referencia.</p>
+<p>Para líquidos:</p>
+<p>\[
+GE=\frac{\rho_{sustancia}}{\rho_{agua}}
+\]</p>
+<hr/>
+<h2>Material de referencia</h2>
+<p>Generalmente se utiliza agua a 4°C:</p>
+<p>\[
+\rho_{agua}=1000kg/m^3
+\]</p>
+<hr/>
+<h2>Magnitud adimensional</h2>
+<p>La gravedad específica no posee unidades.</p>
+<p>\[
+\frac{kg/m^3}{kg/m^3}=1
+\]</p>
+<hr/>
+<h2>Uso para determinar densidades</h2>
+<p>\[
+\rho=GE \times \rho_{agua}
+\]</p>
+<p>Ejemplo:</p>
+<p>\[
+GE=0.85
+\]</p>
+<p>\[
+\rho=0.85(1000)
+\]</p>
+<p>\[
+\rho=850kg/m^3
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Un líquido tiene gravedad específica de
+     <strong>
+      0.85
+     </strong>
+     .
+    </p>
+<p>
+     Determinar su densidad en kg/m³:
+    </p>
+<div class="formula">
+<p>\[
+\rho=SG \times \rho_{agua}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+\rho=0.85\times1000
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+\rho=850\ kg/m^3
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-4">
+<div class="concepto">
+<h1>4. Cantidad de Sustancia (Mol)</h1>
+<h2>Definición de mol</h2>
+<p>El mol es la unidad que mide cantidad de sustancia.</p>
+<hr/>
+<h2>Número de Avogadro</h2>
+<p>Un mol contiene:</p>
+<p>\[
+6.022\times10^{23}
+\]</p>
+<p>partículas.</p>
+<hr/>
+<h2>Mol, kmol y lbmol</h2>
+<ul>
+<li>mol</li>
+<li>kmol</li>
+<li>lbmol</li>
+</ul>
+<hr/>
+<h2>Interpretación física del mol</h2>
+<p>Permite contar átomos o moléculas de forma práctica.</p>
+<p>Ejemplo:</p>
+<p>1 mol de agua contiene:</p>
+<p>\[
+6.022\times10^{23}
+\]</p>
+<p>moléculas de H₂O.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     ¿Cuántas moléculas hay en
+     <strong>
+      3 moles de dióxido de carbono
+     </strong>
+     ?
+    </p>
+<div class="formula">
+<p>\[
+N=3\times6.022\times10^{23}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+N=1.8066\times10^{24}
+\]</p>
+</div>
+<p>
+     moléculas.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-5">
+<div class="concepto">
+<h1>5. Unidades del Mol</h1>
+<h2>Mol</h2>
+<p>Unidad básica.</p>
+<hr/>
+<h2>Kilomol (kmol)</h2>
+<p>\[
+1kmol=1000mol
+\]</p>
+<hr/>
+<h2>Libra-mol (lbmol)</h2>
+<p>Unidad del sistema inglés.</p>
+<hr/>
+<h2>Equivalencias</h2>
+<p>\[
+1kmol=1000mol
+\]</p>
+<p>\[
+1lbmol=453.592mol
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Convertir
+     <strong>
+      2 kmol
+     </strong>
+     a moles:
+    </p>
+<div class="formula">
+<p>\[
+2\times1000
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+=2000\ mol
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-6">
+<div class="concepto">
+<h1>6. Conversión entre Moles y Masa</h1>
+<h2>Peso molecular</h2>
+<p>Es la masa correspondiente a un mol de sustancia.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>H₂O = 18 g/mol</li>
+<li>CO₂ = 44 g/mol</li>
+</ul>
+<hr/>
+<h2>Conversión masa → moles</h2>
+<p>\[
+n=\frac{m}{PM}
+\]</p>
+<hr/>
+<h2>Conversión moles → masa</h2>
+<p>\[
+m=n(PM)
+\]</p>
+<hr/>
+<h2>Uso del peso molecular como factor de conversión</h2>
+<p>Ejemplo:</p>
+<p>90 g de agua</p>
+<p>\[
+n=\frac{90}{18}
+\]</p>
+<p>\[
+n=5mol
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     ¿Cuántos gramos hay en
+     <strong>
+      4 moles de nitrógeno (N₂)
+     </strong>
+     ?
+    </p>
+<p>
+     Peso molecular:
+    </p>
+<div class="formula">
+<p>\[
+MW=28\ g/mol
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+m=4\times28
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+m=112\ g
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-7">
+<div class="concepto">
+<h1>7. Composición de Mezclas</h1>
+<h2>Composición de corrientes de proceso</h2>
+<p>Indica cuánto de cada componente existe en una mezcla.</p>
+<hr/>
+<h2>Fracción másica</h2>
+<p>Basada en masa.</p>
+<hr/>
+<h2>Fracción molar</h2>
+<p>Basada en moles.</p>
+<hr/>
+<h2>Porcentajes másicos y molares</h2>
+<p>\[
+%m=100(w_i)
+\]</p>
+<p>\[
+%mol=100(x_i)
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una mezcla contiene:
+    </p>
+<ul>
+<li>
+      30 kg de azúcar
+     </li>
+<li>
+      70 kg de agua
+     </li>
+</ul>
+<p>
+     Fracción másica del azúcar:
+    </p>
+<div class="formula">
+<p>\[
+x=\frac{30}{100}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+x=0.30
+\]</p>
+</div>
+<p>
+     Fracción másica del agua:
+    </p>
+<div class="formula">
+<p>\[
+x=\frac{70}{100}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+x=0.70
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-8">
+<div class="concepto">
+<h1>8. Fracción Másica</h1>
+<h2>Definición</h2>
+<p>\[
+w_i=\frac{m_i}{m_{total}}
+\]</p>
+<hr/>
+<h2>Propiedades</h2>
+<p>Siempre:</p>
+<p>\[
+0\le w_i\le1
+\]</p>
+<hr/>
+<h2>Suma de fracciones</h2>
+<p>\[
+\sum w_i=1
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una solución tiene:
+    </p>
+<ul>
+<li>
+      12 kg de sal
+     </li>
+<li>
+      88 kg de agua
+     </li>
+</ul>
+<div class="formula">
+<p>\[
+x_{sal}=\frac{12}{100}=0.12
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-9">
+<div class="concepto">
+<h1>9. Fracción Molar</h1>
+<h2>Definición</h2>
+<p>\[
+x_i=\frac{n_i}{n_{total}}
+\]</p>
+<hr/>
+<h2>Cálculo a partir de moles</h2>
+<p>Ejemplo:</p>
+<p>2 mol A</p>
+<p>3 mol B</p>
+<p>\[
+x_A=\frac{2}{5}=0.4
+\]</p>
+<p>\[
+x_B=\frac{3}{5}=0.6
+\]</p>
+<hr/>
+<h2>Conversión desde datos de masa</h2>
+<ol>
+<li>Convertir masa a moles.</li>
+<li>Calcular fracción molar.</li>
+</ol>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una mezcla contiene:
+    </p>
+<ul>
+<li>
+      2 moles de oxígeno
+     </li>
+<li>
+      8 moles de nitrógeno
+     </li>
+</ul>
+<div class="formula">
+<p>\[
+y_{O_2}=\frac{2}{10}=0.20
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+y_{N_2}=\frac{8}{10}=0.80
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-10">
+<div class="concepto">
+<h1>10. Concentración</h1>
+<h2>Concentración másica</h2>
+<p>\[
+C_m=\frac{masa;soluto}{volumen;solución}
+\]</p>
+<hr/>
+<h2>Concentración molar</h2>
+<p>\[
+C=\frac{moles;soluto}{volumen;solución}
+\]</p>
+<hr/>
+<h2>Expresión por unidad de volumen</h2>
+<p>Ejemplos:</p>
+<ul>
+<li>g/L</li>
+<li>kg/m³</li>
+<li>mol/L</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Disolver 25 g de glucosa en 500 mL de solución.
+    </p>
+<div class="formula">
+<p>\[
+C=\frac{25}{0.5}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+C=50\ g/L
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-11">
+<div class="concepto">
+<h1>11. Molaridad</h1>
+<h2>Definición</h2>
+<p>Moles de soluto por litro de solución.</p>
+<p>\[
+M=\frac{mol}{L}
+\]</p>
+<hr/>
+<h2>Ejemplo</h2>
+<p>2 mol de NaCl en 1 L</p>
+<p>\[
+M=2M
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Disolver 1.5 moles de NaCl en 0.75 L de solución.
+    </p>
+<div class="formula">
+<p>\[
+M=\frac{1.5}{0.75}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+M=2.0\ M
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-12">
+<div class="concepto">
+<h1>12. Molalidad</h1>
+<h2>Definición</h2>
+<p>Moles de soluto por kilogramo de solvente.</p>
+<p>\[
+m=\frac{mol;soluto}{kg;solvente}
+\]</p>
+<hr/>
+<h2>Diferencia entre molalidad y molaridad</h2>
+<table>
+<thead>
+<tr>
+<th>Molaridad</th>
+<th>Molalidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mol/L solución</td>
+<td>mol/kg solvente</td>
+</tr>
+<tr>
+<td>Depende del volumen</td>
+<td>No depende del volumen</td>
+</tr>
+<tr>
+<td>Cambia con temperatura</td>
+<td>Prácticamente constante</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Disolver 2 moles de sacarosa en 4 kg de agua.
+    </p>
+<div class="formula">
+<p>\[
+m=\frac{2}{4}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+m=0.5\ mol/kg
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-13">
+<div class="concepto">
+<h1>13. Partes por Millón (ppm) y Partes por Billón (ppb)</h1>
+<h2>Definición</h2>
+<p>ppm:</p>
+<p>\[
+1ppm=\frac{1}{10^6}
+\]</p>
+<p>ppb:</p>
+<p>\[
+1ppb=\frac{1}{10^9}
+\]</p>
+<hr/>
+<h2>Uso industrial y ambiental</h2>
+<p>Se utilizan para concentraciones muy pequeñas.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>Contaminantes atmosféricos.</li>
+<li>Metales pesados en agua.</li>
+<li>Emisiones industriales.</li>
+</ul>
+<hr/>
+<h2>Limitaciones y posibles confusiones</h2>
+<p>Debe especificarse la base:</p>
+<ul>
+<li>ppm masa/masa</li>
+<li>ppm volumen/volumen</li>
+<li>ppm masa/volumen</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una muestra contiene:
+    </p>
+<ul>
+<li>
+      5 mg de plomo
+     </li>
+<li>
+      1 kg de agua
+     </li>
+</ul>
+<div class="formula">
+<p>\[
+ppm=\frac{5mg}{1000g}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+ppm=5
+\]</p>
+</div>
+<p>
+     Resultado:
+    </p>
+<p>
+<strong>
+      5 ppm de plomo.
+     </strong>
+</p>
+</div>
+<hr/>
+</section>
+<section id="section-14">
+<div class="concepto">
+<h1>14. Caudal o Flujo</h1>
+<h2>Flujo másico</h2>
+<p>Cantidad de masa por unidad de tiempo.</p>
+<p>\[
+\dot m=\frac{m}{t}
+\]</p>
+<p>Unidades:</p>
+<p>\[
+kg/s
+\]</p>
+<hr/>
+<h2>Flujo volumétrico</h2>
+<p>\[
+Q=\frac{V}{t}
+\]</p>
+<p>Unidades:</p>
+<p>\[
+m^3/s
+\]</p>
+<hr/>
+<h2>Flujo molar</h2>
+<p>\[
+\dot n=\frac{n}{t}
+\]</p>
+<p>Unidades:</p>
+<p>\[
+mol/s
+\]</p>
+<hr/>
+<h2>Conversión entre diferentes tipos de flujo</h2>
+<p>Flujo másico ↔ volumétrico</p>
+<p>\[
+\dot m=\rho Q
+\]</p>
+<p>Flujo molar ↔ másico</p>
+<p>\[
+\dot n=\frac{\dot m}{PM}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una tubería transporta:
+    </p>
+<div class="formula">
+<p>\[
+3\ kg/s
+\]</p>
+</div>
+<p>
+     de agua.
+    </p>
+<p>
+     Densidad:
+    </p>
+<div class="formula">
+<p>\[
+1000\ kg/m^3
+\]</p>
+</div>
+<p>
+     Flujo volumétrico:
+    </p>
+<div class="formula">
+<p>\[
+Q=\frac{\dot m}{\rho}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+Q=0.003\ m^3/s
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-15">
+<div class="concepto">
+<h1>15. Velocidad Lineal de Flujo</h1>
+<h2>Relación entre flujo volumétrico y área</h2>
+<p>\[
+Q=vA
+\]</p>
+<p>donde:</p>
+<ul>
+<li>Q = flujo volumétrico</li>
+<li>v = velocidad</li>
+<li>A = área transversal</li>
+</ul>
+<hr/>
+<h2>Aplicaciones en tuberías</h2>
+<p>\[
+v=\frac{Q}{A}
+\]</p>
+<p>Permite determinar la velocidad de circulación de fluidos.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Flujo:
+    </p>
+<div class="formula">
+<p>\[
+Q=0.02\ m^3/s
+\]</p>
+</div>
+<p>
+     Área:
+    </p>
+<div class="formula">
+<p>\[
+A=0.01\ m^2
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+v=2\ m/s
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-16">
+<div class="concepto">
+<h1>16. Temperatura</h1>
+<h2>Definición física</h2>
+<p>Propiedad que mide el estado térmico de un sistema.</p>
+<hr/>
+<h2>Energía cinética promedio</h2>
+<p>La temperatura está relacionada con la energía cinética promedio de las moléculas.</p>
+<hr/>
+<h2>Equilibrio térmico</h2>
+<p>Dos cuerpos están en equilibrio térmico cuando tienen la misma temperatura.</p>
+<hr/>
+<h2>Escalas de temperatura</h2>
+<ul>
+<li>Celsius</li>
+<li>Fahrenheit</li>
+<li>Kelvin</li>
+<li>Rankine</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Comparar:
+    </p>
+<ul>
+<li>
+      Agua a 20°C
+     </li>
+<li>
+      Agua a 60°C
+     </li>
+</ul>
+<p>
+     La muestra a 60°C posee mayor energía cinética promedio de sus moléculas.
+    </p>
+</div>
+<hr/>
+</section>
+<section id="section-17">
+<div class="concepto">
+<h1>17. Escalas de Temperatura</h1>
+<h2>Celsius (°C)</h2>
+<p>Agua:</p>
+<ul>
+<li>Congelación: 0°C</li>
+<li>Ebullición: 100°C</li>
+</ul>
+<hr/>
+<h2>Fahrenheit (°F)</h2>
+<p>Agua:</p>
+<ul>
+<li>Congelación: 32°F</li>
+<li>Ebullición: 212°F</li>
+</ul>
+<hr/>
+<h2>Kelvin (K)</h2>
+<p>Escala absoluta del SI.</p>
+<p>\[
+0K
+\]</p>
+<p>corresponde al cero absoluto.</p>
+<hr/>
+<h2>Rankine (°R)</h2>
+<p>Escala absoluta inglesa.</p>
+<hr/>
+<h2>Escalas relativas y absolutas</h2>
+<p>Relativas:</p>
+<ul>
+<li>Celsius</li>
+<li>Fahrenheit</li>
+</ul>
+<p>Absolutas:</p>
+<ul>
+<li>Kelvin</li>
+<li>Rankine</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Convertir 25°C a Kelvin:
+    </p>
+<div class="formula">
+<p>\[
+T(K)=25+273.15
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+T=298.15\ K
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-18">
+<div class="concepto">
+<h1>18. Diferencias de Temperatura</h1>
+<h2>Temperatura absoluta</h2>
+<p>Mide el estado térmico real.</p>
+<p>Ejemplo:</p>
+<p>300 K</p>
+<hr/>
+<h2>Cambio de temperatura</h2>
+<p>Representa una variación.</p>
+<p>Ejemplo:</p>
+<p>\[
+\Delta T=20°C
+\]</p>
+<hr/>
+<h2>Relaciones entre escalas</h2>
+<p>\[
+1K=1°C
+\]</p>
+<p>\[
+1°F=\frac{5}{9}°C
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Si una sustancia aumenta de:
+    </p>
+<div class="formula">
+<p>\[
+10^\circ C \rightarrow 30^\circ C
+\]</p>
+</div>
+<p>
+     Entonces:
+    </p>
+<div class="formula">
+<p>\[
+\Delta T=20^\circ C
+\]</p>
+</div>
+<p>
+     y
+    </p>
+<div class="formula">
+<p>\[
+\Delta T=20K
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-19">
+<div class="concepto">
+<h1>19. Conversión de Temperaturas</h1>
+<h2>Celsius ↔ Fahrenheit</h2>
+<p>\[
+°F=\frac{9}{5}(°C)+32
+\]</p>
+<p>\[
+°C=\frac{5}{9}(°F-32)
+\]</p>
+<hr/>
+<h2>Celsius ↔ Kelvin</h2>
+<p>\[
+K=°C+273.15
+\]</p>
+<p>\[
+°C=K-273.15
+\]</p>
+<hr/>
+<h2>Fahrenheit ↔ Rankine</h2>
+<p>\[
+°R=°F+459.67
+\]</p>
+<hr/>
+<h2>Kelvin ↔ Rankine</h2>
+<p>\[
+°R=1.8K
+\]</p>
+<p>\[
+K=\frac{°R}{1.8}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Convertir 68°F a °C:
+    </p>
+<div class="formula">
+<p>\[
+T(^\circ C)=\frac{68-32}{1.8}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+T=20^\circ C
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-20">
+<div class="concepto">
+<h1>20. Presión</h1>
+<h2>Definición de presión</h2>
+<p>Es la fuerza ejercida sobre una superficie por unidad de área.</p>
+<p>\[
+P=\frac{F}{A}
+\]</p>
+<hr/>
+<h2>Fuerza aplicada por unidad de área</h2>
+<p>A mayor fuerza o menor área, mayor presión.</p>
+<hr/>
+<h2>Unidades comunes</h2>
+<ul>
+<li>Pa</li>
+<li>atm</li>
+<li>bar</li>
+<li>psi</li>
+<li>Torr</li>
+<li>mmHg</li>
+</ul>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Una fuerza de 200 N actúa sobre una superficie de 0.5 m².
+    </p>
+<div class="formula">
+<p>\[
+P=\frac{200}{0.5}
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+P=400\ Pa
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-21">
+<div class="concepto">
+<h1>21. Unidades de Presión</h1>
+<h2>Pascal (Pa)</h2>
+<p>Unidad SI.</p>
+<p>\[
+1Pa=1N/m^2
+\]</p>
+<hr/>
+<h2>atm</h2>
+<p>\[
+1atm=101325Pa
+\]</p>
+<hr/>
+<h2>bar</h2>
+<p>\[
+1bar=100000Pa
+\]</p>
+<hr/>
+<h2>Torr</h2>
+<p>\[
+1Torr=133.322Pa
+\]</p>
+<hr/>
+<h2>mmHg</h2>
+<p>\[
+1mmHg\approx133.322Pa
+\]</p>
+<hr/>
+<h2>psi</h2>
+<p>\[
+1psi=6894.76Pa
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Convertir:
+    </p>
+<div class="formula">
+<p>\[
+2\ atm
+\]</p>
+</div>
+<p>
+     a Pascales:
+    </p>
+<div class="formula">
+<p>\[
+2\times101325
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+202650\ Pa
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-22">
+<div class="concepto">
+<h1>22. Presión Absoluta y Presión Manométrica</h1>
+<h2>Presión absoluta</h2>
+<p>Se mide respecto al vacío absoluto.</p>
+<p>\[
+P_{abs}
+\]</p>
+<hr/>
+<h2>Presión atmosférica de referencia</h2>
+<p>\[
+P_{atm}\approx101.325kPa
+\]</p>
+<hr/>
+<h2>Presión manométrica (gauge)</h2>
+<p>Se mide respecto a la presión atmosférica.</p>
+<p>\[
+P_g=P_{abs}-P_{atm}
+\]</p>
+<hr/>
+<h3>Relaciones importantes</h3>
+<p>\[
+P_{abs}=P_g+P_{atm}
+\]</p>
+<p>\[
+P_g=P_{abs}-P_{atm}
+\]</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo
+    </h3>
+<p>
+     Si un manómetro indica:
+    </p>
+<div class="formula">
+<p>\[
+150\ kPa
+\]</p>
+</div>
+<p>
+     y la presión atmosférica es:
+    </p>
+<div class="formula">
+<p>\[
+101.3\ kPa
+\]</p>
+</div>
+<p>
+     Entonces:
+    </p>
+<div class="formula">
+<p>\[
+P_{abs}=150+101.3
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+P_{abs}=251.3\ kPa
+\]</p>
+</div>
+</div>
+<hr/>
+</section>
+<section id="section-23">
+<div class="concepto">
+<h1>23. Resumen Integrador</h1>
+<h2>Magnitud del sistema</h2>
+<h3>Masa</h3>
+<p>Cantidad de materia presente en el sistema.</p>
+<h3>Volumen</h3>
+<p>Espacio ocupado por la sustancia.</p>
+<h3>Moles</h3>
+<p>Cantidad de partículas presentes.</p>
+<hr/>
+<h2>Composición</h2>
+<h3>Fracción másica</h3>
+<p>\[
+w_i=\frac{m_i}{m_{total}}
+\]</p>
+<p>Describe la participación de cada componente en términos de masa.</p>
+<hr/>
+<h3>Fracción molar</h3>
+<p>\[
+x_i=\frac{n_i}{n_{total}}
+\]</p>
+<p>Describe la participación de cada componente en términos de moles.</p>
+<hr/>
+<h3>Concentración</h3>
+<p>Expresa cuánto soluto existe por unidad de volumen o masa de solución.</p>
+<hr/>
+<h2>Condición del proceso</h2>
+<h3>Temperatura</h3>
+<p>Determina el estado térmico y afecta propiedades físicas y químicas.</p>
+<h3>Presión</h3>
+<p>Determina el estado mecánico del sistema y el comportamiento de líquidos y gases.</p>
+<hr/>
+<h2>Transporte</h2>
+<h3>Caudales</h3>
+<p>Representan la cantidad de masa, volumen o moles que atraviesan una sección por unidad de tiempo:</p>
+<ul>
+<li>Flujo másico ((\dot m))</li>
+<li>Flujo volumétrico ((Q))</li>
+<li>Flujo molar ((\dot n))</li>
+</ul>
+<hr/>
+<h3>Velocidad de flujo</h3>
+<p>Describe la rapidez con la que se mueve un fluido:</p>
+<p>\[
+v=\frac{Q}{A}
+\]</p>
+<p>y es fundamental para el diseño de tuberías, bombas, intercambiadores de calor y procesos industriales.</p>
+<hr/>
+</div>
+
+
+<div class="ejemplo">
+<h3>
+     Ejemplo integrador
+    </h3>
+<p>
+     Una corriente contiene:
+    </p>
+<ul>
+<li>
+      100 kg/h de solución salina
+     </li>
+<li>
+      Concentración de sal = 10%
+     </li>
+</ul>
+<p>
+     Masa de sal:
+    </p>
+<div class="formula">
+<p>\[
+100\times0.10
+\]</p>
+</div>
+<div class="formula">
+<p>\[
+=10\ kg/h
+\]</p>
+</div>
+<p>
+     Masa de agua:
+    </p>
+<div class="formula">
+<p>\[
+90\ kg/h
+\]</p>
+</div>
+</div>
+</section>
+<section id="section-24">
+<div class="concepto">
+<h1>Conclusión General</h1>
+<p>La masa, el volumen y los moles describen la cantidad de materia presente en un sistema. La composición se expresa mediante fracciones másicas, fracciones molares y concentraciones. La temperatura y la presión determinan el estado físico y termodinámico del proceso, mientras que los caudales y velocidades permiten analizar el transporte de materia dentro de equipos y tuberías. Estos conceptos constituyen la base del análisis de procesos químicos, mecánicos, ambientales y de ingeniería en general.</p>
+</div>
+</section>
