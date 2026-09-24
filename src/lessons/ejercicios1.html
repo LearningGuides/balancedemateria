@@ -196,7 +196,157 @@
   </ul>
 </div>
 </li>
+<li>
+  <div class="problema">
+
+  <p>
+    Un jugo de fruta contiene 12.0 % en masa de sólidos (S) y 88.0 % en masa de agua (W).
+    El jugo se alimenta a un evaporador con un caudal de 2500 kg/h para aumentar la concentración de sólidos.
+  </p>
+
+  <p>
+    <strong>F:</strong> Jugo de alimentación, con 12.0 % en masa de sólidos y 88.0 % en masa de agua.
+  </p>
+
+  <p>
+    <strong>V:</strong> Corriente de vapor que contiene 99.5 % molar de agua y el resto de sólidos volátiles.
+  </p>
+
+  <p>
+    <strong>C:</strong> Corriente de concentrado que contiene 35.0 % en masa de sólidos.
+  </p>
+
+  <p>
+    El proceso opera en estado estacionario, sin reacción química y sin acumulación.
+    Para fines del ejercicio, considere los pesos moleculares del agua y de los sólidos iguales a
+    18.0 kg/kmol y 90.0 kg/kmol, respectivamente.
+  </p>
+
+  <p>
+    Dibuje y etiquete un diagrama de flujo del proceso y calcule todas las variables desconocidas
+    de las corrientes, incluyendo los caudales másicos y molares, así como las fracciones másicas
+    y molares de cada componente.
+  </p>
+
+  <table class="tabla-balance">
+    <thead>
+      <tr>
+        <th>Componente</th>
+        <th>Alimentación F</th>
+        <th>Vapor V</th>
+        <th>Concentrado C</th>
+      </tr>
+    </thead>
+
+<tbody>
+
+  <!-- SÓLIDOS -->
+  <tr>
+    <th>Sólidos (S)</th>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = ?</span>
+        <span>n = ?</span>
+        <span>w = 0.120</span>
+        <span>x = ?</span>
+      </div>
+    </td>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = ?</span>
+        <span>n = ?</span>
+        <span>w = ?</span>
+        <span>x = 0.005</span>
+      </div>
+    </td>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = ?</span>
+        <span>n = ?</span>
+        <span>w = 0.350</span>
+        <span>x = ?</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- AGUA -->
+  <tr>
+    <th>Agua (W)</th>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = ?</span>
+        <span>n = ?</span>
+        <span>w = 0.880</span>
+        <span>x = ?</span>
+      </div>
+    </td>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = ?</span>
+        <span>n = ?</span>
+        <span>w = ?</span>
+        <span>x = 0.995</span>
+      </div>
+    </td>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = ?</span>
+        <span>n = ?</span>
+        <span>w = 0.650</span>
+        <span>x = ?</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- TOTAL -->
+  <tr>
+    <th>Total</th>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = 2500</span>
+        <span>n = ?</span>
+        <span>w = 1</span>
+        <span>x = 1</span>
+      </div>
+    </td>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = ?</span>
+        <span>n = ?</span>
+        <span>w = 1</span>
+        <span>x = 1</span>
+      </div>
+    </td>
+
+    <td>
+      <div class="grid-celda">
+        <span>m = ?</span>
+        <span>n = ?</span>
+        <span>w = 1</span>
+        <span>x = 1</span>
+      </div>
+    </td>
+  </tr>
+
+</tbody>
+```
+
+  </table>
+
+</div>
+
+
+</li>
 </ol>
+
 
 
 
@@ -252,4 +402,41 @@ li{
   transform: translateY(-2px);
   transition: 0.2s ease;
 }
+  .tabla-balance {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .tabla-balance th,
+  .tabla-balance td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .tabla-balance th {
+    font-weight: bold;
+  }
+
+  .grid-celda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .grid-celda span {
+    padding: 8px;
+  }
+
+  .grid-celda span:nth-child(1),
+  .grid-celda span:nth-child(2) {
+    border-bottom: 1px solid #999;
+  }
+
+  .grid-celda span:nth-child(1),
+  .grid-celda span:nth-child(3) {
+    border-right: 1px solid #999;
+  }
 </style>
