@@ -1,0 +1,847 @@
+---
+title: Balances de materia en múltiples unidades
+---
+# Lección 8: Balances de materia en múltiples unidades
+
+## 1. Regla de trabajo
+
+Para cada problema:
+
+$$
+\boxed{\text{Entradas}=\text{Salidas}}
+$$
+
+Si interesa un componente específico $A$:
+
+$$
+\boxed{\text{Entrada de A}=\text{Salida de A}}
+$$
+
+Y si una corriente tiene caudal $F$ y fracción másica $w_A$:
+
+$$
+\boxed{m_A=Fw_A}
+$$
+
+En procesos con varios equipos, resulta conveniente empezar por el **sistema global**, porque las corrientes internas desaparecen del balance.  
+
+---
+
+# Ejemplo 1. Balance total sencillo
+
+Una planta recibe dos corrientes:
+
+$$
+F_1=500\ \text{kg/h}
+$$
+
+$$
+F_2=300\ \text{kg/h}
+$$
+
+Produce $600\ \text{kg/h}$ de producto y una corriente de desecho $W$.
+
+### Paso 1. Balance total
+
+$$
+F_1+F_2=P+W
+$$
+
+Sustituyendo:
+
+$$
+500+300=600+W
+$$
+
+$$
+800=600+W
+$$
+
+### Resultado
+
+$$
+\boxed{W=200\ \text{kg/h}}
+$$
+
+### Comprobación
+
+Entradas:
+
+$$
+500+300=800
+$$
+
+Salidas:
+
+$$
+600+200=800
+$$
+
+Por tanto:
+
+$$
+\boxed{800=800}
+$$
+
+El balance se cumple.
+
+---
+
+# Ejemplo 2. Mezclador: calcular caudal y composición
+
+Dos soluciones se alimentan a un mezclador.
+
+**Corriente 1**
+
+$$
+F_1=150\ \text{kg/h}
+$$
+
+$$
+w_{A,1}=0.20
+$$
+
+**Corriente 2**
+
+$$
+F_2=250\ \text{kg/h}
+$$
+
+$$
+w_{A,2}=0.50
+$$
+
+Se desea conocer el caudal y la composición de la mezcla $M$.
+
+El procedimiento sigue exactamente el enfoque del material: primero balance total y después balance por componente.  
+
+### Paso 1. Balance total
+
+$$
+F_1+F_2=M
+$$
+
+$$
+150+250=M
+$$
+
+$$
+\boxed{M=400\ \text{kg/h}}
+$$
+
+### Paso 2. Cantidad de A en cada alimentación
+
+Corriente 1:
+
+$$
+m_{A,1}=150(0.20)=30\ \text{kg/h}
+$$
+
+Corriente 2:
+
+$$
+m_{A,2}=250(0.50)=125\ \text{kg/h}
+$$
+
+Entonces entran:
+
+$$
+30+125=155\ \text{kg/h de A}
+$$
+
+### Paso 3. Balance de A
+
+$$
+150(0.20)+250(0.50)=400w_{A,M}
+$$
+
+$$
+155=400w_{A,M}
+$$
+
+$$
+w_{A,M}=\frac{155}{400}
+$$
+
+$$
+\boxed{w_{A,M}=0.3875}
+$$
+
+Por tanto, la mezcla contiene:
+
+$$
+\boxed{38.75\% \text{ de A}}
+$$
+
+---
+
+# Ejemplo 3. Encontrar una alimentación desconocida
+
+Un mezclador produce:
+
+$$
+M=600\ \text{kg/h}
+$$
+
+con una concentración de A de:
+
+$$
+w_{A,M}=0.30
+$$
+
+La primera alimentación es:
+
+$$
+F_1=200\ \text{kg/h}
+$$
+
+con:
+
+$$
+w_{A,1}=0.10
+$$
+
+La segunda alimentación $F_2$ tiene 40 % de A.
+
+### Paso 1. Balance total
+
+$$
+F_1+F_2=M
+$$
+
+$$
+200+F_2=600
+$$
+
+$$
+\boxed{F_2=400\ \text{kg/h}}
+$$
+
+### Paso 2. Verificación mediante A
+
+Entrada de A:
+
+$$
+200(0.10)+400(0.40)
+$$
+
+$$
+=20+160
+$$
+
+$$
+=180\ \text{kg/h}
+$$
+
+Salida de A:
+
+$$
+600(0.30)=180\ \text{kg/h}
+$$
+
+Por tanto:
+
+$$
+\boxed{180=180}
+$$
+
+El resultado es consistente.
+
+---
+
+# Ejemplo 4. Evaporador
+
+Una solución de:
+
+$$
+F=1000\ \text{kg/h}
+$$
+
+contiene 20 % de sólidos y 80 % de agua.
+
+En un evaporador se elimina agua pura y se obtiene un concentrado con 50 % de sólidos.
+
+Calcular:
+
+1. caudal del concentrado $P$;
+2. agua evaporada $V$.
+
+### Paso 1. Sólidos que entran
+
+$$
+m_s=1000(0.20)
+$$
+
+$$
+m_s=200\ \text{kg/h}
+$$
+
+Los sólidos no salen con el vapor, por lo que todos permanecen en el concentrado.
+
+### Paso 2. Balance de sólidos
+
+$$
+1000(0.20)=P(0.50)
+$$
+
+$$
+200=0.50P
+$$
+
+$$
+\boxed{P=400\ \text{kg/h}}
+$$
+
+### Paso 3. Balance total
+
+$$
+F=P+V
+$$
+
+$$
+1000=400+V
+$$
+
+$$
+\boxed{V=600\ \text{kg/h}}
+$$
+
+### Verificación con agua
+
+Agua de entrada:
+
+$$
+1000(0.80)=800
+$$
+
+Agua en producto:
+
+$$
+400(0.50)=200
+$$
+
+Agua evaporada:
+
+$$
+600
+$$
+
+Entonces:
+
+$$
+800=200+600
+$$
+
+$$
+\boxed{800=800}
+$$
+
+---
+
+# Ejemplo 5. Splitter
+
+El material especifica que un splitter divide el caudal **sin modificar su composición**.  
+
+Una corriente de:
+
+$$
+F=800\ \text{kg/h}
+$$
+
+contiene 25 % de A.
+
+El 35 % del flujo se envía hacia $S_1$.
+
+### Paso 1. Primera salida
+
+$$
+S_1=\alpha F
+$$
+
+$$
+S_1=0.35(800)
+$$
+
+$$
+\boxed{S_1=280\ \text{kg/h}}
+$$
+
+### Paso 2. Segunda salida
+
+$$
+S_2=(1-\alpha)F
+$$
+
+$$
+S_2=0.65(800)
+$$
+
+$$
+\boxed{S_2=520\ \text{kg/h}}
+$$
+
+### Paso 3. Composiciones
+
+Como es un splitter:
+
+$$
+w_{A,F}=w_{A,S1}=w_{A,S2}
+$$
+
+Por tanto:
+
+$$
+\boxed{w_{A,S1}=w_{A,S2}=0.25}
+$$
+
+Cantidad de A en $S_1$:
+
+$$
+280(0.25)=70\ \text{kg/h}
+$$
+
+Cantidad de A en $S_2$:
+
+$$
+520(0.25)=130\ \text{kg/h}
+$$
+
+Verificación:
+
+$$
+70+130=200\ \text{kg/h}
+$$
+
+y en la alimentación:
+
+$$
+800(0.25)=200\ \text{kg/h}
+$$
+
+Correcto.
+
+---
+
+# Ejemplo 6. Dos unidades: mezclador + evaporador
+
+Ahora se combinan conceptos.
+
+El proceso es:
+
+$$
+F_1+F_2
+\rightarrow
+\boxed{\text{Mezclador}}
+\rightarrow M
+\rightarrow
+\boxed{\text{Evaporador}}
+\rightarrow P+V
+$$
+
+Datos:
+
+$$
+F_1=300\ \text{kg/h}
+$$
+
+con 20 % de sólidos.
+
+$$
+F_2=200\ \text{kg/h}
+$$
+
+con 40 % de sólidos.
+
+El evaporador elimina únicamente agua.
+
+## Parte A. Mezclador
+
+Balance total:
+
+$$
+M=300+200
+$$
+
+$$
+\boxed{M=500\ \text{kg/h}}
+$$
+
+Sólidos:
+
+$$
+300(0.20)+200(0.40)
+$$
+
+$$
+=60+80
+$$
+
+$$
+=140\ \text{kg/h}
+$$
+
+Composición de sólidos de $M$:
+
+$$
+w_{s,M}=\frac{140}{500}
+$$
+
+$$
+\boxed{w_{s,M}=0.28}
+$$
+
+La corriente hacia el evaporador contiene 28 % de sólidos.
+
+## Parte B. Evaporador
+
+Supóngase que el producto final debe contener 50 % de sólidos.
+
+Los 140 kg/h de sólidos permanecen en el producto:
+
+$$
+140=0.50P
+$$
+
+$$
+\boxed{P=280\ \text{kg/h}}
+$$
+
+Balance total del evaporador:
+
+$$
+500=280+V
+$$
+
+$$
+\boxed{V=220\ \text{kg/h}}
+$$
+
+### Resultados
+
+$$
+\boxed{M=500\ \text{kg/h}}
+$$
+
+$$
+\boxed{P=280\ \text{kg/h}}
+$$
+
+$$
+\boxed{V=220\ \text{kg/h}}
+$$
+
+---
+
+# Ejemplo 7. Resolver el mismo proceso usando balance global
+
+En el ejemplo anterior puede evitarse inicialmente la corriente interna $M$.
+
+Se coloca una frontera alrededor del **mezclador + evaporador**:
+
+$$
+F_1+F_2\rightarrow
+\boxed{\text{Mezclador + Evaporador}}
+\rightarrow P+V
+$$
+
+La corriente $M$ desaparece porque ahora es interna. Esta es precisamente una de las ventajas de combinar subsistemas descritas en el material.  
+
+Balance global de sólidos:
+
+$$
+300(0.20)+200(0.40)=0.50P
+$$
+
+$$
+60+80=0.50P
+$$
+
+$$
+140=0.50P
+$$
+
+$$
+\boxed{P=280\ \text{kg/h}}
+$$
+
+Después:
+
+$$
+300+200=P+V
+$$
+
+$$
+500=280+V
+$$
+
+$$
+\boxed{V=220\ \text{kg/h}}
+$$
+
+Se obtuvo el mismo resultado **sin calcular primero $M$**.
+
+Este ejemplo muestra por qué seleccionar adecuadamente la frontera puede simplificar mucho un problema.
+
+---
+
+# Ejemplo 8. Tres unidades y resolución secuencial
+
+Considérese:
+
+$$
+F_1+F_2
+\rightarrow
+\boxed{\text{Mezclador}}
+\rightarrow M
+\rightarrow
+\boxed{\text{Evaporador}}
+\rightarrow E+V
+$$
+
+Después:
+
+$$
+E\rightarrow
+\boxed{\text{Filtro}}
+\rightarrow P+W
+$$
+
+Datos:
+
+$$
+F_1=400\ \text{kg/h}
+$$
+
+$$
+F_2=200\ \text{kg/h}
+$$
+
+El proceso completo genera:
+
+$$
+V=150\ \text{kg/h}
+$$
+
+y:
+
+$$
+W=50\ \text{kg/h}
+$$
+
+Calcular $P$, $M$ y $E$.
+
+## Paso 1. Sistema global
+
+Entradas:
+
+$$
+400+200=600
+$$
+
+Salidas:
+
+$$
+P+150+50
+$$
+
+Balance:
+
+$$
+600=P+150+50
+$$
+
+$$
+\boxed{P=400\ \text{kg/h}}
+$$
+
+## Paso 2. Mezclador
+
+$$
+M=F_1+F_2
+$$
+
+$$
+M=400+200
+$$
+
+$$
+\boxed{M=600\ \text{kg/h}}
+$$
+
+## Paso 3. Evaporador
+
+$$
+M=E+V
+$$
+
+$$
+600=E+150
+$$
+
+$$
+\boxed{E=450\ \text{kg/h}}
+$$
+
+## Paso 4. Filtro
+
+$$
+E=P+W
+$$
+
+$$
+450=400+50
+$$
+
+$$
+\boxed{450=450}
+$$
+
+Todo el proceso queda verificado.
+
+El material denomina a este procedimiento **resolución secuencial**: se resuelve una frontera y su resultado se convierte en información para la siguiente.  
+
+---
+
+# Ejemplo 9. Grados de libertad antes de calcular
+
+Considérese un mezclador:
+
+$$
+F_1+F_2=M
+$$
+
+Se conoce $F_1$, pero $F_2$ y $M$ son desconocidos.
+
+Incógnitas:
+
+$$
+N_I=2
+$$
+
+Solo existe un balance total independiente:
+
+$$
+N_E=1
+$$
+
+Entonces:
+
+$$
+GDL=N_I-N_E
+$$
+
+$$
+GDL=2-1
+$$
+
+$$
+\boxed{GDL=1}
+$$
+
+No puede resolverse todavía.
+
+Ahora se proporciona:
+
+$$
+M=500\ \text{kg/h}
+$$
+
+Solo queda $F_2$ como incógnita:
+
+$$
+N_I=1
+$$
+
+y existe una ecuación:
+
+$$
+F_1+F_2=M
+$$
+
+Por tanto:
+
+$$
+GDL=1-1
+$$
+
+$$
+\boxed{GDL=0}
+$$
+
+Ahora sí puede resolverse.
+
+El criterio del material es precisamente que $GDL=0$ corresponde a un sistema correctamente especificado.  
+
+---
+
+# Ejercicio 10. Para practicar
+
+Una solución de azúcar de:
+
+$$
+800\ \text{kg/h}
+$$
+
+contiene 15 % de azúcar y entra a un evaporador. El producto concentrado contiene 40 % de azúcar. El vapor contiene únicamente agua.
+
+Determinar:
+
+**a)** kg/h de azúcar en la alimentación.  
+**b)** caudal del producto concentrado.  
+**c)** kg/h de agua evaporada.
+
+### Solución
+
+Azúcar:
+
+$$
+800(0.15)=120\ \text{kg/h}
+$$
+
+Balance de azúcar:
+
+$$
+120=0.40P
+$$
+
+$$
+\boxed{P=300\ \text{kg/h}}
+$$
+
+Balance total:
+
+$$
+800=300+V
+$$
+
+$$
+\boxed{V=500\ \text{kg/h}}
+$$
+
+---
+
+# Método rápido para examen
+
+Ante cualquier ejercicio de esta lección, conviene seguir siempre:
+
+$$
+\boxed{
+\text{Dibujar}
+\rightarrow
+\text{marcar datos}
+\rightarrow
+\text{elegir frontera}
+\rightarrow
+\text{contar GDL}
+\rightarrow
+\text{balance total}
+\rightarrow
+\text{balance de componente}
+\rightarrow
+\text{resolver}
+\rightarrow
+\text{verificar}
+}
+$$
+
+La comprobación final debe verificar tanto el balance total como los balances por componente, además de unidades y consistencia física.  

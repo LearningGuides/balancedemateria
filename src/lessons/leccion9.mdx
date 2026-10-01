@@ -1,0 +1,907 @@
+---
+title: Estrategias para resolver procesos con múltiples unidades
+---
+
+# Lección 9: Estrategias para resolver procesos con múltiples unidades
+
+## 1. ¿Por dónde se comienza?
+
+Supóngase:
+
+$$
+F
+\rightarrow
+\boxed{\text{Mezclador}}
+\rightarrow
+\boxed{\text{Evaporador}}
+\rightarrow
+\boxed{\text{Filtro}}
+\rightarrow P
+$$
+
+No necesariamente debe resolverse primero el mezclador.
+
+La pregunta correcta es:
+
+$$
+\boxed{\text{¿Qué unidad puede resolverse con los datos disponibles?}}
+$$
+
+Para responderla se utilizan los **grados de libertad**:
+
+$$
+GDL=N_I-N_E
+$$
+
+Si:
+
+$$
+\boxed{GDL=0}
+$$
+
+el sistema puede resolverse.
+
+---
+
+# Ejemplo 1. Elegir dónde comenzar
+
+Un proceso tiene tres unidades:
+
+$$
+\boxed{U_1}\rightarrow
+\boxed{U_2}\rightarrow
+\boxed{U_3}
+$$
+
+Al analizar los datos se obtiene:
+
+| Sistema | Incógnitas | Ecuaciones | GDL |
+|---|---:|---:|---:|
+| $U_1$ | 3 | 2 | 1 |
+| $U_2$ | 4 | 2 | 2 |
+| $U_3$ | 2 | 2 | 0 |
+
+Aunque $U_3$ sea la última unidad:
+
+$$
+GDL_{U_3}=2-2=0
+$$
+
+Por tanto, se comienza por:
+
+$$
+\boxed{U_3}
+$$
+
+Después, los resultados de $U_3$ pueden convertirse en datos conocidos para $U_2$.
+
+**Idea importante:** el orden de cálculo no tiene que coincidir con el sentido físico del proceso.
+
+---
+
+# Ejemplo 2. Resolución desde el producto
+
+Considérese un secador:
+
+$$
+F_h\rightarrow
+\boxed{\text{Secador}}
+\rightarrow
+P+V
+$$
+
+Se producen:
+
+$$
+P=400\ \text{kg/h}
+$$
+
+de producto con 5 % de agua.
+
+La alimentación húmeda contiene 20 % de agua y el vapor $V$ es agua pura.
+
+Calcular $F_h$ y $V$.
+
+### Paso 1. Sólidos del producto
+
+El producto contiene:
+
+$$
+1-0.05=0.95
+$$
+
+de sólidos.
+
+Entonces:
+
+$$
+m_{s,P}=400(0.95)
+$$
+
+$$
+m_{s,P}=380\ \text{kg/h}
+$$
+
+### Paso 2. Balance de sólidos
+
+La alimentación contiene:
+
+$$
+1-0.20=0.80
+$$
+
+de sólidos.
+
+Como los sólidos no salen con el vapor:
+
+$$
+0.80F_h=380
+$$
+
+$$
+F_h=\frac{380}{0.80}
+$$
+
+$$
+\boxed{F_h=475\ \text{kg/h}}
+$$
+
+### Paso 3. Balance total
+
+$$
+F_h=P+V
+$$
+
+$$
+475=400+V
+$$
+
+$$
+\boxed{V=75\ \text{kg/h}}
+$$
+
+Este ejemplo muestra por qué a veces conviene comenzar desde la última unidad cuando el producto está mejor especificado. El material denomina a esta estrategia **análisis inverso del proceso**.  
+
+---
+
+# Ejemplo 3. Uso de una base de cálculo
+
+Una mezcla contiene:
+
+- 40 % de A;
+- 35 % de B;
+- 25 % de C.
+
+No se proporciona una cantidad total.
+
+Se puede seleccionar:
+
+$$
+\boxed{\text{Base}=100\ \text{kg}}
+$$
+
+Entonces directamente:
+
+$$
+m_A=100(0.40)=40\ \text{kg}
+$$
+
+$$
+m_B=100(0.35)=35\ \text{kg}
+$$
+
+$$
+m_C=100(0.25)=25\ \text{kg}
+$$
+
+Comprobación:
+
+$$
+40+35+25=100\ \text{kg}
+$$
+
+La base de cálculo transforma porcentajes en cantidades absolutas y puede elegirse para facilitar las operaciones.  
+
+---
+
+# Ejemplo 4. Conversión de bases
+
+Una planta procesa:
+
+$$
+3600\ \text{kg/día}
+$$
+
+pero los demás datos están expresados en kg/h.
+
+No deben combinarse directamente ambas unidades.
+
+Conversión:
+
+$$
+3600\frac{\text{kg}}{\text{día}}
+\left(
+\frac{1\text{ día}}{24\text{ h}}
+\right)
+$$
+
+$$
+=\frac{3600}{24}
+$$
+
+$$
+\boxed{150\ \text{kg/h}}
+$$
+
+Ahora sí pueden utilizarse los datos en el mismo balance.
+
+---
+
+# Ejemplo 5. Separador: dos ecuaciones simultáneas
+
+Una alimentación de:
+
+$$
+F=1000\ \text{kg/h}
+$$
+
+contiene 30 % de A.
+
+Se separa en:
+
+- producto $P$: 60 % de A;
+- residuo $R$: 10 % de A.
+
+Calcular $P$ y $R$.
+
+Este tipo de problema requiere un balance total y otro por componente.  
+
+### Paso 1. Balance total
+
+$$
+1000=P+R
+$$
+
+Entonces:
+
+$$
+R=1000-P
+$$
+
+### Paso 2. Balance de A
+
+Entrada de A:
+
+$$
+1000(0.30)=300
+$$
+
+Por tanto:
+
+$$
+300=0.60P+0.10R
+$$
+
+Sustituyendo:
+
+$$
+300=0.60P+0.10(1000-P)
+$$
+
+$$
+300=0.60P+100-0.10P
+$$
+
+$$
+200=0.50P
+$$
+
+$$
+\boxed{P=400\ \text{kg/h}}
+$$
+
+Y:
+
+$$
+R=1000-400
+$$
+
+$$
+\boxed{R=600\ \text{kg/h}}
+$$
+
+### Verificación
+
+A en producto:
+
+$$
+400(0.60)=240
+$$
+
+A en residuo:
+
+$$
+600(0.10)=60
+$$
+
+Total:
+
+$$
+240+60=300\ \text{kg/h}
+$$
+
+que coincide con la alimentación.
+
+---
+
+# Ejemplo 6. Mezcla de tres componentes
+
+Se mezclan dos corrientes.
+
+### Corriente 1
+
+$$
+F_1=100\ \text{kg/h}
+$$
+
+Composición:
+
+$$
+A=50\%,\quad B=30\%,\quad C=20\%
+$$
+
+### Corriente 2
+
+$$
+F_2=200\ \text{kg/h}
+$$
+
+Composición:
+
+$$
+A=10\%,\quad B=40\%,\quad C=50\%
+$$
+
+Calcular la composición final.
+
+### Paso 1. Caudal total
+
+$$
+M=100+200
+$$
+
+$$
+\boxed{M=300\ \text{kg/h}}
+$$
+
+### Paso 2. Componente A
+
+$$
+m_A=100(0.50)+200(0.10)
+$$
+
+$$
+m_A=50+20=70
+$$
+
+$$
+w_A=\frac{70}{300}
+$$
+
+$$
+\boxed{w_A=0.2333=23.33\%}
+$$
+
+### Paso 3. Componente B
+
+$$
+m_B=100(0.30)+200(0.40)
+$$
+
+$$
+m_B=30+80=110
+$$
+
+$$
+w_B=\frac{110}{300}
+$$
+
+$$
+\boxed{w_B=0.3667=36.67\%}
+$$
+
+### Paso 4. Componente C
+
+Puede calcularse directamente:
+
+$$
+m_C=100(0.20)+200(0.50)
+$$
+
+$$
+m_C=20+100=120
+$$
+
+$$
+w_C=\frac{120}{300}=0.40
+$$
+
+$$
+\boxed{w_C=40\%}
+$$
+
+### Comprobación
+
+$$
+23.33+36.67+40=100\%
+$$
+
+Este es el ejemplo ternario desarrollado en el material.  
+
+---
+
+# Ejemplo 7. Composición desconocida
+
+Una corriente de:
+
+$$
+F=500\ \text{kg/h}
+$$
+
+contiene A y B.
+
+Se sabe que contiene:
+
+$$
+175\ \text{kg/h de A}
+$$
+
+Sea:
+
+$$
+w_A=x
+$$
+
+Entonces:
+
+$$
+w_B=1-x
+$$
+
+Como:
+
+$$
+m_A=Fw_A
+$$
+
+se obtiene:
+
+$$
+175=500x
+$$
+
+$$
+x=\frac{175}{500}
+$$
+
+$$
+\boxed{x=0.35}
+$$
+
+Por tanto:
+
+$$
+w_A=0.35
+$$
+
+y:
+
+$$
+w_B=1-0.35=0.65
+$$
+
+Resultado:
+
+$$
+\boxed{A=35\%,\qquad B=65\%}
+$$
+
+Una composición desconocida puede representarse algebraicamente con una variable; esto no significa asignarle arbitrariamente un valor.  
+
+---
+
+# Ejemplo 8. Subsistema combinado
+
+Considérese:
+
+$$
+F_1+F_2
+\rightarrow
+\boxed{\text{Mezclador}}
+\rightarrow M
+\rightarrow
+\boxed{\text{Evaporador}}
+\rightarrow P+V
+$$
+
+Datos:
+
+$$
+F_1=300\ \text{kg/h}
+$$
+
+$$
+F_2=200\ \text{kg/h}
+$$
+
+$$
+V=120\ \text{kg/h}
+$$
+
+Se desea calcular $P$.
+
+Podría calcularse primero $M$:
+
+$$
+M=300+200=500
+$$
+
+y posteriormente:
+
+$$
+500=P+120
+$$
+
+Pero existe una estrategia más rápida.
+
+Se coloca una sola frontera alrededor del mezclador y evaporador:
+
+$$
+F_1+F_2=P+V
+$$
+
+La corriente $M$ desaparece porque es interna.  
+
+Entonces:
+
+$$
+300+200=P+120
+$$
+
+$$
+500=P+120
+$$
+
+$$
+\boxed{P=380\ \text{kg/h}}
+$$
+
+**Regla práctica:** si una corriente interna desconocida está complicando el problema, puede intentarse colocar los dos equipos que conecta dentro de una misma frontera.
+
+---
+
+# Ejemplo 9. Cuando el balance global NO funciona
+
+Supóngase que para todo un proceso existen:
+
+$$
+N_I=5
+$$
+
+incógnitas externas.
+
+Solo existen:
+
+$$
+N_E=3
+$$
+
+ecuaciones independientes.
+
+Entonces:
+
+$$
+GDL=5-3
+$$
+
+$$
+\boxed{GDL=2}
+$$
+
+No puede resolverse todavía.
+
+En este caso, insistir con el balance global no resolverá el problema. Conviene buscar información específica de alguna unidad: recuperación, humedad, porcentaje evaporado, relación de división o composición de salida.  
+
+---
+
+# Ejemplo 10. Recuperación de un componente
+
+Una alimentación contiene:
+
+$$
+F=1000\ \text{kg/h}
+$$
+
+con:
+
+$$
+w_{A,F}=0.20
+$$
+
+Se obtiene un producto:
+
+$$
+P=300\ \text{kg/h}
+$$
+
+con:
+
+$$
+w_{A,P}=0.60
+$$
+
+Calcular la recuperación de A.
+
+La expresión del material es:  
+
+$$
+\%R_A=
+\frac{\text{A en producto}}
+{\text{A en alimentación}}
+(100)
+$$
+
+### A alimentado
+
+$$
+m_{A,F}=1000(0.20)
+$$
+
+$$
+m_{A,F}=200\ \text{kg/h}
+$$
+
+### A recuperado
+
+$$
+m_{A,P}=300(0.60)
+$$
+
+$$
+m_{A,P}=180\ \text{kg/h}
+$$
+
+### Recuperación
+
+$$
+\%R_A=
+\frac{180}{200}(100)
+$$
+
+$$
+\boxed{\%R_A=90\%}
+$$
+
+Atención: **recuperación y pureza no son lo mismo**.
+
+En este caso:
+
+$$
+\boxed{\text{Recuperación}=90\%}
+$$
+
+mientras que:
+
+$$
+\boxed{\text{Pureza del producto}=60\%}
+$$
+
+La recuperación indica cuánto A se consiguió recuperar; la pureza indica qué proporción del producto es A.  
+
+---
+
+# Ejemplo 11. Problema integrador: resolver hacia atrás
+
+Considérese:
+
+$$
+F
+\rightarrow
+\boxed{\text{Evaporador}}
+\rightarrow E
+\rightarrow
+\boxed{\text{Secador}}
+\rightarrow P
+$$
+
+La alimentación contiene 20 % de sólidos.
+
+El producto final es:
+
+$$
+P=320\ \text{kg/h}
+$$
+
+con 95 % de sólidos.
+
+La alimentación del secador $E$ contiene 40 % de sólidos.
+
+Calcular $E$ y $F$.
+
+## Paso 1. Empezar por el producto
+
+Sólidos en $P$:
+
+$$
+m_s=320(0.95)
+$$
+
+$$
+m_s=304\ \text{kg/h}
+$$
+
+## Paso 2. Resolver el secador
+
+Los sólidos se conservan:
+
+$$
+0.40E=304
+$$
+
+$$
+E=\frac{304}{0.40}
+$$
+
+$$
+\boxed{E=760\ \text{kg/h}}
+$$
+
+Ahora $E$, que antes era desconocida, se convierte en un dato.
+
+## Paso 3. Resolver el evaporador
+
+La alimentación original contiene 20 % de sólidos:
+
+$$
+0.20F=304
+$$
+
+$$
+F=\frac{304}{0.20}
+$$
+
+$$
+\boxed{F=1520\ \text{kg/h}}
+$$
+
+Así, el problema se resolvió:
+
+$$
+\boxed{\text{Secador}\rightarrow\text{Evaporador}}
+$$
+
+aunque físicamente el material circula:
+
+$$
+\boxed{\text{Evaporador}\rightarrow\text{Secador}}
+$$
+
+El material permite explícitamente resolver procesos hacia adelante, hacia atrás, desde el centro o mediante subsistemas combinados.  
+
+---
+
+# Ejercicio 12. Para practicar
+
+Una corriente de:
+
+$$
+1200\ \text{kg/h}
+$$
+
+contiene 25 % de A y entra a un separador.
+
+Se producen:
+
+- $P$, con 70 % de A;
+- $R$, con 10 % de A.
+
+Calcular $P$ y $R$.
+
+### Planteamiento
+
+Balance total:
+
+$$
+1200=P+R
+$$
+
+Balance de A:
+
+$$
+1200(0.25)=0.70P+0.10R
+$$
+
+De la primera:
+
+$$
+R=1200-P
+$$
+
+Sustituyendo:
+
+$$
+300=0.70P+0.10(1200-P)
+$$
+
+$$
+300=0.70P+120-0.10P
+$$
+
+$$
+180=0.60P
+$$
+
+$$
+\boxed{P=300\ \text{kg/h}}
+$$
+
+Entonces:
+
+$$
+R=1200-300
+$$
+
+$$
+\boxed{R=900\ \text{kg/h}}
+$$
+
+Verificación de A:
+
+$$
+300(0.70)+900(0.10)
+$$
+
+$$
+=210+90
+$$
+
+$$
+=300\ \text{kg/h}
+$$
+
+Correcto.
+
+---
+
+# Método práctico para resolver la Lección 9
+
+Antes de comenzar operaciones, conviene seguir esta secuencia:
+
+$$
+\boxed{
+\begin{array}{c}
+\text{1. Dibujar el proceso}\\
+\downarrow\\
+\text{2. Numerar corrientes}\\
+\downarrow\\
+\text{3. Marcar datos e incógnitas}\\
+\downarrow\\
+\text{4. Probar diferentes fronteras}\\
+\downarrow\\
+\text{5. Calcular GDL}\\
+\downarrow\\
+\text{6. Buscar GDL=0}\\
+\downarrow\\
+\text{7. Resolver esa unidad}\\
+\downarrow\\
+\text{8. Actualizar las corrientes conocidas}\\
+\downarrow\\
+\text{9. Buscar el siguiente GDL=0}\\
+\downarrow\\
+\text{10. Verificar el proceso completo}
+\end{array}}
+$$
+
+Esta secuencia coincide con la estrategia general propuesta en el material: identificar el sistema adecuado, resolver por etapas y comprobar después balances, composiciones, unidades y significado físico.  
+
+La diferencia esencial entre las lecciones 8 y 9 puede resumirse así: en la **Lección 8** se aprende a aplicar balances a sistemas globales y subsistemas; en la **Lección 9** se practica principalmente **cómo elegir estratégicamente cuál de esos sistemas conviene resolver primero**.

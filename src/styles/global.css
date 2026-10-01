@@ -1,0 +1,449 @@
+/* src/styles/global.css */
+
+:root {
+  --background: #ffffff;
+  --foreground: #182033;
+  --muted: #64748b;
+  --border: #e2e8f0;
+
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+
+  --code-bg: #f8fafc;
+  --code-border: #e2e8f0;
+
+  --math-bg: #fafbfc;
+  --math-border: #e5e7eb;
+
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--foreground);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Markdown */
+
+.markdown {
+  width: min(100% - 2rem, 850px);
+  margin-inline: auto;
+  padding: 3rem 0 5rem;
+}
+
+/* Headings */
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  color: #111827;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.markdown h1 {
+  margin: 0 0 2rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 750;
+}
+
+.markdown h2 {
+  margin: 3rem 0 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.7rem;
+}
+
+.markdown h3 {
+  margin: 2.25rem 0 0.75rem;
+  font-size: 1.3rem;
+}
+
+/* Paragraphs */
+
+.markdown p {
+  margin: 1rem 0;
+}
+
+/* Links */
+
+.markdown a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.markdown a:hover {
+  color: var(--primary-hover);
+}
+
+/* Lists */
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.6rem;
+}
+
+.markdown li {
+  margin: 0.45rem 0;
+}
+
+/* Quotes */
+
+.markdown blockquote {
+  margin: 1.75rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid #94a3b8;
+  color: #475569;
+}
+
+/* Inline code */
+
+.markdown :not(pre) > code {
+  padding: 0.15rem 0.4rem;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 5px;
+  color: #be123c;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.9em;
+}
+
+/* Code blocks */
+
+.markdown pre {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.markdown pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #1e293b;
+}
+
+/* ==================================================
+   KaTeX
+   ================================================== */
+
+/*
+ * Ecuaciones inline:
+ * $E = mc^2$
+ */
+
+.markdown .katex {
+  color: #111827;
+  font-size: 1.05em;
+}
+
+/*
+ * Evita que fórmulas inline alteren demasiado
+ * la altura de la línea.
+ */
+
+.markdown p .katex,
+.markdown li .katex,
+.markdown td .katex {
+  line-height: 1;
+}
+
+/*
+ * Ecuaciones display:
+ *
+ * $$
+ *   f(x) = ...
+ * $$
+ */
+
+.markdown .katex-display {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  background: var(--math-bg);
+  border: 1px solid var(--math-border);
+  border-radius: var(--radius);
+
+  text-align: center;
+}
+
+/* Tamaño cómodo para ecuaciones principales */
+
+.markdown .katex-display > .katex {
+  font-size: 1.12em;
+}
+
+/*
+ * Fórmulas grandes nunca deben romper
+ * el layout del artículo.
+ */
+
+.markdown .katex-display > .katex {
+  max-width: 100%;
+}
+
+/* Scroll horizontal discreto */
+
+.markdown .katex-display::-webkit-scrollbar {
+  height: 6px;
+}
+
+.markdown .katex-display::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+/*
+ * Número de ecuación generado por KaTeX
+ */
+
+.markdown .katex-display > .katex > .katex-html {
+  position: relative;
+}
+
+/*
+ * Mejor integración de fórmulas
+ * dentro de tablas.
+ */
+
+.markdown td .katex,
+.markdown th .katex {
+  white-space: nowrap;
+}
+
+/* Tables */
+
+.markdown table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.markdown th,
+.markdown td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.markdown th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+/* Images */
+
+.markdown img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: var(--radius);
+}
+
+/* Separator */
+
+.markdown hr {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  .markdown {
+    width: min(100% - 1.5rem, 850px);
+    padding-top: 2rem;
+  }
+
+  .markdown .katex {
+    font-size: 1em;
+  }
+
+  .markdown .katex-display {
+    margin: 1.5rem -0.25rem;
+    padding: 1rem 0.75rem;
+    text-align: left;
+  }
+
+  .markdown .katex-display > .katex {
+    font-size: 1.05em;
+  }
+
+  .markdown table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* ==================================================
+   Tables
+   ================================================== */
+
+/* Permite scroll horizontal en tablas grandes */
+.markdown table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Celdas */
+
+.markdown th,
+.markdown td {
+  padding: 0.8rem 1rem;
+
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Encabezado */
+
+.markdown thead th {
+  background: #f8fafc;
+  color: #1e293b;
+
+  font-size: 0.875rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+
+  white-space: nowrap;
+}
+
+/* Quitar bordes sobrantes */
+
+.markdown th:last-child,
+.markdown td:last-child {
+  border-right: 0;
+}
+
+.markdown tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Hover sutil */
+
+.markdown tbody tr {
+  transition: background-color 120ms ease;
+}
+
+.markdown tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Números */
+
+.markdown td[align="right"],
+.markdown th[align="right"] {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.markdown td[align="center"],
+.markdown th[align="center"] {
+  text-align: center;
+}
+
+/* KaTeX dentro de tablas */
+
+.markdown table .katex {
+  font-size: 1em;
+}
+
+.markdown table .katex-display {
+  margin: 0.5rem 0;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+
+  overflow-x: auto;
+}
+
+/* Primera y última esquina */
+
+.markdown thead tr:first-child th:first-child {
+  border-top-left-radius: 7px;
+}
+
+.markdown thead tr:first-child th:last-child {
+  border-top-right-radius: 7px;
+}
+
+/* Tablas sin thead */
+
+.markdown tbody tr:first-child td:first-child {
+  border-top-left-radius: 7px;
+}
+
+.markdown tbody tr:first-child td:last-child {
+  border-top-right-radius: 7px;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .markdown table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+
+    font-size: 0.9rem;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .markdown th,
+  .markdown td {
+    min-width: 120px;
+    padding: 0.7rem 0.8rem;
+  }
+
+  .markdown table::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .markdown table::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+  }
+}

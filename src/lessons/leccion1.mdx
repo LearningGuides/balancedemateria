@@ -1,0 +1,1250 @@
+---
+title: "Fundamentos de los Cálculos de Ingeniería"
+---
+
+# Lección 1: Fundamentos de los Cálculos de Ingeniería
+
+# 1. Introducción a las Unidades
+
+## Definición de unidad
+
+Una **unidad** es una cantidad estandarizada de una magnitud física que se utiliza como referencia para medir otras cantidades de la misma naturaleza.
+
+Ejemplos:
+
+* Metro (m): unidad de longitud.
+* Kilogramo (kg): unidad de masa.
+* Segundo (s): unidad de tiempo.
+
+Cuando se dice que una mesa mide **2 metros**, significa que su longitud equivale a dos veces la unidad patrón llamada metro.
+
+---
+
+## Diferencia entre valor numérico y unidad
+
+Toda medición está formada por dos partes:
+
+**Valor numérico:** indica cuántas veces está contenida la unidad en la magnitud medida.
+
+**Unidad:** especifica la naturaleza física de la cantidad.
+
+Ejemplo:
+
+$$
+10 , m
+$$
+
+* Valor numérico = 10
+* Unidad = m
+
+El número por sí solo carece de significado físico.
+
+---
+
+## Importancia de utilizar unidades en ingeniería
+
+Las unidades permiten expresar magnitudes físicas de forma clara y universal.
+
+Sin unidades:
+
+* No se puede interpretar correctamente un resultado.
+* Se generan errores de diseño.
+* Se dificulta la comunicación entre profesionales.
+
+En ingeniería, una diferencia de unidades puede provocar fallas catastróficas.
+
+---
+
+## Beneficios de trabajar con unidades
+
+### Interpretación física correcta
+
+Permiten comprender el significado de una cantidad.
+
+Ejemplo:
+
+* 50 kg → masa.
+* 50 N → fuerza.
+
+Aunque el número es igual, representan conceptos distintos.
+
+---
+
+### Reducción de errores
+
+Las unidades ayudan a detectar errores matemáticos o conceptuales.
+
+Ejemplo:
+
+$$
+Velocidad = Distancia + Tiempo
+$$
+
+No es correcto porque:
+
+$$
+m + s
+$$
+
+no pueden sumarse.
+
+---
+
+### Método lógico de resolución de problemas
+
+Las unidades actúan como una guía para encontrar ecuaciones y verificar resultados.
+
+---
+
+### Ejemplo
+
+     Una persona corre una distancia de
+     **5 km**
+     en
+     **25 min**
+     . Sin las unidades, los números 5 y 25 no tienen significado físico. Con las unidades sabemos que representan distancia y tiempo respectivamente.
+
+---
+
+# 2. Dimensiones y Magnitudes Físicas
+
+## Definición de dimensión
+
+Una dimensión representa la naturaleza física de una magnitud.
+
+Ejemplos:
+
+* Longitud → [L]
+* Masa → [M]
+* Tiempo → [T]
+
+---
+
+## Dimensiones fundamentales
+
+Son independientes y no pueden expresarse mediante otras.
+
+Las siete dimensiones fundamentales del SI son:
+
+| Magnitud | Símbolo |
+| --- | --- |
+| Longitud | [L] |
+| Masa | [M] |
+| Tiempo | [T] |
+| Temperatura | [Θ] |
+| Corriente eléctrica | [I] |
+| Cantidad de sustancia | [N] |
+| Intensidad luminosa | [J] |
+
+---
+
+## Dimensiones derivadas
+
+Se obtienen combinando dimensiones fundamentales.
+
+Ejemplos:
+
+Velocidad:
+
+$$
+[L][T]^{-1}
+$$
+
+Aceleración:
+
+$$
+[L][T]^{-2}
+$$
+
+Fuerza:
+
+$$
+[M][L][T]^{-2}
+$$
+
+---
+
+## Relación entre dimensiones y unidades
+
+La dimensión indica qué tipo de magnitud es.
+
+La unidad indica cómo se mide.
+
+Ejemplo:
+
+Velocidad:
+
+Dimensión:
+
+$$
+[L][T]^{-1}
+$$
+
+Unidades:
+
+* m/s
+* km/h
+* ft/s
+
+---
+
+### Ejemplo
+
+     La aceleración de un automóvil es de
+     **3 m/s²**
+     . La dimensión de la aceleración se obtiene combinando longitud y tiempo:
+
+$$
+[L][T^{-2}]
+$$
+
+---
+
+# 3. Reglas Básicas para Trabajar con Unidades
+
+## Suma y resta de magnitudes con las mismas unidades
+
+Solo pueden sumarse magnitudes de igual naturaleza.
+
+Correcto:
+
+$$
+5m + 3m = 8m
+$$
+
+Incorrecto:
+
+$$
+5m + 2s
+$$
+
+---
+
+## Multiplicación y división de unidades
+
+Ejemplo:
+
+Área:
+
+$$
+m \times m = m^2
+$$
+
+Velocidad:
+
+$$
+\frac{m}{s}
+$$
+
+---
+
+## Factores de conversión
+
+Son relaciones equivalentes entre unidades.
+
+Ejemplo:
+
+$$
+1 m = 100 cm
+$$
+
+Factor:
+
+$$
+\frac{100cm}{1m}
+$$
+
+o
+
+$$
+\frac{1m}{100cm}
+$$
+
+---
+
+### Ejemplo
+
+     Convertir
+     **72 km/h**
+     a
+     **m/s**
+     :
+
+$$
+72 \frac{km}{h}\times\frac{1000m}{1km}\times\frac{1h}{3600s}
+=20\frac{m}{s}
+$$
+
+---
+
+# 4. Sistemas de Unidades
+
+## Sistema Internacional (SI)
+
+Es el sistema oficial mundial.
+
+Unidades básicas:
+
+* m
+* kg
+* s
+* K
+* A
+* mol
+* cd
+
+---
+
+## Sistema CGS
+
+Basado en:
+
+* centímetro (cm)
+* gramo (g)
+* segundo (s)
+
+Muy utilizado en física.
+
+---
+
+## Sistema Inglés o Americano
+
+Utiliza:
+
+* pie (ft)
+* libra (lb)
+* segundo (s)
+
+Común en Estados Unidos.
+
+---
+
+## Comparación entre sistemas
+
+| Magnitud | SI | CGS | Inglés |
+| --- | --- | --- | --- |
+| Longitud | 1 m | 100 cm | 3.28084 ft |
+| Masa | 1 kg | 1000 g | 2.20462 lbm |
+| Fuerza | 1 N | 100000 dina | 0.224809 lbf |
+
+---
+
+# 5. Clasificación de las Unidades
+
+## Unidades fundamentales
+
+Son independientes.
+
+Ejemplos:
+
+* metro
+* kilogramo
+* segundo
+
+---
+
+## Unidades derivadas
+
+Provienen de combinaciones de fundamentales.
+
+Ejemplos:
+
+* m²
+* m³
+* N
+* J
+
+---
+
+## Relación entre ambas
+
+Las derivadas se construyen a partir de las fundamentales.
+
+Ejemplo:
+
+$$
+N = kg \cdot m/s^2
+$$
+
+---
+
+### Ejemplo
+
+     La densidad se obtiene a partir de:
+
+$$
+\text{Densidad}=\frac{\text{Masa}}{\text{Volumen}}
+$$
+
+     Unidad SI:
+
+$$
+kg/m^3
+$$
+
+---
+
+# 6. Dimensiones Fundamentales
+
+## Longitud
+
+Mide distancia.
+
+Unidad SI:
+
+$$
+m
+$$
+
+---
+
+## Masa
+
+Cantidad de materia.
+
+Unidad:
+
+$$
+kg
+$$
+
+---
+
+## Tiempo
+
+Duración de eventos.
+
+Unidad:
+
+$$
+s
+$$
+
+---
+
+## Temperatura
+
+Nivel térmico.
+
+Unidad:
+
+$$
+K
+$$
+
+---
+
+## Cantidad de sustancia
+
+Cantidad de partículas.
+
+Unidad:
+
+$$
+mol
+$$
+
+---
+
+## Corriente eléctrica
+
+Flujo de carga.
+
+Unidad:
+
+$$
+A
+$$
+
+---
+
+## Intensidad luminosa
+
+Potencia luminosa.
+
+Unidad:
+
+$$
+cd
+$$
+
+---
+
+### Ejemplo
+
+     La cantidad de sustancia contenida en una muestra puede expresarse como:
+
+$$
+2.5\ mol
+$$
+
+     donde el mol es una dimensión fundamental relacionada con la cantidad de materia.
+
+---
+
+# 7. Unidades Derivadas
+
+## Volumen
+
+$$
+V=L^3
+$$
+
+Unidad:
+
+$$
+m^3
+$$
+
+---
+
+## Fuerza
+
+$$
+F=ma
+$$
+
+Unidad:
+
+$$
+N=kg·m/s^2
+$$
+
+---
+
+## Presión
+
+$$
+P=\frac{F}{A}
+$$
+
+Unidad:
+
+$$
+Pa=\frac{N}{m^2}
+$$
+
+---
+
+## Energía
+
+$$
+E=F·d
+$$
+
+Unidad:
+
+$$
+J=N·m
+$$
+
+---
+
+## Potencia
+
+$$
+P=\frac{E}{t}
+$$
+
+Unidad:
+
+$$
+W=\frac{J}{s}
+$$
+
+---
+
+### Ejemplo
+
+     Calcular la presión ejercida por una fuerza de
+     **500 N**
+     sobre una superficie de
+     **2 m²**
+     :
+
+$$
+P=\frac{F}{A}
+=\frac{500}{2}
+=250\ Pa
+$$
+
+---
+
+# 8. Fuerza y Segunda Ley de Newton
+
+## Definición de fuerza
+
+Interacción capaz de modificar el movimiento de un cuerpo.
+
+---
+
+## Relación entre fuerza, masa y aceleración
+
+Segunda Ley de Newton:
+
+$$
+F=ma
+$$
+
+donde:
+
+* F = fuerza
+* m = masa
+* a = aceleración
+
+---
+
+## Unidades de fuerza en distintos sistemas
+
+| Sistema | Unidad |
+| --- | --- |
+| SI | Newton (N) |
+| CGS | Dina |
+| Inglés | Libra-fuerza (lbf) |
+
+---
+
+### Ejemplo
+
+     Una caja de
+     **15 kg**
+     acelera a
+     **2 m/s²**
+     :
+
+$$
+F=ma
+$$
+
+$$
+F=15\times2=30N
+$$
+
+---
+
+# 9. Factores de Conversión Especiales en el Sistema Inglés
+
+## Libra-masa (lbm)
+
+Unidad de masa.
+
+---
+
+## Libra-fuerza (lbf)
+
+Unidad de fuerza.
+
+---
+
+## Factor de conversión (g\_c)
+
+Permite mantener consistencia dimensional.
+
+$$
+g\_c = 32.174 \frac{lbm·ft}{lbf·s^2}
+$$
+
+Ecuación:
+
+$$
+F=\frac{ma}{g\_c}
+$$
+
+---
+
+### Ejemplo
+
+     Convertir una fuerza equivalente a:
+
+$$
+64.348\ \frac{lbm\cdot ft}{s^2}
+$$
+
+     a libra-fuerza:
+
+$$
+\frac{64.348}{32.174}=2\ lbf
+$$
+
+---
+
+# 10. Cantidades Adimensionales
+
+## Números puros
+
+No poseen dimensiones.
+
+Ejemplo:
+
+$$
+5
+$$
+
+---
+
+## Razones
+
+Relación entre magnitudes iguales.
+
+Ejemplo:
+
+$$
+\frac{20m}{10m}=2
+$$
+
+---
+
+## Magnitudes adimensionales
+
+Ejemplos:
+
+* Coeficiente de fricción
+* Número de Reynolds
+* Eficiencia
+
+---
+
+## Diferencia entre adimensional y sin unidades
+
+Adimensional:
+
+* Surge de una combinación física.
+* Tiene significado físico.
+
+Sin unidades:
+
+* Puede ser simplemente un número.
+
+---
+
+### Ejemplo
+
+     La eficiencia de una máquina:
+
+$$
+\eta=\frac{E\\_{salida}}{E\\_{entrada}}
+=\frac{800}{1000}=0.8
+$$
+
+     La eficiencia es adimensional.
+
+---
+
+# 11. Homogeneidad Dimensional
+
+## Verificación de ecuaciones
+
+Toda ecuación física debe ser dimensionalmente consistente.
+
+---
+
+## Igualdad de dimensiones entre ambos lados
+
+Ejemplo:
+
+$$
+d=vt
+$$
+
+Dimensiones:
+
+$$
+[L]=[L/T][T]
+$$
+
+$$
+[L]=[L]
+$$
+
+Correcto.
+
+---
+
+## Validación física de fórmulas
+
+Permite detectar errores antes de realizar cálculos.
+
+---
+
+### Ejemplo
+
+     Verificar:
+
+$$
+v=v\_0+at
+$$
+
+     Dimensiones:
+
+$$
+[L/T]=[L/T]+[L/T^2][T]
+$$
+
+$$
+[L/T]=[L/T]+[L/T]
+$$
+
+     La ecuación es dimensionalmente correcta.
+
+---
+
+# 12. Obtención de Dimensiones de Constantes
+
+## Uso de homogeneidad dimensional
+
+Ejemplo:
+
+$$
+F=kx
+$$
+
+Dimensiones:
+
+$$
+[M][L][T^{-2}] = [k][L]
+$$
+
+---
+
+## Determinación de dimensiones desconocidas
+
+$$
+[k]=[M][T^{-2}]
+$$
+
+La constante elástica tiene dimensiones:
+
+$$
+kg/s^2
+$$
+
+---
+
+### Ejemplo
+
+     Si:
+
+$$
+F=kx
+$$
+
+     donde (F) es fuerza y (x) longitud,
+
+$$
+[k]=\frac{F}{x}
+=\frac{MLT^{-2}}{L}
+=MT^{-2}
+$$
+
+---
+
+# 13. Cifras Significativas
+
+## Definición
+
+Son los dígitos que representan la precisión de una medición.
+
+Ejemplo:
+
+$$
+12.34
+$$
+
+Tiene 4 cifras significativas.
+
+---
+
+## Reglas de conteo
+
+### Todos los dígitos distintos de cero cuentan
+
+1234 → 4 cifras
+
+---
+
+### Ceros entre dígitos sí cuentan
+
+1002 → 4 cifras
+
+---
+
+### Ceros a la izquierda no cuentan
+
+0.0035 → 2 cifras
+
+---
+
+### Ceros finales después del decimal sí cuentan
+
+2.500 → 4 cifras
+
+---
+
+## Notación científica
+
+Ejemplo:
+
+$$
+4500=4.5\times10^3
+$$
+
+2 cifras significativas.
+
+---
+
+### Ejemplo
+
+| Número | Cifras significativas |
+| --- | --- |
+| 3500 | 2 |
+| 3500.0 | 5 |
+| 0.00456 | 3 |
+
+---
+
+# 14. Significado Físico de las Cifras Significativas
+
+## Precisión de instrumentos
+
+Un instrumento más preciso genera más cifras significativas.
+
+---
+
+## Limitaciones de medición
+
+Toda medición tiene incertidumbre.
+
+---
+
+## Interpretación de resultados
+
+No deben reportarse más cifras que las justificadas por los datos.
+
+---
+
+### Ejemplo
+
+     Un termómetro con resolución de
+     **0.1 °C**
+     registra:
+
+$$
+25.4^\circ C
+$$
+
+     No sería correcto reportar:
+
+$$
+25.437^\circ C
+$$
+
+     porque supera la precisión del instrumento.
+
+---
+
+# 15. Operaciones con Cifras Significativas
+
+## Multiplicación y división
+
+El resultado conserva la menor cantidad de cifras significativas.
+
+Ejemplo:
+
+$$
+2.5\times3.42=8.55
+$$
+
+Resultado:
+
+$$
+8.6
+$$
+
+(2 cifras significativas)
+
+---
+
+## Suma y resta
+
+El resultado conserva la menor precisión decimal.
+
+Ejemplo:
+
+$$
+12.11+1.2=13.31
+$$
+
+Resultado:
+
+$$
+13.3
+$$
+
+---
+
+### Ejemplo (multiplicación)
+
+$$
+12.4\times3.2=39.68
+$$
+
+     Resultado correcto:
+
+$$
+40
+$$
+
+     (2 cifras significativas)
+
+### Ejemplo (suma)
+
+$$
+15.23+2.1=17.33
+$$
+
+     Resultado correcto:
+
+$$
+17.3
+$$
+
+---
+
+# 16. Validación de Resultados
+
+## Repetición de cálculos
+
+Verificar nuevamente operaciones.
+
+---
+
+## Sustitución inversa
+
+Introducir el resultado en la ecuación original.
+
+---
+
+## Estimación por orden de magnitud
+
+Comparar con valores aproximados.
+
+Ejemplo:
+
+$$
+998 \approx 10^3
+$$
+
+---
+
+## Prueba de razonabilidad
+
+Preguntarse:
+
+* ¿Tiene sentido físico?
+* ¿Las unidades son correctas?
+* ¿El valor es coherente?
+
+---
+
+### Ejemplo
+
+     Si se calcula la masa de un automóvil y se obtiene:
+
+$$
+0.005\ kg
+$$
+
+     aunque matemáticamente el cálculo parezca correcto, el resultado no es razonable físicamente, por lo que debe revisarse el procedimiento.
+
+---
+
+# 17. Conclusiones
+
+## Importancia de las unidades
+
+Las unidades proporcionan significado físico a cualquier medición y permiten comunicar resultados de manera universal.
+
+---
+
+## Uso correcto de dimensiones
+
+Las dimensiones ayudan a comprender la naturaleza de las magnitudes físicas y facilitan la construcción y análisis de ecuaciones.
+
+---
+
+## Aplicación de la homogeneidad dimensional
+
+Toda ecuación física válida debe cumplir con la igualdad dimensional entre ambos lados, permitiendo detectar errores y obtener dimensiones desconocidas.
+
+---
+
+## Manejo adecuado de cifras significativas
+
+Las cifras significativas reflejan la precisión de las mediciones y garantizan que los resultados reportados sean coherentes con la exactitud de los datos experimentales.
+
+---
+
+## Métodos de verificación de resultados
+
+La repetición de cálculos, la sustitución inversa, la estimación por orden de magnitud y la prueba de razonabilidad son herramientas fundamentales para validar resultados y minimizar errores en ingeniería y ciencias.
+
+---
+
+### Conclusión general
+
+El estudio de las unidades, dimensiones, sistemas de medición, homogeneidad dimensional y cifras significativas constituye una base esencial para cualquier disciplina de ingeniería y ciencias aplicadas. Su correcto uso permite interpretar adecuadamente los fenómenos físicos, realizar cálculos confiables, evitar errores de diseño y garantizar que los resultados obtenidos tengan validez técnica y científica.
+
+### Ejemplo integrador
+
+     Calcular la energía cinética de una bicicleta de
+     **20 kg**
+     que viaja a
+     **5 m/s**
+     :
+
+$$
+E\_k=\frac{1}{2}mv^2
+$$
+
+$$
+E\_k=\frac{1}{2}(20)(5)^2
+=250J
+$$
+
+     Verificando:
+
+* Unidades correctas.
+* Dimensiones homogéneas.
+* Resultado físicamente razonable.
+
+# Tabla de Conversiones en Ingeniería
+
+## 1. Longitud
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 km | 1000 m |
+| 1 m | 100 cm = 1000 mm |
+| 1 pulgada (in) | 25.4 mm |
+| 1 pie (ft) | 0.3048 m |
+| 1 yarda (yd) | 0.9144 m |
+| 1 milla (mi) | 1.609 km |
+
+## 2. Área
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 m² | 10.764 ft² |
+| 1 ft² | 0.0929 m² |
+| 1 ha | 10,000 m² |
+| 1 acre | 4046.86 m² |
+
+## 3. Volumen
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 m³ | 1000 L |
+| 1 L | 1000 mL |
+| 1 ft³ | 0.02832 m³ |
+| 1 galón estadounidense | 3.785 L |
+| 1 galón imperial | 4.546 L |
+
+## 4. Masa
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 kg | 1000 g |
+| 1 tonelada (t) | 1000 kg |
+| 1 lb | 0.4536 kg |
+| 1 oz | 28.35 g |
+
+## 5. Fuerza
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 N | 0.2248 lbf |
+| 1 lbf | 4.448 N |
+| 1 kgf | 9.80665 N |
+
+## 6. Presión
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 Pa | 1 N/m² |
+| 1 kPa | 1000 Pa |
+| 1 MPa | 10⁶ Pa |
+| 1 bar | 100 kPa |
+| 1 atm | 101.325 kPa |
+| 1 psi | 6.895 kPa |
+| 1 MPa | 145.04 psi |
+
+## 7. Energía
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 J | 1 N·m |
+| 1 kJ | 1000 J |
+| 1 cal | 4.184 J |
+| 1 kcal | 4184 J |
+| 1 BTU | 1055 J |
+| 1 kWh | 3.6 MJ |
+
+## 8. Potencia
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 W | 1 J/s |
+| 1 kW | 1000 W |
+| 1 HP | 745.7 W |
+| 1 CV | 735.5 W |
+
+## 9. Temperatura
+
+| Conversión | Fórmula |
+| --- | --- |
+| °F a °C | (°F − 32) × 5/9 |
+| °C a °F | (°C × 9/5) + 32 |
+| K a °C | K − 273.15 |
+| °C a K | °C + 273.15 |
+
+## 10. Velocidad
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 m/s | 3.6 km/h |
+| 1 km/h | 0.2778 m/s |
+| 1 mph | 1.609 km/h |
+| 1 nudo | 1.852 km/h |
+
+## 11. Caudal
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 m³/s | 1000 L/s |
+| 1 L/s | 0.001 m³/s |
+| 1 gpm estadounidense | 3.785 L/min |
+
+## 12. Densidad
+
+| Unidad | Equivalencia |
+| --- | --- |
+| 1 g/cm³ | 1000 kg/m³ |
+| 1 kg/m³ | 0.001 g/cm³ |
+
+## 13. Prefijos del Sistema Internacional
+
+| Prefijo | Símbolo | Factor |
+| --- | --- | --- |
+| Tera | T | 10¹² |
+| Giga | G | 10⁹ |
+| Mega | M | 10⁶ |
+| Kilo | k | 10³ |
+| Hecto | h | 10² |
+| Deca | da | 10¹ |
+| Unidad | — | 10⁰ |
+| Deci | d | 10⁻¹ |
+| Centi | c | 10⁻² |
+| Mili | m | 10⁻³ |
+| Micro | µ | 10⁻⁶ |
+| Nano | n | 10⁻⁹ |
+| Pico | p | 10⁻¹² |

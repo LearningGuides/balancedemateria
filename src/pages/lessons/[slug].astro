@@ -1,0 +1,59 @@
+---
+interface MdxModule {
+  Content: any;
+  frontmatter: {
+    title?: string;
+    [key: string]: unknown;
+  };
+}
+
+export function getStaticPaths() {
+  const modules = import.meta.glob<MdxModule>(
+    '../../lessons/*.mdx',
+    {
+      eager: true,
+    }
+  );
+
+  return Object.entries(modules).map(([path, module]) => {
+    const slug = path
+      .split('/')
+      .pop()!
+      .replace('.mdx', '');
+
+    return {
+      params: { slug },
+      props: {
+        Content: module.Content,
+        frontmatter: module.frontmatter,
+      },
+    };
+  });
+}
+
+const { Content, frontmatter } = Astro.props;
+
+
+import "../../styles/global.css";
+
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>{frontmatter.title}</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>{frontmatter.title}</h1>
+
+      <Content />
+    </main>
+  </body>
+</html>

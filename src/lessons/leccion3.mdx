@@ -1,0 +1,1740 @@
+---
+title: Fundamentos de los Balances de Materia
+---
+
+# Lección 3: Fundamentos de los Balances de Materia
+
+# 1. Introducción a los Balances de Materia
+
+Un **balance de materia** es una herramienta de análisis que permite contabilizar la cantidad de materia que entra, sale, se acumula, se genera o se consume dentro de un sistema.
+
+Se basa en la **ley de conservación de la masa**, la cual establece que la materia no se crea ni se destruye, solo se transforma.
+
+En ingeniería química y biotecnológica es fundamental porque permite:
+
+- Diseñar reactores, separadores, mezcladores y tanques.
+
+- Calcular materias primas necesarias.
+
+- Determinar productos obtenidos.
+
+- Analizar pérdidas, acumulaciones y conversiones.
+
+- Controlar procesos industriales.
+
+---
+
+### Ejemplo
+
+     Una planta recibe
+
+     **
+
+      500 kg/h de agua
+
+     **
+
+     y descarga
+
+     **
+
+      500 kg/h de agua
+
+     **
+
+     .
+
+   
+
+     Como no existe reacción ni acumulación:
+
+   
+
+\
+$$
+Entrada = Salida
+
+\
+$$
+
+\
+$$
+500 = 500
+
+\
+$$
+
+     El balance se cumple.
+
+   
+
+---
+
+# 2. Sistemas y Alrededores
+
+Un **sistema** es la parte del universo que se decide estudiar.
+
+Ejemplo: un tanque, reactor, tubería, fermentador o columna de destilación.
+
+Los **alrededores** son todo lo que está fuera del sistema.
+
+La **frontera del sistema** es el límite real o imaginario que separa al sistema de sus alrededores. A través de esa frontera puede cruzar masa, energía o ambas.
+
+Elegir correctamente el sistema es importante porque define qué entradas, salidas y acumulaciones se deben analizar.
+
+---
+
+### Ejemplo
+
+     Se estudia un tanque de almacenamiento.
+
+   
+
+- Sistema: el interior del tanque.
+
+- Alrededores: el ambiente exterior.
+
+- Frontera: las paredes del tanque.
+
+---
+
+# 3. Sistemas Abiertos y Cerrados
+
+Un **sistema cerrado** no intercambia masa con el entorno, aunque sí puede intercambiar energía.
+
+Ejemplo: un tanque sellado que se calienta.
+
+Un **sistema abierto** intercambia masa con el entorno.
+
+Ejemplo: una tubería, una bomba o un reactor continuo donde entra y sale material.
+
+---
+
+### Ejemplo
+
+**
+
+      Sistema cerrado
+
+     **
+
+     Una botella sellada de agua.
+
+   
+
+     No entra ni sale masa.
+
+   
+
+**
+
+      Sistema abierto
+
+     **
+
+     Un tanque al que entra agua por una tubería y sale por otra.
+
+   
+
+---
+
+# 4. Clasificación de Procesos según el Flujo de Materia
+
+Los procesos pueden clasificarse según la forma en que entra o sale materia.
+
+### Proceso batch o por lotes
+
+Toda la materia se introduce al inicio y no hay entradas ni salidas durante la operación.
+
+### Proceso continuo
+
+Hay entrada y salida constante de materia.
+
+### Proceso semibatch
+
+Existe entrada o salida, pero no ambas simultáneamente.
+
+### Proceso fed-batch
+
+Es un caso especial de semibatch donde solo hay alimentación durante el proceso.
+
+---
+
+### Ejemplo
+
+     Una olla de cocción donde se agregan todos los ingredientes al inicio y se retiran al final.
+
+   
+
+     Clasificación:
+
+   
+
+- Sistema cerrado.
+
+- Proceso batch.
+
+---
+
+# 5. Proceso Batch
+
+En un proceso **batch**, el sistema se carga al inicio, se realiza la operación y al final se retira el producto.
+
+Durante la operación:
+
+\
+$$
+Entrada = 0
+
+\
+$$
+
+\
+$$
+Salida = 0
+
+\
+$$
+
+Por eso, si ocurre un cambio en la cantidad de una sustancia, se debe a reacción, acumulación o transformación interna.
+
+Ejemplo: una fermentación en un tanque cerrado.
+
+---
+
+### Ejemplo
+
+     Fermentación de yogur en un recipiente sellado durante 8 horas.
+
+   
+
+     Durante la fermentación:
+
+   
+
+- Entrada = 0
+
+- Salida = 0
+
+---
+
+# 6. Proceso Continuo
+
+En un proceso **continuo**, la materia entra y sale de forma constante.
+
+Ejemplo: una planta de tratamiento de agua o una columna de destilación.
+
+Generalmente se busca operar en **estado estacionario**, donde las variables permanecen constantes con el tiempo.
+
+---
+
+### Ejemplo
+
+     Una planta de tratamiento recibe:
+
+   
+
+\
+$$
+1000\ L/min
+
+\
+$$
+
+     y descarga:
+
+   
+
+\
+$$
+1000\ L/min
+
+\
+$$
+
+     de agua continuamente.
+
+   
+
+---
+
+# 7. Proceso Semibatch
+
+En un proceso **semibatch**, puede existir entrada sin salida o salida sin entrada.
+
+Ejemplo: un tanque al que se le agrega reactivo poco a poco, pero del cual no se retira producto hasta el final.
+
+Este tipo de proceso permite controlar mejor la temperatura, la concentración y la velocidad de reacción.
+
+---
+
+### Ejemplo
+
+     Un tanque recibe reactivo continuamente, pero no descarga producto durante la operación.
+
+   
+
+---
+
+# 8. Proceso Fed-Batch
+
+El proceso **fed-batch** es un caso especial de semibatch.
+
+Solo hay alimentación al sistema, pero no hay salida durante la operación.
+
+Es muy usado en biotecnología, especialmente en fermentaciones, porque permite alimentar nutrientes gradualmente y evitar inhibición por exceso de sustrato.
+
+---
+
+### Ejemplo
+
+     Un biorreactor recibe nutrientes continuamente mientras el cultivo permanece dentro del reactor.
+
+   
+
+---
+
+# 9. Clasificación según el Tiempo
+
+Los procesos también se clasifican según si sus variables cambian o no con el tiempo.
+
+### Estado estacionario
+
+Las variables no cambian con el tiempo.
+
+### Estado transitorio o no estacionario
+
+Las variables sí cambian con el tiempo.
+
+---
+
+### Ejemplo
+
+     Un tanque que tarda varios minutos en llenarse.
+
+   
+
+     Durante el llenado:
+
+   
+
+- Volumen cambia.
+
+- Nivel cambia.
+
+     Es un proceso transitorio.
+
+   
+
+---
+
+# 10. Estado Estacionario
+
+En estado estacionario, las propiedades del sistema permanecen constantes.
+
+Ejemplos de variables constantes:
+
+- Temperatura.
+
+- Presión.
+
+- Caudales.
+
+- Composición.
+
+- Masa dentro del sistema.
+
+En este caso:
+
+\
+$$
+Acumulación = 0
+
+\
+$$
+
+Esto simplifica mucho los balances.
+
+---
+
+### Ejemplo
+
+     Una tubería transporta:
+
+   
+
+\
+$$
+50\ kg/min
+
+\
+$$
+
+     constantemente durante todo el día.
+
+   
+
+     Sistema estacionario.
+
+   
+
+---
+
+# 11. Estado Transitorio
+
+En estado transitorio, las variables cambian con el tiempo.
+
+Puede existir:
+
+- Llenado.
+
+- Vaciado.
+
+- Calentamiento.
+
+- Enfriamiento.
+
+- Acumulación de masa.
+
+- Cambio de concentración.
+
+En este caso:
+
+\
+$$
+Acumulación \neq 0
+
+\
+$$
+
+Ejemplo: un tanque que se está llenando con agua.
+
+---
+
+### Ejemplo
+
+     Un tanque inicialmente vacío se llena con agua.
+
+   
+
+     El volumen aumenta continuamente.
+
+   
+
+     Proceso transitorio.
+
+   
+
+---
+
+# 12. Clasificación de Casos Reales
+
+Para analizar un caso real se debe identificar:
+
+- Qué parte será el sistema.
+
+- Si el sistema es abierto o cerrado.
+
+- Si el proceso es batch, continuo, semibatch o fed-batch.
+
+- Si está en estado estacionario o transitorio.
+
+- Qué corrientes entran y salen.
+
+- Qué componentes participan.
+
+La interpretación física es esencial para no aplicar ecuaciones incorrectas.
+
+---
+
+### Ejemplo
+
+     Carga de batería de un vehículo eléctrico.
+
+   
+
+- Entra energía continuamente.
+
+- El estado de carga cambia con el tiempo.
+
+     Clasificación:
+
+   
+
+- Sistema abierto energéticamente.
+
+- Proceso transitorio.
+
+---
+
+# 13. Ley de Conservación de la Masa
+
+La ley de conservación de la masa establece que:
+
+La masa no se crea.
+
+La masa no se destruye.
+
+Solo puede transformarse.
+
+En procesos sin reacción química, la masa de entrada debe ser igual a la masa de salida más la acumulada.
+
+En procesos con reacción, los componentes pueden transformarse, pero la masa total se conserva.
+
+---
+
+### Ejemplo
+
+     Si se mezclan:
+
+   
+
+- 20 kg de agua
+
+- 5 kg de sal
+
+     Masa total:
+
+   
+
+\
+$$
+25\ kg
+
+\
+$$
+
+     La masa final siempre será 25 kg.
+
+   
+
+---
+
+# 14. Concepto de Balance de Materia
+
+Un balance de materia es una **contabilidad de materiales**.
+
+Permite seguir:
+
+- Lo que entra.
+
+- Lo que sale.
+
+- Lo que se acumula.
+
+- Lo que se genera.
+
+- Lo que se consume.
+
+Es la base para el diseño, análisis y control de procesos industriales.
+
+---
+
+### Ejemplo
+
+     Un tanque recibe:
+
+   
+
+\
+$$
+40\ kg/h
+
+\
+$$
+
+     y descarga:
+
+   
+
+\
+$$
+35\ kg/h
+
+\
+$$
+
+     La diferencia se acumula:
+
+   
+
+\
+$$
+5\ kg/h
+
+\
+$$
+
+---
+
+# 15. ¿Qué Puede Ocurrir con un Material que Entra al Sistema?
+
+Un material que entra a un sistema puede:
+
+### Salir
+
+El material atraviesa el sistema sin acumularse ni reaccionar.
+
+### Acumularse
+
+Permanece dentro del sistema y aumenta la cantidad almacenada.
+
+### Reaccionar
+
+Se transforma químicamente en otra sustancia.
+
+### Generar nuevos productos
+
+Si participa en una reacción, puede formar productos diferentes.
+
+Ejemplo:
+
+\
+$$
+A \rightarrow B
+
+\
+$$
+
+El componente A se consume y el componente B se genera.
+
+---
+
+### Ejemplo
+
+     Azúcar alimentada a un fermentador:
+
+   
+
+- Parte permanece en el reactor.
+
+- Parte se consume.
+
+- Parte se transforma en etanol.
+
+---
+
+# 16. Términos Fundamentales del Balance
+
+Los términos principales son:
+
+### Entrada
+
+Cantidad de materia que ingresa al sistema.
+
+### Salida
+
+Cantidad de materia que abandona el sistema.
+
+### Generación
+
+Cantidad de una especie producida dentro del sistema por reacción química o biológica.
+
+### Consumo
+
+Cantidad de una especie que desaparece por reacción.
+
+### Acumulación
+
+Cambio de cantidad de materia dentro del sistema.
+
+---
+
+### Ejemplo
+
+     En una reacción:
+
+   
+
+- Entran 100 kg de reactivo.
+
+- Se generan 60 kg de producto.
+
+     El reactivo experimenta consumo y el producto generación.
+
+   
+
+---
+
+# 17. Ecuación General del Balance de Materia
+
+La forma general es:
+
+\
+$$
+Entrada - Salida + Generación - Consumo = Acumulación
+
+\
+$$
+
+También puede escribirse como:
+
+\
+$$
+Acumulación = Entrada - Salida + Generación - Consumo
+
+\
+$$
+
+Esta ecuación puede aplicarse a:
+
+- Masa total.
+
+- Moles totales.
+
+- Componentes individuales.
+
+- Corrientes de proceso.
+
+---
+
+### Ejemplo
+
+     Datos:
+
+   
+
+- Entrada = 80 kg/h
+
+- Salida = 50 kg/h
+
+- Generación = 10 kg/h
+
+- Consumo = 5 kg/h
+
+\
+$$
+Acumulación=80-50+10-5
+
+\
+$$
+
+\
+$$
+Acumulación=35\ kg/h
+
+\
+$$
+
+---
+
+# 18. Aplicación de la Ecuación General
+
+Para aplicar la ecuación se identifican los términos que existen y los que son cero.
+
+Ejemplos:
+
+### Sistema cerrado
+
+\
+$$
+Entrada = 0
+
+\
+$$
+
+\
+$$
+Salida = 0
+
+\
+$$
+
+### Estado estacionario
+
+\
+$$
+Acumulación = 0
+
+\
+$$
+
+### Sin reacción química
+
+\
+$$
+Generación = 0
+
+\
+$$
+
+\
+$$
+Consumo = 0
+
+\
+$$
+
+Esto permite simplificar la ecuación.
+
+---
+
+### Ejemplo
+
+     Tanque sin reacción:
+
+   
+
+- Entrada = 200 kg/h
+
+- Salida = 150 kg/h
+
+\
+$$
+Acumulación=50\ kg/h
+
+\
+$$
+
+---
+
+# 19. Balance Total de Masa
+
+El balance total considera todos los componentes juntos.
+
+Para masa total, la generación y el consumo desaparecen porque la masa total no se crea ni se destruye.
+
+Entonces:
+
+\
+$$
+Entrada - Salida = Acumulación
+
+\
+$$
+
+En estado estacionario:
+
+\
+$$
+Entrada = Salida
+
+\
+$$
+
+---
+
+### Ejemplo
+
+     Una corriente de mezcla entra con:
+
+   
+
+\
+$$
+500\ kg/h
+
+\
+$$
+
+     y sale con:
+
+   
+
+\
+$$
+500\ kg/h
+
+\
+$$
+
+\
+$$
+Acumulación=0
+
+\
+$$
+
+---
+
+# 20. Balance por Componentes
+
+El balance por componentes se aplica a una sustancia específica.
+
+Ejemplo: agua, etanol, glucosa, oxígeno, dióxido de carbono.
+
+La ecuación es:
+
+\
+$$
+Entrada_i - Salida_i + Generación_i - Consumo_i = Acumulación_i
+
+\
+$$
+
+Es útil cuando hay mezclas, separaciones o reacciones químicas.
+
+---
+
+### Ejemplo
+
+     Una corriente contiene:
+
+   
+
+- 100 kg/h de agua
+
+- 20 kg/h de sal
+
+     Se puede realizar un balance independiente para la sal.
+
+   
+
+---
+
+# 21. Componentes Reactivos y No Reactivos
+
+Un **componente no reactivo** no se genera ni se consume.
+
+Para él:
+
+\
+$$
+Generación = 0
+
+\
+$$
+
+\
+$$
+Consumo = 0
+
+\
+$$
+
+Un **componente reactivo** participa en una reacción química o biológica.
+
+Puede:
+
+- Consumirse.
+
+- Generarse.
+
+- Transformarse en otro componente.
+
+Ejemplo:
+
+En una fermentación, la glucosa se consume y el etanol se genera.
+
+---
+
+### Ejemplo
+
+     En una combustión:
+
+   
+
+- Oxígeno → reactivo.
+
+- Nitrógeno del aire → no reactivo.
+
+---
+
+# 22. Balance en Estado Estacionario
+
+En estado estacionario:
+
+\
+$$
+Acumulación = 0
+
+\
+$$
+
+Por lo tanto:
+
+\
+$$
+Entrada - Salida + Generación - Consumo = 0
+
+\
+$$
+
+Si no hay reacción:
+
+\
+$$
+Entrada = Salida
+
+\
+$$
+
+Este caso es muy común en procesos industriales continuos.
+
+---
+
+### Ejemplo
+
+     Entrada:
+
+   
+
+\
+$$
+1000\ kg/h
+
+\
+$$
+
+     Salida:
+
+   
+
+\
+$$
+1000\ kg/h
+
+\
+$$
+
+     Sin reacción:
+
+   
+
+\
+$$
+Entrada=Salida
+
+\
+$$
+
+---
+
+# 23. Análisis de Grados de Libertad
+
+El análisis de grados de libertad permite saber si un problema puede resolverse antes de comenzar los cálculos.
+
+Sirve para evitar:
+
+- Resolver problemas imposibles.
+
+- Usar datos insuficientes.
+
+- Plantear ecuaciones innecesarias.
+
+- Trabajar con información contradictoria.
+
+---
+
+### Ejemplo
+
+     Problema:
+
+   
+
+     Variables desconocidas:
+
+   
+
+\
+$$
+x,y,z
+
+\
+$$
+
+     Ecuaciones independientes:
+
+   
+
+\
+$$
+3
+
+\
+$$
+
+     Entonces:
+
+   
+
+\
+$$
+NDF=3-3=0
+
+\
+$$
+
+     Problema resoluble.
+
+   
+
+---
+
+# 24. Cálculo de los Grados de Libertad
+
+Los grados de libertad se calculan como:
+
+\
+$$
+GDL = Número\,de\,incógnitas - Número\,de\,ecuaciones\,independientes
+
+\
+$$
+
+Donde las ecuaciones pueden ser:
+
+- Balances de materia.
+
+- Relaciones de composición.
+
+- Restricciones del problema.
+
+- Relaciones estequiométricas.
+
+- Datos de conversión.
+
+- Sumas de fracciones iguales a 1.
+
+---
+
+### Ejemplo
+
+     Desconocidas:
+
+   
+
+\
+$$
+5
+
+\
+$$
+
+     Ecuaciones:
+
+   
+
+\
+$$
+4
+
+\
+$$
+
+\
+$$
+NDF=1
+
+\
+$$
+
+     Hace falta una ecuación o dato adicional.
+
+   
+
+---
+
+# 25. Interpretación de los Grados de Libertad
+
+### Si (GDL = 0)
+
+El problema está correctamente especificado y tiene solución única.
+
+### Si (GDL > 0)
+
+Faltan datos o ecuaciones. El problema no puede resolverse completamente.
+
+### Si (GDL < 0)
+
+El problema está sobreespecificado. Hay más ecuaciones que incógnitas, y puede existir información redundante o contradictoria.
+
+---
+
+### Ejemplo
+
+     Si existen:
+
+   
+
+- 2 incógnitas
+
+- 4 ecuaciones
+
+\
+$$
+NDF=-2
+
+\
+$$
+
+     Probablemente hay información redundante.
+
+   
+
+---
+
+# 26. Base de Cálculo
+
+La **base de cálculo** es una cantidad de referencia elegida para resolver el problema.
+
+Ejemplos:
+
+- 100 kg de mezcla.
+
+- 100 mol de alimentación.
+
+- 1 hora de operación.
+
+- 1 kmol de producto.
+
+La base no cambia la física del problema, solo facilita los cálculos.
+
+---
+
+### Ejemplo
+
+     Una mezcla contiene:
+
+   
+
+- 25% A
+
+- 75% B
+
+     Elegir base:
+
+   
+
+\
+$$
+100\ kg
+
+\
+$$
+
+     Entonces:
+
+   
+
+\
+$$
+A=25\ kg
+
+\
+$$
+
+\
+$$
+B=75\ kg
+
+\
+$$
+
+---
+
+# 27. Selección de una Base Apropiada
+
+Una buena base de cálculo debe simplificar las operaciones.
+
+Se recomienda:
+
+- Usar una cantidad dada en el problema.
+
+- Elegir 100 kg si hay porcentajes en masa.
+
+- Elegir 100 mol si hay porcentajes molares.
+
+- Elegir 1 hora si hay caudales.
+
+- Elegir números fáciles para evitar fracciones complicadas.
+
+---
+
+### Ejemplo
+
+     Si una corriente contiene 40% de etanol:
+
+   
+
+     Base:
+
+   
+
+\
+$$
+100\ kg
+
+\
+$$
+
+     Etanol:
+
+   
+
+\
+$$
+40\ kg
+
+\
+$$
+
+     Agua:
+
+   
+
+\
+$$
+60\ kg
+
+\
+$$
+
+---
+
+# 28. Elaboración del Diagrama de Flujo
+
+El diagrama de flujo representa visualmente el proceso.
+
+Debe incluir:
+
+- Equipos.
+
+- Corrientes de entrada.
+
+- Corrientes de salida.
+
+- Datos conocidos.
+
+- Incógnitas.
+
+- Composiciones.
+
+- Caudales.
+
+Ejemplo básico:
+
+\
+$$
+Entrada \rightarrow Sistema \rightarrow Salida
+
+\
+$$
+
+Un buen diagrama facilita el planteamiento correcto del balance.
+
+---
+
+### Ejemplo
+
+     Proceso con:
+
+   
+
+- Corriente de entrada.
+
+- Mezclador.
+
+- Corriente de salida.
+
+     El diagrama debe incluir caudales y composiciones conocidas.
+
+   
+
+---
+
+# 29. Incorporación de Relaciones y Restricciones
+
+Además de los balances, pueden existir relaciones adicionales.
+
+Ejemplos:
+
+\
+$$
+x_A + x_B = 1
+
+\
+$$
+
+\
+$$
+w_A + w_B + w_C = 1
+
+\
+$$
+
+También pueden usarse:
+
+- Porcentajes.
+
+- Conversiones.
+
+- Selectividades.
+
+- Rendimientos.
+
+- Relaciones entre corrientes.
+
+- Condiciones de operación.
+
+Estas relaciones reducen el número de incógnitas.
+
+---
+
+### Ejemplo
+
+     Si:
+
+   
+
+\
+$$
+F_2=3F_1
+
+\
+$$
+
+     No se usan dos incógnitas.
+
+   
+
+     Se trabaja únicamente con:
+
+   
+
+\
+$$
+F_1
+
+\
+$$
+
+     y
+
+   
+
+\
+$$
+3F_1
+
+\
+$$
+
+---
+
+# 30. Conversión entre Bases de Masa y Mol
+
+Es importante no mezclar masa y moles sin convertir.
+
+Para convertir masa a moles:
+
+\
+$$
+n = \frac{m}{PM}
+
+\
+$$
+
+Para convertir moles a masa:
+
+\
+$$
+m = n(PM)
+
+\
+$$
+
+donde (PM) es el peso molecular.
+
+Ejemplo:
+
+\
+$$
+18\,kg\,H_2O
+
+\
+$$
+
+\
+$$
+PM = 18\,kg/kmol
+
+\
+$$
+
+\
+$$
+n = \frac{18}{18}=1\,kmol
+
+\
+$$
+
+---
+
+### Ejemplo
+
+     Se tienen:
+
+   
+
+- 2 kmol de CO₂
+
+- 88 kg de CO₂
+
+     Convertir ambos a kmol o ambos a kg antes de balancear.
+
+   
+
+---
+
+# 31. Procedimiento General para Resolver un Balance de Materia
+
+- Leer cuidadosamente el problema.
+
+- Identificar el sistema.
+
+- Clasificar el proceso:
+
+- Batch
+
+- Continuo.
+
+- Semibatch.
+
+- Fed-batch
+
+- Determinar si está en estado estacionario o transitorio.
+
+- Dibujar el diagrama de flujo.
+
+- Colocar todos los datos conocidos.
+
+- Definir incógnitas.
+
+- Elegir una base de cálculo.
+
+- Escribir la ecuación general del balance.
+
+- Simplificar términos nulos.
+
+- Plantear balances totales y por componente.
+
+- Agregar relaciones de composición o restricciones.
+
+- Hacer análisis de grados de libertad.
+
+- Resolver las ecuaciones.
+
+- Verificar unidades.
+
+- Revisar si el resultado tiene sentido físico.
+
+---
+
+### Ejemplo
+
+        Una corriente de 100 kg/h de una solución salina que contiene 10% en masa de sal entra a un evaporador. Durante el proceso se evaporan 20 kg/h de agua. Determine:
+
+El flujo másico de la corriente de salida.
+
+La composición de la solución concentrada.
+
+   
+
+        Entrada:
+
+   
+
+\
+$$
+100\ kg/h
+
+\
+$$
+
+        Composición de entrada:
+
+   
+
+\
+$$
+10\\%\ sal,\ 90\\%\ agua
+
+\
+$$
+
+        Se evaporan:
+
+   
+
+\
+$$
+20\ kg/h\ de\ agua
+
+\
+$$
+
+        Balance total:
+
+   
+
+\
+$$
+Entrada=Salida+Vapor
+
+\
+$$
+
+\
+$$
+100=F+20
+
+\
+$$
+
+\
+$$
+F=80\ kg/h
+
+\
+$$
+
+        Balance de sal:
+
+   
+
+\
+$$
+10=80x_s
+
+\
+$$
+
+\
+$$
+x_s=0.125=12.5\\%
+
+\
+$$
+
+        Resultado:
+
+   
+
+\
+$$
+Salida=80\ kg/h
+
+\
+$$
+
+\
+$$
+Composición\ final=12.5\\%\ sal,\ 87.5\\%\ agua
+
+\
+$$
+
+---
+
+# 32. Resumen Integrador
+
+Los balances de materia son una herramienta esencial para analizar procesos donde existe transformación, transporte o acumulación de materia.
+
+Primero se debe identificar el tipo de sistema:
+
+- Abierto.
+
+- Cerrado.
+
+Después se clasifica el proceso:
+
+- Batch.
+
+- Continuo.
+
+- Semibatch.
+
+- Fed-batch.
+
+También se determina si el proceso está en:
+
+- Estado estacionario.
+
+- Estado transitorio.
+
+La base del balance es la conservación de la masa:
+
+\
+$$
+Entrada - Salida + Generación - Consumo = Acumulación
+
+\
+$$
+
+En un balance total de masa, generación y consumo no aparecen porque la masa total se conserva.
+
+En balances por componente, sí pueden aparecer generación y consumo si hay reacción química o biológica.
+
+El análisis de grados de libertad permite saber si el problema tiene suficiente información para resolverse.
+
+La base de cálculo facilita las operaciones y debe elegirse de forma conveniente.
+
+Finalmente, un buen procedimiento incluye:
+
+- Diagrama de flujo.
+
+- Identificación de corrientes.
+
+- Conversión correcta de unidades.
+
+- Planteamiento de ecuaciones.
+
+- Verificación de resultados.
+
+### Ejemplo integrador
+
+     Un tanque recibe:
+
+   
+
+\
+$$
+300\ kg/h
+
+\
+$$
+
+     y descarga:
+
+   
+
+\
+$$
+300\ kg/h
+
+\
+$$
+
+     Sin reacción y en estado estacionario:
+
+   
+
+\
+$$
+Acumulación=0
+
+\
+$$
+
+\
+$$
+Entrada=Salida
+
+\
+$$
+
+\
+$$
+300=300
+
+\
+$$
+
+     Este es el tipo de razonamiento que se utilizará en las siguientes lecciones para resolver balances de materia más complejos.
+
+   
+
+# Conclusión General
+
+Los balances de materia permiten describir, analizar y diseñar procesos industriales, químicos y biotecnológicos. Su fundamento es la conservación de la masa, y su correcta aplicación requiere identificar el sistema, clasificar el proceso, reconocer entradas y salidas, plantear balances totales y por componentes, seleccionar una base de cálculo adecuada y verificar los grados de libertad. Dominar estos conceptos es indispensable para resolver problemas reales de ingeniería.

@@ -1,0 +1,1268 @@
+---
+title: Operaciones Unitarias de Separación y Balances de Materia
+---
+
+# Lección 6: Operaciones Unitarias de Separación y Balances de Materia
+
+# 1. Introducción a Nuevas Operaciones Unitarias
+
+Las **operaciones unitarias** son procesos físicos utilizados para separar, purificar, concentrar o transformar materiales sin que ocurra una reacción química. En estas operaciones, la composición química de las sustancias permanece igual; lo que cambia es su distribución entre diferentes fases o corrientes.
+
+Estas operaciones se fundamentan en diferencias de propiedades físicas, como:
+
+- Punto de ebullición.
+
+- Solubilidad.
+
+- Densidad.
+
+- Volatilidad.
+
+- Afinidad entre fases.
+
+En su análisis se aplican los **balances de materia** y, en muchos casos, los **datos de equilibrio**, que permiten conocer cómo se distribuyen los componentes entre las fases presentes.
+
+---
+
+## Importancia en Ingeniería
+
+Las operaciones unitarias son indispensables para:
+
+- Refinación de petróleo.
+
+- Producción de alimentos.
+
+- Industria farmacéutica.
+
+- Biotecnología.
+
+- Tratamiento de aguas.
+
+- Procesamiento de minerales.
+
+- Industria química.
+
+---
+
+### Ejemplo
+
+Una mezcla líquida entra a una unidad de separación donde sus componentes se distribuyen entre dos corrientes sin que ocurra reacción química.
+
+---
+
+# 2. Destilación
+
+![Imagen](/balancedemateria/images/bdestilacion.png)
+
+## Definición
+
+La **destilación** es una operación de separación que aprovecha la diferencia en los **puntos de ebullición** de los componentes de una mezcla.
+
+Cuando una mezcla líquida se calienta:
+
+- Los componentes más volátiles pasan preferentemente a la fase vapor.
+
+- Los componentes menos volátiles permanecen principalmente en la fase líquida.
+
+Posteriormente, el vapor se condensa para obtener un producto enriquecido en el componente más volátil.
+
+---
+
+## Componentes más volátiles
+
+Son aquellos que poseen:
+
+- Menor punto de ebullición.
+
+- Mayor presión de vapor.
+
+- Mayor facilidad para evaporarse.
+
+Ejemplos:
+
+- Etanol respecto al agua.
+
+- Acetona respecto al agua.
+
+---
+
+## Componentes menos volátiles
+
+Poseen:
+
+- Mayor punto de ebullición.
+
+- Menor presión de vapor.
+
+Permanecen principalmente en el fondo de la columna.
+
+---
+
+## Productos obtenidos
+
+### Producto de cabeza (Destilado)
+
+Corriente rica en componentes más volátiles.
+
+### Producto de fondo
+
+Corriente rica en componentes menos volátiles.
+
+---
+
+### Ejemplo
+
+Una mezcla de metanol y agua se alimenta a una columna de destilación.
+
+El metanol, al ser más volátil, sale principalmente por la parte superior.
+
+---
+
+# 3. Corrientes de una Columna de Destilación
+
+Una columna de destilación posee tres corrientes principales.
+
+## Alimentación (Feed, F)
+
+Es la mezcla que entra a la columna.
+
+Puede encontrarse en estado:
+
+- Líquido.
+
+- Vapor.
+
+- Mezcla líquido-vapor.
+
+---
+
+## Destilado (Overhead Product, D)
+
+Sale por la parte superior.
+
+Está enriquecido en el componente más volátil.
+
+---
+
+## Fondo (Bottom Product, B)
+
+Sale por la parte inferior.
+
+Contiene mayor concentración del componente menos volátil.
+
+---
+
+## Distribución de componentes
+
+Si una mezcla contiene:
+
+- Agua.
+
+- Etanol.
+
+Después de la destilación:
+
+- El destilado contendrá más etanol.
+
+- El fondo contendrá más agua.
+
+---
+
+### Ejemplo
+
+Alimentación:
+
+$$
+
+800\ kg/h
+
+$$
+
+Productos:
+
+- Destilado = 220 kg/h
+
+- Fondo = 580 kg/h
+
+---
+
+# 4. Conversión entre Fracción Molar y Fracción Másica
+
+Muchas veces la composición se expresa como fracción molar y debe convertirse a fracción másica, o viceversa.
+
+---
+
+## Fracción molar
+
+$$
+
+x_i=\frac{n_i}{n\_{total}}
+
+$$
+
+---
+
+## Fracción másica
+
+$$
+
+w_i=\frac{m_i}{m\_{total}}
+
+$$
+
+---
+
+## Conversión mediante pesos moleculares
+
+Primero se elige una **base de cálculo**, por ejemplo:
+
+100 mol de mezcla.
+
+Luego se calcula la masa de cada componente:
+
+$$
+
+m_i=n_i(PM_i)
+
+$$
+
+Finalmente:
+
+$$
+
+w_i=\frac{m_i}{m\_{total}}
+
+$$
+
+---
+
+## Importancia de trabajar con unidades consistentes
+
+No deben mezclarse:
+
+- moles con kilogramos.
+
+- fracciones molares con másicas sin convertir.
+
+Esto evita errores en los balances.
+
+---
+
+### Ejemplo
+
+Una mezcla contiene:
+
+- 30 mol% acetona
+
+- 70 mol% agua
+
+Suponiendo una base de 100 moles:
+
+- Acetona = 30 mol
+
+- Agua = 70 mol
+
+A partir de los pesos moleculares se calculan las masas y posteriormente las fracciones másicas.
+
+---
+
+# 5. Balance Total en Destilación
+
+Para una columna que opera en estado estacionario y sin reacción química:
+
+$$
+
+F=D+B
+
+$$
+
+donde:
+
+- (F): alimentación.
+
+- (D): destilado.
+
+- (B): fondo.
+
+Este balance indica que toda la masa que entra debe salir distribuida entre las dos corrientes.
+
+---
+
+### Ejemplo
+
+Alimentación:
+
+$$
+
+1500\ kg/h
+
+$$
+
+Destilado:
+
+$$
+
+450\ kg/h
+
+$$
+
+Entonces:
+
+$$
+
+B=1500-450
+
+$$
+
+$$
+
+B=1050\ kg/h
+
+$$
+
+---
+
+# 6. Balance por Componentes en Destilación
+
+Para cada componente:
+
+$$
+
+Fz_i=Dx_i+By_i
+
+$$
+
+o, en términos generales:
+
+$$
+
+Entrada_i=Salida\_{i,D}+Salida\_{i,B}
+
+$$
+
+donde:
+
+- (z_i): fracción del componente en la alimentación.
+
+- (x_i): fracción en el destilado.
+
+- (y_i): fracción en el fondo.
+
+Este balance permite determinar composiciones o caudales desconocidos.
+
+---
+
+### Ejemplo
+
+Una alimentación contiene:
+
+$$
+
+120\ kg/h
+
+$$
+
+de benceno.
+
+En el fondo permanecen:
+
+$$
+
+18\ kg/h
+
+$$
+
+Por diferencia:
+
+$$
+
+102\ kg/h
+
+$$
+
+salen con el destilado.
+
+---
+
+# 7. Interpretación de la Recuperación de Componentes
+
+## Recuperación
+
+Es el porcentaje de un componente que aparece en la corriente deseada.
+
+$$
+
+Recuperación=\frac{\text{Cantidad recuperada}}{\text{Cantidad alimentada}}\times100
+
+$$
+
+---
+
+## Rendimiento de separación
+
+Mide la eficiencia del proceso para separar un componente específico.
+
+---
+
+## Distribución entre corrientes
+
+Indica qué fracción del componente termina en:
+
+- Destilado.
+
+- Fondo.
+
+Una buena separación implica que la mayor parte del componente de interés se encuentre en la corriente objetivo.
+
+---
+
+### Ejemplo
+
+Si una corriente alimenta:
+
+$$
+
+80\ kg
+
+$$
+
+de un compuesto y se recuperan:
+
+$$
+
+72\ kg
+
+$$
+
+en el destilado,
+
+la recuperación es:
+
+$$
+
+90%
+
+$$
+
+---
+
+# 8. Condensador Parcial
+
+## Definición
+
+Es un equipo donde solo una parte del vapor que llega se condensa.
+
+Como resultado se obtienen simultáneamente:
+
+- Una corriente líquida.
+
+- Una corriente de vapor.
+
+---
+
+## Corrientes en equilibrio
+
+Las fases líquida y vapor se encuentran en equilibrio termodinámico, por lo que sus composiciones son diferentes.
+
+---
+
+## Aplicaciones
+
+- Destilación.
+
+- Refinación de petróleo.
+
+- Separación de gases.
+
+---
+
+### Ejemplo
+
+Una corriente de vapor se enfría.
+
+Se condensan:
+
+$$
+
+65%
+
+$$
+
+de los vapores.
+
+El resto continúa en fase gaseosa.
+
+---
+
+# 9. Balance en un Condensador Parcial
+
+Si entra una corriente de vapor:
+
+$$
+
+V=L+V_s
+
+$$
+
+donde:
+
+- (V): vapor de entrada.
+
+- (L): líquido condensado.
+
+- (V_s): vapor que no condensó.
+
+Para cada componente:
+
+$$
+
+V z_i=L x_i+V_s y_i
+
+$$
+
+---
+
+### Ejemplo
+
+Vapor alimentado:
+
+$$
+
+600\ kg/h
+
+$$
+
+Vapor de salida:
+
+$$
+
+180\ kg/h
+
+$$
+
+Líquido condensado:
+
+$$
+
+420\ kg/h
+
+$$
+
+---
+
+# 10. Flash Vaporization (Evaporación Flash)
+
+## Definición
+
+Es una operación en la que una corriente líquida se somete a:
+
+- Disminución brusca de presión.
+
+- Aumento de temperatura.
+
+Como consecuencia, parte del líquido se evapora instantáneamente.
+
+---
+
+## Productos
+
+Se generan simultáneamente:
+
+- Vapor.
+
+- Líquido.
+
+Ambas fases tienen composiciones distintas.
+
+---
+
+## Aplicaciones
+
+- Refinación de petróleo.
+
+- Separación de hidrocarburos.
+
+- Procesamiento químico.
+
+---
+
+### Ejemplo
+
+Una solución líquida se somete a una caída brusca de presión.
+
+Parte del líquido se evapora instantáneamente formando dos fases.
+
+---
+
+# 11. Equilibrio Líquido-Vapor
+
+## Definición
+
+Es la condición en la que las fases líquida y vapor coexisten sin cambios netos de masa entre ellas.
+
+---
+
+## Características
+
+- Las composiciones son diferentes.
+
+- La temperatura y presión permanecen constantes para el equilibrio.
+
+- Es la base de la destilación y la evaporación flash.
+
+---
+
+### Ejemplo
+
+Una mezcla de etanol y agua alcanza el equilibrio.
+
+El vapor contiene mayor proporción de etanol que el líquido.
+
+---
+
+# 12. Secadores de Gas
+
+## Definición
+
+Son equipos utilizados para eliminar un solvente (generalmente agua) de un sólido mediante una corriente gaseosa caliente.
+
+---
+
+## Funcionamiento
+
+El gas absorbe el solvente evaporado y el sólido sale seco.
+
+---
+
+## Corrientes
+
+- Alimentación húmeda.
+
+- Gas caliente.
+
+- Producto seco.
+
+- Gas húmedo.
+
+---
+
+### Ejemplo
+
+Una corriente de aire seco atraviesa un lecho de granos húmedos.
+
+El aire sale con mayor contenido de vapor de agua.
+
+---
+
+# 13. Análisis de un Secador de Gas
+
+Puede analizarse como:
+
+### Un secador
+
+Considerando la evaporación del solvente.
+
+### Un mezclador
+
+Porque el vapor evaporado se mezcla con el gas de secado.
+
+En ambos casos se aplican balances de materia.
+
+---
+
+### Ejemplo
+
+Primero:
+
+- Se evapora el agua del sólido.
+
+Después:
+
+- Ese vapor se mezcla con la corriente de aire.
+
+---
+
+# 14. Cristalización
+
+![Imagen](/balancedemateria/images/bcristalizador.png)
+
+## Definición
+
+La cristalización es una operación donde un soluto forma cristales al disminuir su solubilidad.
+
+---
+
+## Métodos para cristalizar
+
+- Enfriamiento.
+
+- Evaporación del solvente.
+
+- Cambio de composición.
+
+---
+
+## Soluciones saturadas
+
+La cristalización ocurre cuando la solución alcanza la saturación y ya no puede disolver más soluto.
+
+---
+
+## Separación sólido-líquido
+
+Los cristales se separan del licor madre mediante filtración o centrifugación.
+
+---
+
+### Ejemplo
+
+Una solución saturada de sulfato de cobre se enfría.
+
+Se forman cristales azules que pueden separarse del líquido.
+
+---
+
+# 15. Corrientes de un Cristalizador
+
+## Alimentación
+
+Solución que contiene el soluto.
+
+---
+
+## Cristales
+
+Producto sólido obtenido.
+
+---
+
+## Licor madre
+
+Solución saturada que permanece después de la cristalización.
+
+---
+
+### Ejemplo
+
+Alimentación:
+
+$$
+
+5000\ kg
+
+$$
+
+Cristales:
+
+$$
+
+1200\ kg
+
+$$
+
+Licor madre:
+
+$$
+
+3800\ kg
+
+$$
+
+---
+
+# 16. Cristales Hidratados
+
+## Definición
+
+Son cristales que incorporan moléculas de agua en su estructura cristalina.
+
+Ejemplo:
+
+$$
+
+CuSO_4\cdot5H_2O
+
+$$
+
+---
+
+## Agua de hidratación
+
+Está químicamente unida al cristal.
+
+No debe confundirse con el agua libre de la solución.
+
+---
+
+## Agua libre
+
+Es el agua que permanece como solvente y puede eliminarse fácilmente.
+
+---
+
+### Ejemplo
+
+El sulfato de cobre pentahidratado:
+
+$$
+
+CuSO_4\cdot5H_2O
+
+$$
+
+contiene agua químicamente unida al cristal.
+
+---
+
+# 17. Cálculo de Fracciones Másicas en Cristales
+
+Se utilizan los pesos moleculares de cada componente del cristal.
+
+Ejemplo:
+
+$$
+
+Na_2CO_3\cdot10H_2O
+
+$$
+
+Se calcula:
+
+- Peso molecular total.
+
+- Masa correspondiente al agua.
+
+- Masa correspondiente al soluto.
+
+Finalmente:
+
+$$
+
+w_i=\frac{m_i}{m\_{cristal}}
+
+$$
+
+Esto permite conocer la composición del cristal hidratado.
+
+---
+
+### Ejemplo
+
+Un cristal contiene:
+
+- 150 g de compuesto.
+
+- 90 g de agua de hidratación.
+
+Fracción másica del compuesto:
+
+$$
+
+\frac{150}{240}=0.625
+
+$$
+
+---
+
+# 18. Uso de Datos de Solubilidad
+
+## Definición
+
+La solubilidad indica la máxima cantidad de soluto que puede disolverse en una cantidad determinada de solvente a una temperatura específica.
+
+---
+
+## Relación con la temperatura
+
+En la mayoría de los sólidos:
+
+- La solubilidad aumenta al aumentar la temperatura.
+
+---
+
+## Unidades de solubilidad
+
+Puede expresarse como:
+
+- g de soluto / 100 g de agua.
+
+- kg de soluto / kg de solvente.
+
+- mol/L.
+
+---
+
+## Aplicación
+
+Los datos de solubilidad permiten determinar cuánto cristaliza al enfriar una solución.
+
+---
+
+### Ejemplo
+
+Una sal presenta:
+
+$$
+
+45\ g
+
+$$
+
+por
+
+$$
+
+100\ g
+
+$$
+
+de agua a 40°C.
+
+Ese dato permite determinar cuánto permanece disuelto.
+
+---
+
+# 19. Determinación de Temperatura mediante Solubilidad
+
+Si se conoce la concentración de una solución saturada, puede determinarse la temperatura utilizando:
+
+### Interpolación
+
+Entre dos datos conocidos de una tabla.
+
+### Curvas de solubilidad
+
+Gráficas que relacionan temperatura con solubilidad.
+
+Esto permite calcular indirectamente la temperatura de operación.
+
+---
+
+### Ejemplo
+
+Después de cristalizar, una solución contiene:
+
+$$
+
+28\ g
+
+$$
+
+de sal por
+
+$$
+
+100\ g
+
+$$
+
+de agua.
+
+Comparando con la curva de solubilidad se estima la temperatura correspondiente.
+
+---
+
+# 20. Balance Total en Cristalización
+
+Para un cristalizador:
+
+$$
+
+F=C+L
+
+$$
+
+donde:
+
+- (F): alimentación.
+
+- (C): cristales.
+
+- (L): licor madre.
+
+Toda la masa alimentada debe distribuirse entre estas corrientes.
+
+---
+
+### Ejemplo
+
+Alimentación:
+
+$$
+
+6000\ kg
+
+$$
+
+Cristales:
+
+$$
+
+1800\ kg
+
+$$
+
+Licor:
+
+$$
+
+4200\ kg
+
+$$
+
+---
+
+# 21. Balance por Componentes en Cristalización
+
+## Balance de soluto
+
+El soluto se distribuye entre:
+
+- Cristales.
+
+- Licor madre.
+
+$$
+
+Soluto\_{entrada}=Soluto\_{cristales}+Soluto\_{licor}
+
+$$
+
+---
+
+## Balance de agua
+
+Debe considerarse:
+
+- Agua libre.
+
+- Agua de hidratación.
+
+$$
+
+Agua\_{entrada}=Agua\_{licor}+Agua\_{hidratación}
+
+$$
+
+Esto es fundamental cuando se forman cristales hidratados.
+
+---
+
+### Ejemplo
+
+Una alimentación contiene:
+
+- 900 kg de soluto.
+
+- 2100 kg de agua.
+
+Los balances permiten determinar cuánto soluto cristaliza y cuánto permanece disuelto.
+
+---
+
+# 22. Construcción de Tablas de Conversión
+
+Las tablas de conversión ayudan a organizar la información.
+
+Ejemplo:
+
+| Componente | PM (kg/kmol) | Masa (kg) | Moles (kmol) |
+| --- | --- | --- | --- |
+| Agua | 18 | 180 | 10 |
+| NaCl | 58.44 | 58.44 | 1 |
+
+---
+
+## Conversión masa ↔ mol
+
+$$
+
+n=\frac{m}{PM}
+
+$$
+
+$$
+
+m=n(PM)
+
+$$
+
+Estas tablas reducen errores y facilitan los cálculos.
+
+---
+
+### Ejemplo
+
+Construir una tabla para una mezcla de:
+
+- Glucosa.
+
+- Agua.
+
+Incluyendo:
+
+- Moles.
+
+- Peso molecular.
+
+- Masa.
+
+- Fracción másica.
+
+---
+
+# 23. Estrategia General para Resolver Problemas
+
+- Leer cuidadosamente el problema.
+
+- Dibujar el diagrama de flujo.
+
+- Identificar corrientes.
+
+- Elegir una base de cálculo.
+
+- Convertir todas las composiciones a una base común (masa o moles).
+
+- Aplicar el balance total.
+
+- Aplicar balances por componente.
+
+- Incorporar datos de equilibrio o solubilidad.
+
+- Resolver el sistema de ecuaciones.
+
+- Verificar la coherencia física de los resultados.
+
+---
+
+### Ejemplo
+
+En una columna de destilación:
+
+- Base = 1000 kg/h.
+
+- Se identifican alimentación, destilado y fondo.
+
+- Se resuelve primero el balance total y luego los balances por componente.
+
+---
+
+# 24. Validación de Resultados
+
+Todo problema debe verificarse mediante:
+
+### Balance total
+
+$$
+
+Entrada=Salida
+
+$$
+
+---
+
+### Balance por componentes
+
+Cada componente debe cumplir:
+
+$$
+
+Entrada_i=Salida_i
+
+$$
+
+---
+
+### Revisión de unidades
+
+No deben mezclarse unidades incompatibles.
+
+---
+
+### Consistencia con datos físicos
+
+Verificar que:
+
+- Las fracciones másicas y molares estén entre 0 y 1.
+
+- No existan masas o caudales negativos.
+
+- Las composiciones sean compatibles con los datos de equilibrio y solubilidad.
+
+---
+
+### Ejemplo
+
+Si una cristalización produce más masa de cristales que la cantidad de soluto alimentado, el resultado es físicamente imposible y debe revisarse.
+
+---
+
+# 25. Resumen Integrador
+
+## Destilación
+
+Separa componentes utilizando diferencias en sus puntos de ebullición.
+
+---
+
+## Condensador parcial
+
+Condensa solo parte del vapor, obteniendo simultáneamente líquido y vapor en equilibrio.
+
+---
+
+## Evaporación flash
+
+Genera fases líquida y vapor mediante una disminución de presión o aumento de temperatura.
+
+---
+
+## Secado con gas
+
+Elimina solventes de un sólido utilizando una corriente gaseosa.
+
+---
+
+## Cristalización
+
+Forma cristales a partir de soluciones saturadas mediante enfriamiento o evaporación.
+
+---
+
+## Equilibrio líquido-vapor
+
+Es la base para operaciones como la destilación, la evaporación flash y la condensación parcial.
+
+---
+
+## Solubilidad
+
+Determina la cantidad máxima de soluto que puede disolverse a una temperatura dada y permite predecir la formación de cristales.
+
+---
+
+## Balances por componentes
+
+Son la herramienta fundamental para analizar la distribución de cada especie en las diferentes corrientes.
+
+---
+
+### Ejemplo integrador
+
+Una solución de 1000 kg contiene:
+
+- 25% de soluto.
+
+- 75% de agua.
+
+Después del enfriamiento se obtienen:
+
+- 180 kg de cristales.
+
+- 820 kg de licor madre.
+
+Los balances de materia permiten calcular la cantidad de soluto cristalizado, el que permanece disuelto y la temperatura de equilibrio utilizando la curva de solubilidad. Estos procedimientos representan la metodología general para analizar operaciones de separación sin reacción química.
+
+# Conclusión General
+
+Las operaciones unitarias de **destilación, condensación parcial, evaporación flash, secado con gas y cristalización** son procesos esenciales de separación basados en diferencias de propiedades físicas, como la volatilidad y la solubilidad. Su análisis requiere aplicar balances totales y por componentes, además de utilizar datos de equilibrio líquido-vapor y de solubilidad para describir correctamente la distribución de las especies entre las distintas fases. El dominio de estas herramientas permite diseñar y optimizar procesos industriales en los sectores químico, farmacéutico, alimentario, ambiental y biotecnológico, garantizando una separación eficiente y un aprovechamiento adecuado de los materiales.
